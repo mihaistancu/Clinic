@@ -6,7 +6,7 @@ namespace Clinic.Core
     {
         public Doctor Doctor { get; set; }
 
-        public string Practice { get; set; }
+        public Practice Practice { get; set; }
 
         public List<Availability> Schedule { get; set; }
     }
