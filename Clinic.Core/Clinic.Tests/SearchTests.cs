@@ -28,7 +28,30 @@ namespace Clinic.Tests
 
             CollectionAssert.AreEquivalent(new [] {visit2, visit3}, visits);
         }
-        
+
+
+        [TestMethod]
+        public void SearchByOffice()
+        {
+            var office1 = new Office { Location = "Office1" };
+            var office2 = new Office { Location = "Office2" };
+
+            var visit1 = CreateClinicalVisit(office1, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
+            var visit2 = CreateClinicalVisit(office2, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
+            var visit3 = CreateClinicalVisit(office2, new DateTime(2010, 1, 1, 13, 0, 0), new DateTime(2010, 1, 1, 14, 0, 0));
+
+            var medicalRecordsBoook = new MedicalRecordsBook();
+            medicalRecordsBoook.Add(visit1);
+            medicalRecordsBoook.Add(visit2);
+            medicalRecordsBoook.Add(visit3);
+
+            var visits = medicalRecordsBoook.SearchBy(office2,
+                new DateTime(2010, 1, 1, 10, 0, 0),
+                new DateTime(2010, 1, 1, 15, 0, 0));
+
+            CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
+        }
+
         private ClinicalVisit CreateClinicalVisit(Office office, DateTime startDateTime, DateTime endDateTime)
         {
             return new ClinicalVisit
