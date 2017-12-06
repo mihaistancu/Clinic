@@ -45,7 +45,7 @@
     <Compile Include="Availability.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Doctor.cs" />
-    <Compile Include="Pacient.cs" />
+    <Compile Include="Patient.cs" />
     <Compile Include="ClinicalVisit.cs" />
     <Compile Include="Practice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
