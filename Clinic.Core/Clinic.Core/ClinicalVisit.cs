@@ -2,7 +2,7 @@
 
 namespace Clinic.Core
 {
-    public class PacientVisit
+    public class ClinicalVisit
     {
         public Pacient Pacient { get; set; }
         public Doctor Doctor { get; set; }
