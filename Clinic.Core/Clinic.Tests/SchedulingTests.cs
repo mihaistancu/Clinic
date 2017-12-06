@@ -9,9 +9,9 @@ namespace Clinic.Tests
     public class SchedulingTests
     {
         [TestMethod]
-        public void CanCreateSchedule()
+        public void CanCreateOfficeHours()
         {
-            var schedule = new Schedule
+            var weeklyOfficeHours = new WeeklyOfficeHours
             {
                 Doctor = new Doctor
                 {
@@ -23,15 +23,15 @@ namespace Clinic.Tests
                     }
                 },
                 Office = new Office { Location = "Location" },
-                OfficeHours = new List<Availability>
+                OfficeHours = new List<DailyOfficeHours>
                 {
-                    new Availability
+                    new DailyOfficeHours
                     {
                         DayOfWeek = DayOfWeek.Monday,
                         StartTime = TimeSpan.Parse("08:00"),
                         EndTime = TimeSpan.Parse("18:00")
                     },
-                    new Availability
+                    new DailyOfficeHours
                     {
                         DayOfWeek = DayOfWeek.Tuesday,
                         StartTime = TimeSpan.Parse("09:00"),

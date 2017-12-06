@@ -2,12 +2,12 @@
 
 namespace Clinic.Core
 {
-    public class Schedule
+    public class WeeklyOfficeHours
     {
         public Doctor Doctor { get; set; }
 
         public Office Office { get; set; }
 
-        public List<Availability> OfficeHours { get; set; }
+        public List<DailyOfficeHours> OfficeHours { get; set; }
     }
 }

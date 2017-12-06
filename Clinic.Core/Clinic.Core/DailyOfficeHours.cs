@@ -2,7 +2,7 @@
 
 namespace Clinic.Core
 {
-    public class Availability
+    public class DailyOfficeHours
     {
         public DayOfWeek DayOfWeek { get; set; }
         public TimeSpan StartTime { get; set; }
