@@ -9,7 +9,7 @@ namespace Clinic.Tests
     public class SchedulingTests
     {
         [TestMethod]
-        public void Foo()
+        public void CanCreateSchedule()
         {
             var schedule = new Schedule
             {
