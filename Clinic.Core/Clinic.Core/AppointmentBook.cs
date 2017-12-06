@@ -4,6 +4,16 @@ namespace Clinic.Core
 {
     public class AppointmentBook
     {
-        public List<Appointment> Appointments { get; set; }
+        private readonly List<Appointment> appointments;
+
+        public AppointmentBook()
+        {
+            appointments = new List<Appointment>();
+        }
+
+        public void Schedule(Appointment appointment)
+        {
+            appointments.Add(appointment);
+        }
     }
 }
