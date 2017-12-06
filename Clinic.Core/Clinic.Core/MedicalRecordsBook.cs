@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Clinic.Core
@@ -17,9 +18,13 @@ namespace Clinic.Core
             visits.Add(visit);    
         }
 
-        public List<ClinicalVisit> SearchBy(Office office)
+        public List<ClinicalVisit> SearchBy(Office office, DateTime startDateTime, DateTime endDateTime)
         {
-            return visits.Where(v => v.Office == office).ToList();
+            return visits.Where(v =>
+                    v.Office == office &&
+                    v.StartDateTime >= startDateTime &&
+                    v.EndDateTime <= endDateTime)
+                .ToList();
         }
     }
 }
