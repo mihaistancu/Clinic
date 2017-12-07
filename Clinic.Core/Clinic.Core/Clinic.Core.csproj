@@ -47,6 +47,7 @@
     <Compile Include="MedicalRecordsBook.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="OfficeActivityReport.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="ClinicalVisit.cs" />
     <Compile Include="Practice.cs" />

@@ -20,5 +20,10 @@ namespace Clinic.Core
                 visit.StartDateTime >= startDateTime &&
                 visit.EndDateTime <= endDateTime;
         }
+
+        public static Func<ClinicalVisit, bool> ByDate(DateTime date)
+        {
+            return visit => visit.StartDateTime.Date == date.Date;
+        }
     }
 }
