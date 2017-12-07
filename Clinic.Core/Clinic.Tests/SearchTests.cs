@@ -68,6 +68,25 @@ namespace Clinic.Tests
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
 
+        [TestMethod]
+        public void SearchByMultipleConditions()
+        {
+            var doctor1 = new Doctor { Name = "Doctor1" };
+            var doctor2 = new Doctor { Name = "Doctor2" };
+            var office1 = new Office { Location = "Office1" };
+            var office2 = new Office { Location = "Office2" };
+
+            var visit1 = Visit(doctor1, office1, Time(12, 0), Time(13, 0));
+            var visit2 = Visit(doctor1, office2, Time(12, 0), Time(13, 0));
+            var visit3 = Visit(doctor2, office2, Time(13, 0), Time(14, 0));
+
+            Record(visit1, visit2, visit3);
+
+            var visits = medicalRecordsBook.Search(Filter.ByDoctor(doctor2), Filter.ByOffice(office2));
+
+            CollectionAssert.AreEquivalent(new[] { visit3 }, visits);
+        }
+
         private ClinicalVisit Visit(Doctor doctor, Office office, DateTime startDateTime, DateTime endDateTime)
         {
             return new ClinicalVisit
