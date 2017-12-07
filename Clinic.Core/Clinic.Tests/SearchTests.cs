@@ -52,12 +52,45 @@ namespace Clinic.Tests
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
 
+        [TestMethod]
+        public void SearchByDoctor()
+        {
+            var doctor1 = new Doctor { Name = "Doctor1" };
+            var doctor2 = new Doctor { Name = "Doctor2" };
+
+            var visit1 = CreateClinicalVisit(doctor1, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
+            var visit2 = CreateClinicalVisit(doctor2, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
+            var visit3 = CreateClinicalVisit(doctor2, new DateTime(2010, 1, 1, 13, 0, 0), new DateTime(2010, 1, 1, 14, 0, 0));
+
+            var medicalRecordsBoook = new MedicalRecordsBook();
+            medicalRecordsBoook.Add(visit1);
+            medicalRecordsBoook.Add(visit2);
+            medicalRecordsBoook.Add(visit3);
+
+            var visits = medicalRecordsBoook.SearchBy(doctor2,
+                new DateTime(2010, 1, 1, 10, 0, 0),
+                new DateTime(2010, 1, 1, 15, 0, 0));
+
+            CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
+        }
+
         private ClinicalVisit CreateClinicalVisit(Office office, DateTime startDateTime, DateTime endDateTime)
         {
             return new ClinicalVisit
             {
                 Patient = new Patient { Name = "Patient" },
                 Office = office,
+                StartDateTime = startDateTime,
+                EndDateTime = endDateTime
+            };
+        }
+
+        private ClinicalVisit CreateClinicalVisit(Doctor doctor, DateTime startDateTime, DateTime endDateTime)
+        {
+            return new ClinicalVisit
+            {
+                Patient = new Patient { Name = "Patient" },
+                Doctor = doctor,
                 StartDateTime = startDateTime,
                 EndDateTime = endDateTime
             };

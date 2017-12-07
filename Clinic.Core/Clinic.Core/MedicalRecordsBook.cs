@@ -26,5 +26,14 @@ namespace Clinic.Core
                     v.EndDateTime <= endDateTime)
                 .ToList();
         }
+
+        public List<ClinicalVisit> SearchBy(Doctor doctor, DateTime startDateTime, DateTime endDateTime)
+        {
+            return visits.Where(v =>
+                    v.Doctor == doctor &&
+                    v.StartDateTime >= startDateTime &&
+                    v.EndDateTime <= endDateTime)
+                .ToList();
+        }
     }
 }
