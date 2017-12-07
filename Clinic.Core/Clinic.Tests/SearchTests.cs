@@ -23,9 +23,7 @@ namespace Clinic.Tests
             medicalRecordsBoook.Add(visit3);
             medicalRecordsBoook.Add(visit4);
 
-            var visits = medicalRecordsBoook.SearchBy(office, 
-                new DateTime(2010, 1, 1, 11, 0, 0),
-                new DateTime(2010, 1, 1, 15, 0, 0));
+            var visits = medicalRecordsBoook.SearchBy(office, Time(11, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new [] {visit2, visit3}, visits);
         }
@@ -47,9 +45,7 @@ namespace Clinic.Tests
             medicalRecordsBoook.Add(visit2);
             medicalRecordsBoook.Add(visit3);
 
-            var visits = medicalRecordsBoook.SearchBy(office2,
-                new DateTime(2010, 1, 1, 10, 0, 0),
-                new DateTime(2010, 1, 1, 15, 0, 0));
+            var visits = medicalRecordsBoook.SearchBy(office2, Time(10, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -70,9 +66,7 @@ namespace Clinic.Tests
             medicalRecordsBoook.Add(visit2);
             medicalRecordsBoook.Add(visit3);
 
-            var visits = medicalRecordsBoook.SearchBy(doctor2,
-                new DateTime(2010, 1, 1, 10, 0, 0),
-                new DateTime(2010, 1, 1, 15, 0, 0));
+            var visits = medicalRecordsBoook.SearchBy(doctor2, Time(10, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
