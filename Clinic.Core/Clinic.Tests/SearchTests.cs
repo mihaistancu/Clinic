@@ -7,12 +7,12 @@ namespace Clinic.Tests
     [TestClass]
     public class SearchTests
     {
-        private MedicalRecordsBook medicalRecordsBoook;
+        private MedicalRecordsBook medicalRecordsBook;
 
         [TestInitialize]
         public void Setup()
         {
-            medicalRecordsBoook = new MedicalRecordsBook();
+            medicalRecordsBook = new MedicalRecordsBook();
         }
 
         [TestMethod]
@@ -27,11 +27,10 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3, visit4);
 
-            var visits = medicalRecordsBoook.SearchBy(office, Time(11, 0), Time(15, 0));
+            var visits = medicalRecordsBook.SearchBy(office, Time(11, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new [] {visit2, visit3}, visits);
         }
-
 
         [TestMethod]
         public void SearchByOffice()
@@ -46,7 +45,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBoook.SearchBy(office2, Time(10, 0), Time(15, 0));
+            var visits = medicalRecordsBook.SearchBy(office2, Time(10, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -64,7 +63,7 @@ namespace Clinic.Tests
             
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBoook.SearchBy(doctor2, Time(10, 0), Time(15, 0));
+            var visits = medicalRecordsBook.SearchBy(doctor2, Time(10, 0), Time(15, 0));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -85,7 +84,7 @@ namespace Clinic.Tests
         {
             foreach (var visit in visits)
             {
-                medicalRecordsBoook.Add(visit);
+                medicalRecordsBook.Add(visit);
             }
         }
         
