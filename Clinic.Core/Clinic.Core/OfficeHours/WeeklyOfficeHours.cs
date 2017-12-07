@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Clinic.Core
+namespace Clinic.Core.OfficeHours
 {
     public class WeeklyOfficeHours
     {
