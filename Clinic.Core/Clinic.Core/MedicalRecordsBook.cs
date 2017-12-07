@@ -17,23 +17,10 @@ namespace Clinic.Core
         {
             visits.Add(visit);    
         }
-
-        public List<ClinicalVisit> SearchBy(Office office, DateTime startDateTime, DateTime endDateTime)
+        
+        public List<ClinicalVisit> Search(params Func<ClinicalVisit, bool>[] predicates)
         {
-            return visits.Where(v =>
-                    v.Office == office &&
-                    v.StartDateTime >= startDateTime &&
-                    v.EndDateTime <= endDateTime)
-                .ToList();
-        }
-
-        public List<ClinicalVisit> SearchBy(Doctor doctor, DateTime startDateTime, DateTime endDateTime)
-        {
-            return visits.Where(v =>
-                    v.Doctor == doctor &&
-                    v.StartDateTime >= startDateTime &&
-                    v.EndDateTime <= endDateTime)
-                .ToList();
+            return visits.Where(v => predicates.All(p => p(v))).ToList();
         }
     }
 }

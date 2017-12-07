@@ -27,7 +27,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3, visit4);
 
-            var visits = medicalRecordsBook.SearchBy(office, Time(11, 0), Time(15, 0));
+            var visits = medicalRecordsBook.Search(Filter.ByTimeframe(Time(11, 0), Time(15, 0)));
 
             CollectionAssert.AreEquivalent(new [] {visit2, visit3}, visits);
         }
@@ -45,7 +45,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBook.SearchBy(office2, Time(10, 0), Time(15, 0));
+            var visits = medicalRecordsBook.Search(Filter.ByOffice(office2));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -63,7 +63,7 @@ namespace Clinic.Tests
             
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBook.SearchBy(doctor2, Time(10, 0), Time(15, 0));
+            var visits = medicalRecordsBook.Search(Filter.ByDoctor(doctor2));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
