@@ -1,5 +1,6 @@
 ﻿using System;
 using Clinic.Core;
+using Clinic.Core.Consultations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Clinic.Tests

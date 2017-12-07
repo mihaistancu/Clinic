@@ -44,15 +44,15 @@
     <Compile Include="AppointmentBook.cs" />
     <Compile Include="DailyOfficeHours.cs" />
     <Compile Include="Reports\DoctorActivityReport.cs" />
-    <Compile Include="MedicalRecordsBook.cs" />
+    <Compile Include="Consultations\MedicalRecordsBook.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Reports\OfficeActivityReport.cs" />
     <Compile Include="Patient.cs" />
-    <Compile Include="ClinicalVisit.cs" />
+    <Compile Include="Consultations\ClinicalVisit.cs" />
     <Compile Include="Practice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Filter.cs" />
+    <Compile Include="Consultations\Filter.cs" />
     <Compile Include="Reports\ClinicActivityReport.cs" />
     <Compile Include="WeeklyOfficeHours.cs" />
   </ItemGroup>

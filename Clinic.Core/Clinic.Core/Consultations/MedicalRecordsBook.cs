@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Clinic.Core
+namespace Clinic.Core.Consultations
 {
     public class MedicalRecordsBook
     {
