@@ -12,10 +12,10 @@ namespace Clinic.Tests
         {
             var doctor = new Doctor {Name = "Doctor"};
             var office = new Office {Location = "Office1"};
-            var visit1 = CreateClinicalVisit(doctor, office, Time(9, 0), Time(10, 0));
-            var visit2 = CreateClinicalVisit(doctor, office, Time(12, 0), Time(13, 0));
-            var visit3 = CreateClinicalVisit(doctor, office, Time(13, 0), Time(14, 0));
-            var visit4 = CreateClinicalVisit(doctor, office, Time(17, 0), Time(18, 0));
+            var visit1 = Visit(doctor, office, Time(9, 0), Time(10, 0));
+            var visit2 = Visit(doctor, office, Time(12, 0), Time(13, 0));
+            var visit3 = Visit(doctor, office, Time(13, 0), Time(14, 0));
+            var visit4 = Visit(doctor, office, Time(17, 0), Time(18, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -38,9 +38,9 @@ namespace Clinic.Tests
             var office1 = new Office { Location = "Office1" };
             var office2 = new Office { Location = "Office2" };
 
-            var visit1 = CreateClinicalVisit(doctor, office1, Time(12, 0), Time(13, 0));
-            var visit2 = CreateClinicalVisit(doctor, office2, Time(12, 0), Time(13, 0));
-            var visit3 = CreateClinicalVisit(doctor, office2, Time(13, 0), Time(14, 0));
+            var visit1 = Visit(doctor, office1, Time(12, 0), Time(13, 0));
+            var visit2 = Visit(doctor, office2, Time(12, 0), Time(13, 0));
+            var visit3 = Visit(doctor, office2, Time(13, 0), Time(14, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -61,9 +61,9 @@ namespace Clinic.Tests
             var doctor2 = new Doctor { Name = "Doctor2" };
             var office = new Office{ Location = "Location" };
 
-            var visit1 = CreateClinicalVisit(doctor1, office, Time(12, 0), Time(13, 0));
-            var visit2 = CreateClinicalVisit(doctor2, office, Time(12, 0), Time(13, 0));
-            var visit3 = CreateClinicalVisit(doctor2, office, Time(13, 0), Time(14, 0));
+            var visit1 = Visit(doctor1, office, Time(12, 0), Time(13, 0));
+            var visit2 = Visit(doctor2, office, Time(12, 0), Time(13, 0));
+            var visit3 = Visit(doctor2, office, Time(13, 0), Time(14, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -77,7 +77,7 @@ namespace Clinic.Tests
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
 
-        private ClinicalVisit CreateClinicalVisit(Doctor doctor, Office office, DateTime startDateTime, DateTime endDateTime)
+        private ClinicalVisit Visit(Doctor doctor, Office office, DateTime startDateTime, DateTime endDateTime)
         {
             return new ClinicalVisit
             {
