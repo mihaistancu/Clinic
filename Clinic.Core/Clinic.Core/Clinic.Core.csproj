@@ -43,6 +43,7 @@
     <Compile Include="Appointment.cs" />
     <Compile Include="AppointmentBook.cs" />
     <Compile Include="DailyOfficeHours.cs" />
+    <Compile Include="DoctorActivityReport.cs" />
     <Compile Include="MedicalRecordsBook.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Doctor.cs" />
