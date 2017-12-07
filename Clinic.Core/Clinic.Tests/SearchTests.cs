@@ -11,10 +11,10 @@ namespace Clinic.Tests
         public void SearchByTimeInterval()
         {
             var office = new Office {Location = "Office1"};
-            var visit1 = CreateClinicalVisit(office, new DateTime(2010, 1, 1, 9, 0, 0), new DateTime(2010, 1, 1, 10, 0, 0));
-            var visit2 = CreateClinicalVisit(office, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
-            var visit3 = CreateClinicalVisit(office, new DateTime(2010, 1, 1, 13, 0, 0), new DateTime(2010, 1, 1, 14, 0, 0));
-            var visit4 = CreateClinicalVisit(office, new DateTime(2010, 1, 1, 17, 0, 0), new DateTime(2010, 1, 1, 18, 0, 0));
+            var visit1 = CreateClinicalVisit(office, Time(9, 0), Time(10, 0));
+            var visit2 = CreateClinicalVisit(office, Time(12, 0), Time(13, 0));
+            var visit3 = CreateClinicalVisit(office, Time(13, 0), Time(14, 0));
+            var visit4 = CreateClinicalVisit(office, Time(17, 0), Time(18, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -36,9 +36,9 @@ namespace Clinic.Tests
             var office1 = new Office { Location = "Office1" };
             var office2 = new Office { Location = "Office2" };
 
-            var visit1 = CreateClinicalVisit(office1, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
-            var visit2 = CreateClinicalVisit(office2, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
-            var visit3 = CreateClinicalVisit(office2, new DateTime(2010, 1, 1, 13, 0, 0), new DateTime(2010, 1, 1, 14, 0, 0));
+            var visit1 = CreateClinicalVisit(office1, Time(12, 0), Time(13, 0));
+            var visit2 = CreateClinicalVisit(office2, Time(12, 0), Time(13, 0));
+            var visit3 = CreateClinicalVisit(office2, Time(13, 0), Time(14, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -58,9 +58,9 @@ namespace Clinic.Tests
             var doctor1 = new Doctor { Name = "Doctor1" };
             var doctor2 = new Doctor { Name = "Doctor2" };
 
-            var visit1 = CreateClinicalVisit(doctor1, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
-            var visit2 = CreateClinicalVisit(doctor2, new DateTime(2010, 1, 1, 12, 0, 0), new DateTime(2010, 1, 1, 13, 0, 0));
-            var visit3 = CreateClinicalVisit(doctor2, new DateTime(2010, 1, 1, 13, 0, 0), new DateTime(2010, 1, 1, 14, 0, 0));
+            var visit1 = CreateClinicalVisit(doctor1, Time(12, 0), Time(13, 0));
+            var visit2 = CreateClinicalVisit(doctor2, Time(12, 0), Time(13, 0));
+            var visit3 = CreateClinicalVisit(doctor2, Time(13, 0), Time(14, 0));
 
             var medicalRecordsBoook = new MedicalRecordsBook();
             medicalRecordsBoook.Add(visit1);
@@ -94,6 +94,11 @@ namespace Clinic.Tests
                 StartDateTime = startDateTime,
                 EndDateTime = endDateTime
             };
+        }
+
+        private DateTime Time(int hour, int minute)
+        {
+            return new DateTime(2010, 1, 1, hour, minute, 0);
         }
     }
 }
