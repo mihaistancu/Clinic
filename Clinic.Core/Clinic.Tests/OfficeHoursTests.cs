@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Clinic.Tests
 {
     [TestClass]
-    public class SchedulingTests
+    public class OfficeHoursTests
     {
         [TestMethod]
         public void CanCreateOfficeHours()

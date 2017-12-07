@@ -6,7 +6,7 @@ using Clinic.Core.Appointments;
 namespace Clinic.Tests
 {
     [TestClass]
-    public class AppointmentBookTests
+    public class AppointmentsTests
     {
         [TestMethod]
         public void CanCreateAnAppointment()
