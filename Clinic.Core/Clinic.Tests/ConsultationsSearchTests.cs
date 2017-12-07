@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Clinic.Tests
 {
     [TestClass]
-    public class SearchTests
+    public class ConsultationsSearchTests
     {
         private MedicalRecordsBook medicalRecordsBook;
 
