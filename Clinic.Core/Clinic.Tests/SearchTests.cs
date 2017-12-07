@@ -7,6 +7,14 @@ namespace Clinic.Tests
     [TestClass]
     public class SearchTests
     {
+        private MedicalRecordsBook medicalRecordsBoook;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            medicalRecordsBoook = new MedicalRecordsBook();
+        }
+
         [TestMethod]
         public void SearchByTimeInterval()
         {
@@ -17,11 +25,7 @@ namespace Clinic.Tests
             var visit3 = Visit(doctor, office, Time(13, 0), Time(14, 0));
             var visit4 = Visit(doctor, office, Time(17, 0), Time(18, 0));
 
-            var medicalRecordsBoook = new MedicalRecordsBook();
-            medicalRecordsBoook.Add(visit1);
-            medicalRecordsBoook.Add(visit2);
-            medicalRecordsBoook.Add(visit3);
-            medicalRecordsBoook.Add(visit4);
+            Record(visit1, visit2, visit3, visit4);
 
             var visits = medicalRecordsBoook.SearchBy(office, Time(11, 0), Time(15, 0));
 
@@ -40,10 +44,7 @@ namespace Clinic.Tests
             var visit2 = Visit(doctor, office2, Time(12, 0), Time(13, 0));
             var visit3 = Visit(doctor, office2, Time(13, 0), Time(14, 0));
 
-            var medicalRecordsBoook = new MedicalRecordsBook();
-            medicalRecordsBoook.Add(visit1);
-            medicalRecordsBoook.Add(visit2);
-            medicalRecordsBoook.Add(visit3);
+            Record(visit1, visit2, visit3);
 
             var visits = medicalRecordsBoook.SearchBy(office2, Time(10, 0), Time(15, 0));
 
@@ -60,11 +61,8 @@ namespace Clinic.Tests
             var visit1 = Visit(doctor1, office, Time(12, 0), Time(13, 0));
             var visit2 = Visit(doctor2, office, Time(12, 0), Time(13, 0));
             var visit3 = Visit(doctor2, office, Time(13, 0), Time(14, 0));
-
-            var medicalRecordsBoook = new MedicalRecordsBook();
-            medicalRecordsBoook.Add(visit1);
-            medicalRecordsBoook.Add(visit2);
-            medicalRecordsBoook.Add(visit3);
+            
+            Record(visit1, visit2, visit3);
 
             var visits = medicalRecordsBoook.SearchBy(doctor2, Time(10, 0), Time(15, 0));
 
@@ -81,6 +79,14 @@ namespace Clinic.Tests
                 StartDateTime = startDateTime,
                 EndDateTime = endDateTime
             };
+        }
+
+        private void Record(params ClinicalVisit[] visits)
+        {
+            foreach (var visit in visits)
+            {
+                medicalRecordsBoook.Add(visit);
+            }
         }
         
         private DateTime Time(int hour, int minute)
