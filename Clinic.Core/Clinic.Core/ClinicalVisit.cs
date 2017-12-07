@@ -9,5 +9,7 @@ namespace Clinic.Core
         public Office Office { get; set; }
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
+
+        public double AmountReceived { get; set; }
     }
 }
