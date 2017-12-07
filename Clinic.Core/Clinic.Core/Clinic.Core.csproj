@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointment.cs" />
-    <Compile Include="AppointmentBook.cs" />
+    <Compile Include="Appointments\Appointment.cs" />
+    <Compile Include="Appointments\AppointmentBook.cs" />
     <Compile Include="OfficeHours\DailyOfficeHours.cs" />
     <Compile Include="Reports\DoctorActivityReport.cs" />
     <Compile Include="Consultations\MedicalRecordsBook.cs" />
