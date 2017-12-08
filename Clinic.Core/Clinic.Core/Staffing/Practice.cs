@@ -1,4 +1,4 @@
-﻿namespace Clinic.Core
+﻿namespace Clinic.Core.Staffing
 {
     public class Practice
     {

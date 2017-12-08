@@ -1,7 +1,7 @@
-﻿using Clinic.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Clinic.Core.Appointments;
+using Clinic.Core.Staffing;
 
 namespace Clinic.Tests
 {

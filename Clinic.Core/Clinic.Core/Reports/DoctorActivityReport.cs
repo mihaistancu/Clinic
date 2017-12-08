@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Clinic.Core.Consultations;
+using Clinic.Core.Staffing;
 
 namespace Clinic.Core.Reports
 {
