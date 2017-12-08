@@ -16,6 +16,8 @@ namespace Clinic.Console
                 string doctorName = args[1];
 
                 medicalStaff.Add(new Doctor { Name = doctorName });
+
+                return;
             }
             
             if (operation == "list")
@@ -23,7 +25,11 @@ namespace Clinic.Console
                 List<Doctor> doctors = medicalStaff.GetAll();
 
                 doctors.ForEach(d => System.Console.WriteLine(d.Name));
+
+                return;
             }
+
+            System.Console.WriteLine("Unknown operation");
         }
     }
 }
