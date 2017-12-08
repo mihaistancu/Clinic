@@ -17,12 +17,7 @@ namespace Clinic.Tests
             {
                 Doctor = new Doctor
                 {
-                    Name = "Doctor",
-                    Practices = new List<Practice>
-                    {
-                        new Practice {Title = "Practice1"},
-                        new Practice {Title = "Practice2"}
-                    }
+                    Name = "Doctor"
                 },
                 Office = new Office { Location = "Location" },
                 OfficeHours = new List<DailyOfficeHours>
