@@ -49,7 +49,7 @@
     <Compile Include="Infrastructure\Office.cs" />
     <Compile Include="Staffing\Doctor.cs" />
     <Compile Include="Reports\OfficeActivityReport.cs" />
-    <Compile Include="Patient.cs" />
+    <Compile Include="Patients\Patient.cs" />
     <Compile Include="Consultations\ClinicalVisit.cs" />
     <Compile Include="Staffing\Practice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

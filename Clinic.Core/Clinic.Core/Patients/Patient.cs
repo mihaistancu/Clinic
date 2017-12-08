@@ -1,4 +1,4 @@
-﻿namespace Clinic.Core
+﻿namespace Clinic.Core.Patients
 {
     public class Patient
     {

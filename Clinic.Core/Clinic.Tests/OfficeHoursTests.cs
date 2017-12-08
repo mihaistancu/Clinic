@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Clinic.Core;
+using Clinic.Core.Staffing;
+using Clinic.Core.Infrastructure;
 using Clinic.Core.OfficeHours;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
