@@ -1,5 +1,6 @@
 ﻿using System;
 using Clinic.Core.Staffing;
+using Clinic.Core.Infrastructure;
 
 namespace Clinic.Core.Consultations
 {

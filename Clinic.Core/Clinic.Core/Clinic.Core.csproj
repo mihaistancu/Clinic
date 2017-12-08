@@ -46,7 +46,7 @@
     <Compile Include="OfficeHours\DailyOfficeHours.cs" />
     <Compile Include="Reports\DoctorActivityReport.cs" />
     <Compile Include="Consultations\MedicalRecordsBook.cs" />
-    <Compile Include="Office.cs" />
+    <Compile Include="Infrastructure\Office.cs" />
     <Compile Include="Staffing\Doctor.cs" />
     <Compile Include="Reports\OfficeActivityReport.cs" />
     <Compile Include="Patient.cs" />

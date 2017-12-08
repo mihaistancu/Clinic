@@ -1,4 +1,4 @@
-﻿namespace Clinic.Core
+﻿namespace Clinic.Core.Infrastructure
 {
     public class Office
     {
