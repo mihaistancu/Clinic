@@ -15,5 +15,10 @@ namespace Clinic.Core.Staffing
         {
             doctors.Add(doctor);
         }
+
+        public List<Doctor> GetAll()
+        {
+            return doctors;
+        }
     }
 }

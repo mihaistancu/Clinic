@@ -1,4 +1,5 @@
 ﻿using Clinic.Core.Staffing;
+using System.Collections.Generic;
 
 namespace Clinic.Console
 {
@@ -8,9 +9,21 @@ namespace Clinic.Console
         {
             var medicalStaff = new MedicalStaff();
 
-            string doctorName = args[0];
+            string operation = args[0];
 
-            medicalStaff.Add(new Doctor { Name = doctorName });
+            if (operation == "add")
+            {
+                string doctorName = args[1];
+
+                medicalStaff.Add(new Doctor { Name = doctorName });
+            }
+            
+            if (operation == "list")
+            {
+                List<Doctor> doctors = medicalStaff.GetAll();
+
+                doctors.ForEach(d => System.Console.WriteLine(d.Name));
+            }
         }
     }
 }
