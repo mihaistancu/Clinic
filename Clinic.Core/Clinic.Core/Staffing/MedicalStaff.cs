@@ -4,7 +4,12 @@ namespace Clinic.Core.Staffing
 {
     public class MedicalStaff
     {
-        private List<Doctor> doctors;
+        private readonly List<Doctor> doctors;
+
+        public MedicalStaff()
+        {
+            doctors = new List<Doctor>();
+        }
 
         public void Add(Doctor doctor)
         {
