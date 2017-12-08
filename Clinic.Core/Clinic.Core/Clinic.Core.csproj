@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Appointments\Appointment.cs" />
     <Compile Include="Appointments\AppointmentBook.cs" />
+    <Compile Include="OfficeHours\ClinicOfficeHours.cs" />
     <Compile Include="OfficeHours\DailyOfficeHours.cs" />
     <Compile Include="Reports\DoctorActivityReport.cs" />
     <Compile Include="Consultations\MedicalRecordsBook.cs" />
