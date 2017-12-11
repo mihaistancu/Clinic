@@ -54,6 +54,10 @@
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
       <Name>Clinic.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Clinic.DataAccess\Clinic.DataAccess.csproj">
+      <Project>{caa2d445-f099-47de-a08f-d5f262051eb0}</Project>
+      <Name>Clinic.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
