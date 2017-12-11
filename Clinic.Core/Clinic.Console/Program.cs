@@ -1,5 +1,6 @@
 ﻿using Clinic.Core.Staffing;
 using System.Collections.Generic;
+using Clinic.Core.Patients;
 using Clinic.DataAccess;
 
 namespace Clinic.Console
@@ -9,25 +10,51 @@ namespace Clinic.Console
         static void Main(string[] args)
         {
             var medicalStaff = new MedicalStaff();
+            var patientRepository = new PatientRepository();
 
-            string operation = args[0];
+            string module = args[0];
+            string operation = args[1];
 
-            if (operation == "add")
+            if (module == "doctors")
             {
-                string doctorName = args[1];
+                if (operation == "add")
+                {
+                    string doctorName = args[2];
 
-                medicalStaff.Add(new Doctor { Name = doctorName });
+                    medicalStaff.Add(new Doctor { Name = doctorName });
 
-                return;
+                    return;
+                }
+
+                if (operation == "list")
+                {
+                    List<Doctor> doctors = medicalStaff.GetAll();
+
+                    doctors.ForEach(d => System.Console.WriteLine(d.Name));
+
+                    return;
+                }
             }
-            
-            if (operation == "list")
+
+            if (module == "patients")
             {
-                List<Doctor> doctors = medicalStaff.GetAll();
+                if (operation == "add")
+                {
+                    string patientName = args[2];
 
-                doctors.ForEach(d => System.Console.WriteLine(d.Name));
+                    patientRepository.Add(new Patient { Name = patientName });
 
-                return;
+                    return;
+                }
+
+                if (operation == "list")
+                {
+                    List<Patient> patients = patientRepository.GetAll();
+
+                    patients.ForEach(d => System.Console.WriteLine(d.Name));
+
+                    return;
+                }
             }
 
             System.Console.WriteLine("Unknown operation");

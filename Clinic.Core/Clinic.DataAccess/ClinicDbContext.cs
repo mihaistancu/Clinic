@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Clinic.Core.Patients;
 using Clinic.Core.Staffing;
 
 namespace Clinic.DataAccess
@@ -9,6 +10,7 @@ namespace Clinic.DataAccess
         {
         }
 
-        public DbSet<Doctor> Doctors { get; set; } 
+        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Patient> Patients { get; set; }
     }
 }
