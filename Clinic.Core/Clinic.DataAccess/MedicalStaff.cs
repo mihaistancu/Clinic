@@ -1,25 +1,26 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Clinic.Core.Staffing;
 
 namespace Clinic.DataAccess
 {
     public class MedicalStaff
     {
-        private readonly List<Doctor> doctors;
-
-        public MedicalStaff()
-        {
-            doctors = new List<Doctor>();
-        }
-
         public void Add(Doctor doctor)
         {
-            doctors.Add(doctor);
+            using (var context = new ClinicDbContext())
+            {
+                context.Doctors.Add(doctor);
+                context.SaveChanges();
+            }   
         }
 
         public List<Doctor> GetAll()
         {
-            return doctors;
+            using (var context = new ClinicDbContext())
+            {
+                return context.Doctors.ToList();
+            } 
         }
     }
 }
