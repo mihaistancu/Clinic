@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Clinic.Core.Staffing;
 
-namespace Clinic.Core.Staffing
+namespace Clinic.DataAccess
 {
     public class MedicalStaff
     {

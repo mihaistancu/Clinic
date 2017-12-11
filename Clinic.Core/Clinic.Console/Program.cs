@@ -1,5 +1,6 @@
 ﻿using Clinic.Core.Staffing;
 using System.Collections.Generic;
+using Clinic.DataAccess;
 
 namespace Clinic.Console
 {
