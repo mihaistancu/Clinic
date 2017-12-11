@@ -3,8 +3,12 @@ using Clinic.Core.Staffing;
 
 namespace Clinic.DataAccess
 {
-    public class ClinicDbContext
+    public class ClinicDbContext : DbContext
     {
+        public ClinicDbContext() : base("Clinic")
+        {
+        }
+
         public DbSet<Doctor> Doctors { get; set; } 
     }
 }
