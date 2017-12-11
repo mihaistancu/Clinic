@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Clinic.Core.Patients;
 
-namespace Clinic.Core.Patients
+namespace Clinic.DataAccess
 {
     public class PatientRepository
     {
