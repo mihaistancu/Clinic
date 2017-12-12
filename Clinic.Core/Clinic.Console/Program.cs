@@ -10,9 +10,9 @@ namespace Clinic.Console
     {
         static void Main(string[] args)
         {
-            var medicalStaff = new MedicalStaff();
-            var patientRepository = new PatientRepository();
-            var officeRepository = new OfficeRepository();
+            var medicalStaff = new Repository<Doctor>();
+            var patientRepository = new Repository<Patient>();
+            var officeRepository = new Repository<Office>();
 
             string module = args[0];
             string operation = args[1];

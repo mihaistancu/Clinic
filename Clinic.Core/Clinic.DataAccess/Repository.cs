@@ -1,26 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Clinic.Core.Staffing;
 
 namespace Clinic.DataAccess
 {
-    public class MedicalStaff
+    public class Repository<T> where T : class
     {
-        public void Add(Doctor doctor)
+        public void Add(T doctor)
         {
             using (var context = new ClinicDbContext())
             {
-                context.Doctors.Add(doctor);
+                context.Set<T>().Add(doctor);
                 context.SaveChanges();
-            }   
+            }
         }
 
-        public List<Doctor> GetAll()
+        public List<T> GetAll()
         {
             using (var context = new ClinicDbContext())
             {
-                return context.Doctors.ToList();
-            } 
+                return context.Set<T>().ToList();
+            }
         }
     }
 }

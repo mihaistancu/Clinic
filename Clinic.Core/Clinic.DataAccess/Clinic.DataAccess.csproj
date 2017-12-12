@@ -50,10 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClinicDbContext.cs" />
-    <Compile Include="MedicalStaff.cs" />
-    <Compile Include="OfficeRepository.cs" />
-    <Compile Include="PatientRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
