@@ -1,83 +1,30 @@
-﻿using Clinic.Core.Staffing;
-using System.Collections.Generic;
-using Clinic.Core.Infrastructure;
-using Clinic.Core.Patients;
-using Clinic.DataAccess;
-
-namespace Clinic.Console
+﻿namespace Clinic.Console
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            var medicalStaff = new Repository<Doctor>();
-            var patientRepository = new Repository<Patient>();
-            var officeRepository = new Repository<Office>();
-
+        {            
             string module = args[0];
-            string operation = args[1];
-
+            
             if (module == "doctors")
             {
-                if (operation == "add")
-                {
-                    string doctorName = args[2];
-
-                    medicalStaff.Add(new Doctor { Name = doctorName });
-
-                    return;
-                }
-
-                if (operation == "list")
-                {
-                    List<Doctor> doctors = medicalStaff.GetAll();
-
-                    doctors.ForEach(d => System.Console.WriteLine(d.Name));
-
-                    return;
-                }
+                var doctorsModule = new DoctorsModule();
+                doctorsModule.Execute(args);
+                return;
             }
 
             if (module == "patients")
             {
-                if (operation == "add")
-                {
-                    string patientName = args[2];
-
-                    patientRepository.Add(new Patient { Name = patientName });
-
-                    return;
-                }
-
-                if (operation == "list")
-                {
-                    List<Patient> patients = patientRepository.GetAll();
-
-                    patients.ForEach(d => System.Console.WriteLine(d.Name));
-
-                    return;
-                }
+                var patientsModule = new PatientsModule();
+                patientsModule.Execute(args);
+                return;
             }
 
             if (module == "offices")
             {
-                if (operation == "add")
-                {
-                    string officeLocation = args[2];
-
-                    officeRepository.Add(new Office { Location = officeLocation });
-
-                    return;
-                }
-
-                if (operation == "list")
-                {
-                    List<Office> offices = officeRepository.GetAll();
-
-                    offices.ForEach(d => System.Console.WriteLine(d.Location));
-
-                    return;
-                }
+                var officesModule = new OfficesModule();
+                officesModule.Execute(args);
+                return;
             }
 
             System.Console.WriteLine("Unknown operation");
