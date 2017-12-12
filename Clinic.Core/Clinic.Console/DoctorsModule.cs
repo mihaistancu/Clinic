@@ -1,32 +1,17 @@
 ﻿using Clinic.Core.Staffing;
-using Clinic.DataAccess;
-using System.Collections.Generic;
 
 namespace Clinic.Console
 {
-    class DoctorsModule
+    public class DoctorsModule : Module<Doctor>
     {
-        public void Execute(string[] args)
+        protected override Doctor Create(string[] args)
         {
-            var medicalStaff = new Repository<Doctor>();
+            return new Doctor { Name = args[2] };
+        }
 
-            if (args[1] == "add")
-            {
-                string doctorName = args[2];
-
-                medicalStaff.Add(new Doctor { Name = doctorName });
-
-                return;
-            }
-
-            if (args[1] == "list")
-            {
-                List<Doctor> doctors = medicalStaff.GetAll();
-
-                doctors.ForEach(d => System.Console.WriteLine(d.Name));
-
-                return;
-            }
+        protected override void Display(Doctor item)
+        {
+            System.Console.WriteLine(item.Name);
         }
     }
 }

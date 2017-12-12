@@ -1,32 +1,17 @@
 ﻿using Clinic.Core.Infrastructure;
-using Clinic.DataAccess;
-using System.Collections.Generic;
 
 namespace Clinic.Console
 {
-    public class OfficesModule
+    public class OfficesModule : Module<Office>
     {
-        public void Execute(string[] args)
+        protected override Office Create(string[] args)
         {
-            var officeRepository = new Repository<Office>();
+            return new Office { Location = args[2] };
+        }
 
-            if (args[1] == "add")
-            {
-                string officeLocation = args[2];
-
-                officeRepository.Add(new Office { Location = officeLocation });
-
-                return;
-            }
-
-            if (args[1] == "list")
-            {
-                List<Office> offices = officeRepository.GetAll();
-
-                offices.ForEach(d => System.Console.WriteLine(d.Location));
-
-                return;
-            }
+        protected override void Display(Office item)
+        {
+            System.Console.WriteLine(item.Location);
         }
     }
 }
