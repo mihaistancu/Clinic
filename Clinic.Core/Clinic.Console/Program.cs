@@ -1,5 +1,6 @@
 ﻿using Clinic.Core.Staffing;
 using System.Collections.Generic;
+using Clinic.Core.Infrastructure;
 using Clinic.Core.Patients;
 using Clinic.DataAccess;
 
@@ -11,6 +12,7 @@ namespace Clinic.Console
         {
             var medicalStaff = new MedicalStaff();
             var patientRepository = new PatientRepository();
+            var officeRepository = new OfficeRepository();
 
             string module = args[0];
             string operation = args[1];
@@ -52,6 +54,27 @@ namespace Clinic.Console
                     List<Patient> patients = patientRepository.GetAll();
 
                     patients.ForEach(d => System.Console.WriteLine(d.Name));
+
+                    return;
+                }
+            }
+
+            if (module == "offices")
+            {
+                if (operation == "add")
+                {
+                    string officeLocation = args[2];
+
+                    officeRepository.Add(new Office { Location = officeLocation });
+
+                    return;
+                }
+
+                if (operation == "list")
+                {
+                    List<Office> offices = officeRepository.GetAll();
+
+                    offices.ForEach(d => System.Console.WriteLine(d.Location));
 
                     return;
                 }
