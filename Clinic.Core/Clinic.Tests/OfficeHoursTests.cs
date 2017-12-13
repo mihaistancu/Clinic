@@ -36,8 +36,6 @@ namespace Clinic.Tests
                     }
                 }
             };
-            var clinicOfficeHours = new ClinicOfficeHours();
-            clinicOfficeHours.Add(weeklyOfficeHours);
         }
     }
 }

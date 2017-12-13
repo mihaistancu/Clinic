@@ -46,6 +46,7 @@
     <Compile Include="DoctorsModule.cs" />
     <Compile Include="IModule.cs" />
     <Compile Include="Module.cs" />
+    <Compile Include="OfficeHoursModule.cs" />
     <Compile Include="OfficesModule.cs" />
     <Compile Include="PatientsModule.cs" />
     <Compile Include="Program.cs" />
