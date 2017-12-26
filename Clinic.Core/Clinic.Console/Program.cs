@@ -14,7 +14,7 @@ namespace Clinic.Console
             { "doctors", new DoctorsModule(new Repository<Doctor>()) },
             { "patients", new PatientsModule(new Repository<Patient>()) },
             { "offices", new OfficesModule(new Repository<Office>()) },
-            { "hours", new OfficeHoursModule(new Repository<WeeklyOfficeHours>()) }
+            { "hours", new OfficeHoursModule(new OfficeHoursRepository()) }
         };
 
         static void Main(string[] args)

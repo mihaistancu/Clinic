@@ -14,7 +14,7 @@ namespace Clinic.DataAccess
             }
         }
 
-        public List<T> GetAll()
+        public virtual List<T> GetAll()
         {
             using (var context = new ClinicDbContext())
             {
