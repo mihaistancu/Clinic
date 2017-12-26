@@ -4,14 +4,17 @@ namespace Clinic.Console
 {
     public class PatientsModule : Module<Patient>
     {
-        protected override Patient Create(string[] args)
+        protected override void Add(string[] args)
         {
-            return new Patient { Name = args[2] };
+            Repository.Add(new Patient { Name = args[2] });
         }
 
-        protected override void Display(Patient item)
+        protected override void List()
         {
-            System.Console.WriteLine(item.Name);
+            foreach(var patient in Repository.GetAll())
+            {
+                System.Console.WriteLine(patient.Name);
+            }
         }
     }
 }

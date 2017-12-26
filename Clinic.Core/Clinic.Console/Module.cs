@@ -5,26 +5,23 @@ namespace Clinic.Console
 {
     public abstract class Module<T> : IModule where T: class
     {
-        protected abstract T Create(string[] args);
+        protected Repository<T> Repository { get; set; }
 
-        protected abstract void Display(T item);
+        public Module()
+        {
+            Repository = new Repository<T>();
+        }
+
+        protected abstract void Add(string[] args);
+
+        protected abstract void List();
 
         public void Execute(string[] args)
         {
-            var repository = new Repository<T>();
-
-            if (args[1] == "add")
+            switch (args[1])
             {
-                var newItem = Create(args);
-                repository.Add(newItem);
-                return;
-            }
-
-            if (args[1] == "list")
-            {
-                List<T> items = repository.GetAll();
-                items.ForEach(Display);
-                return;
+                case "add": Add(args); break;
+                case "list": List(); break;
             }
         }
     }

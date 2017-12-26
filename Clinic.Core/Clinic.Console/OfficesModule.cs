@@ -4,14 +4,17 @@ namespace Clinic.Console
 {
     public class OfficesModule : Module<Office>
     {
-        protected override Office Create(string[] args)
+        protected override void Add(string[] args)
         {
-            return new Office { Location = args[2] };
+            Repository.Add(new Office { Location = args[2] });
         }
 
-        protected override void Display(Office item)
+        protected override void List()
         {
-            System.Console.WriteLine(item.Location);
+            foreach(var office in Repository.GetAll())
+            {
+                System.Console.WriteLine(office.Location);
+            }
         }
     }
 }

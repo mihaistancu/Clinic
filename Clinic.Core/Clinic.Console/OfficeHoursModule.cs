@@ -5,12 +5,12 @@ namespace Clinic.Console
 {
     public class OfficeHoursModule : Module<WeeklyOfficeHours>
     {
-        protected override WeeklyOfficeHours Create(string[] args)
+        protected override void Add(string[] args)
         {
             throw new NotImplementedException();
         }
 
-        protected override void Display(WeeklyOfficeHours item)
+        protected override void List()
         {
             throw new NotImplementedException();
         }
