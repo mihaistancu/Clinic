@@ -1,17 +1,7 @@
-﻿using Clinic.DataAccess;
-using System.Collections.Generic;
-
-namespace Clinic.Console
+﻿namespace Clinic.Console
 {
-    public abstract class Module<T> : IModule where T: class
+    public abstract class Module
     {
-        protected Repository<T> Repository { get; set; }
-
-        public Module()
-        {
-            Repository = new Repository<T>();
-        }
-
         protected abstract void Add(string[] args);
 
         protected abstract void List();

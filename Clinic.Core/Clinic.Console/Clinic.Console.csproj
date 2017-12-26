@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoctorsModule.cs" />
-    <Compile Include="IModule.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="OfficeHoursModule.cs" />
     <Compile Include="OfficesModule.cs" />

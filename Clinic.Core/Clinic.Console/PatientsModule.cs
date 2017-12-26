@@ -1,17 +1,25 @@
 ﻿using Clinic.Core.Patients;
+using Clinic.DataAccess;
 
 namespace Clinic.Console
 {
-    public class PatientsModule : Module<Patient>
+    public class PatientsModule : Module
     {
+        Repository<Patient> repository;
+
+        public PatientsModule(Repository<Patient> repository)
+        {
+            this.repository = repository;
+        }
+
         protected override void Add(string[] args)
         {
-            Repository.Add(new Patient { Name = args[2] });
+            repository.Add(new Patient { Name = args[2] });
         }
 
         protected override void List()
         {
-            foreach(var patient in Repository.GetAll())
+            foreach(var patient in repository.GetAll())
             {
                 System.Console.WriteLine(patient.Name);
             }
