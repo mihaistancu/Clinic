@@ -8,7 +8,8 @@ namespace Clinic.Console
         {
             { "doctors", new DoctorsModule() },
             { "patients", new PatientsModule() },
-            { "offices", new OfficesModule() }
+            { "offices", new OfficesModule() },
+            { "hours", new OfficeHoursModule() }
         };
 
         static void Main(string[] args)
