@@ -5,11 +5,11 @@ namespace Clinic.DataAccess
 {
     public class Repository<T> where T : class
     {
-        public void Add(T doctor)
+        public void Add(T item)
         {
             using (var context = new ClinicDbContext())
             {
-                context.Set<T>().Add(doctor);
+                context.Set<T>().Add(item);
                 context.SaveChanges();
             }
         }
