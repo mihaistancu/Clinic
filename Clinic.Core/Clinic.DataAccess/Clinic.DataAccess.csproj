@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentsRepository.cs" />
     <Compile Include="ClinicDbContext.cs" />
     <Compile Include="OfficeHoursRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
