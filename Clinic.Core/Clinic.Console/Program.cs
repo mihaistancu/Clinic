@@ -1,5 +1,4 @@
 ﻿using Clinic.Core.Infrastructure;
-using Clinic.Core.OfficeHours;
 using Clinic.Core.Patients;
 using Clinic.Core.Staffing;
 using Clinic.DataAccess;
