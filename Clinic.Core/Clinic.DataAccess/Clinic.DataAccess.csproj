@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AppointmentsRepository.cs" />
     <Compile Include="ClinicDbContext.cs" />
+    <Compile Include="ConsultationsRepository.cs" />
     <Compile Include="OfficeHoursRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

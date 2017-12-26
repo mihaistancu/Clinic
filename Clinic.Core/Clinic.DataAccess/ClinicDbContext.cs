@@ -4,6 +4,7 @@ using Clinic.Core.Patients;
 using Clinic.Core.Staffing;
 using Clinic.Core.OfficeHours;
 using Clinic.Core.Appointments;
+using Clinic.Core.Consultations;
 
 namespace Clinic.DataAccess
 {
@@ -18,5 +19,6 @@ namespace Clinic.DataAccess
         public DbSet<Office> Offices { get; set; }
         public DbSet<WeeklyOfficeHours> OfficeHours { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<ClinicalVisit> Consultations { get; set; }
     }
 }
