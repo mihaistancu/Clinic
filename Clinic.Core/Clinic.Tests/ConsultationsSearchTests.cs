@@ -4,18 +4,20 @@ using Clinic.Core.Infrastructure;
 using Clinic.Core.Consultations;
 using Clinic.Core.Patients;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Clinic.Tests
 {
     [TestClass]
     public class ConsultationsSearchTests
     {
-        private MedicalRecordsBook medicalRecordsBook;
+        private List<ClinicalVisit> medicalRecordsBook;
 
         [TestInitialize]
         public void Setup()
         {
-            medicalRecordsBook = new MedicalRecordsBook();
+            medicalRecordsBook = new List<ClinicalVisit>();
         }
 
         [TestMethod]
@@ -30,7 +32,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3, visit4);
 
-            var visits = medicalRecordsBook.Search(Filter.ByTimeframe(Time(11, 0), Time(15, 0)));
+            var visits = Search(Filter.ByTimeframe(Time(11, 0), Time(15, 0)));
 
             CollectionAssert.AreEquivalent(new [] {visit2, visit3}, visits);
         }
@@ -48,7 +50,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBook.Search(Filter.ByOffice(office2));
+            var visits = Search(Filter.ByOffice(office2));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -66,7 +68,7 @@ namespace Clinic.Tests
             
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBook.Search(Filter.ByDoctor(doctor2));
+            var visits = Search(Filter.ByDoctor(doctor2));
 
             CollectionAssert.AreEquivalent(new[] { visit2, visit3 }, visits);
         }
@@ -85,7 +87,7 @@ namespace Clinic.Tests
 
             Record(visit1, visit2, visit3);
 
-            var visits = medicalRecordsBook.Search(Filter.ByDoctor(doctor2), Filter.ByOffice(office2));
+            var visits = Search(Filter.ByDoctor(doctor2), Filter.ByOffice(office2));
 
             CollectionAssert.AreEquivalent(new[] { visit3 }, visits);
         }
@@ -113,6 +115,11 @@ namespace Clinic.Tests
         private DateTime Time(int hour, int minute)
         {
             return new DateTime(2010, 1, 1, hour, minute, 0);
+        }
+
+        private List<ClinicalVisit> Search(params Func<ClinicalVisit, bool>[] predicates)
+        {
+            return medicalRecordsBook.Where(v => predicates.All(p => p(v))).ToList();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Clinic.Core.Reports
 
         private ClinicActivityReport() { }
 
-        public static ClinicActivityReport For(MedicalRecordsBook medicalRecordsBook, DateTime startDateTime, DateTime endDateTime)
+        public static ClinicActivityReport For(IRepository<ClinicalVisit> medicalRecordsBook, DateTime startDateTime, DateTime endDateTime)
         {
             var visits = medicalRecordsBook.Search(Filter.ByTimeframe(startDateTime, endDateTime));
 

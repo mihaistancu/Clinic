@@ -15,7 +15,7 @@ namespace Clinic.Core.Reports
         
         private DoctorActivityReport() { }
 
-        public static DoctorActivityReport For(MedicalRecordsBook medicalRecordsBook, Doctor doctor, DateTime startDateTime, DateTime endDateTime)
+        public static DoctorActivityReport For(IRepository<ClinicalVisit> medicalRecordsBook, Doctor doctor, DateTime startDateTime, DateTime endDateTime)
         {
             var visits = medicalRecordsBook.Search(Filter.ByDoctor(doctor), Filter.ByTimeframe(startDateTime, endDateTime));
 

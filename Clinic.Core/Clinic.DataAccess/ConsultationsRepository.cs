@@ -39,5 +39,18 @@ namespace Clinic.DataAccess
                     .ToList();
             }
         }
+
+        public override List<ClinicalVisit> Search(params Func<ClinicalVisit, bool>[] predicates)
+        {
+            using (var context = new ClinicDbContext())
+            {
+                return context.Consultations
+                    .Include(a => a.Doctor)
+                    .Include(a => a.Office)
+                    .Include(a => a.Patient)
+                    .Where(v => predicates.All(p => p(v)))
+                    .ToList();
+            }
+        }
     }
 }
