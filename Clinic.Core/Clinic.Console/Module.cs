@@ -1,6 +1,6 @@
 ﻿namespace Clinic.Console
 {
-    public abstract class Module
+    public abstract class Module: IModule
     {
         protected abstract void Add(string[] args);
 
