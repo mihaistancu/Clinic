@@ -13,19 +13,19 @@ namespace Clinic.WindowsForms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OnDoctorsButtonClicked(object sender, EventArgs e)
         {
             var doctorsForm = new DoctorsForm();
             doctorsForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void OnOfficesButtonClicked(object sender, EventArgs e)
         {
             var officesForm = new OfficesForm();
             officesForm.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void OnPatientsButtonClicked(object sender, EventArgs e)
         {
             var patientsForm = new PatientsForm();
             patientsForm.Show();
