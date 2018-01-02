@@ -6,6 +6,7 @@ using Clinic.Core.Patients;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Clinic.Tests
 {
@@ -117,9 +118,9 @@ namespace Clinic.Tests
             return new DateTime(2010, 1, 1, hour, minute, 0);
         }
 
-        private List<ClinicalVisit> Search(params Func<ClinicalVisit, bool>[] predicates)
+        private List<ClinicalVisit> Search(params Expression<Func<ClinicalVisit, bool>>[] predicates)
         {
-            return medicalRecordsBook.Where(v => predicates.All(p => p(v))).ToList();
+            return medicalRecordsBook.Where(v => predicates.All(p => p.Compile()(v))).ToList();
         }
     }
 }

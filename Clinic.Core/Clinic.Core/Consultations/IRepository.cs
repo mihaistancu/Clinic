@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Clinic.Core
 {
@@ -9,6 +10,6 @@ namespace Clinic.Core
 
         List<T> GetAll();
 
-        List<T> Search(params Func<T, bool>[] predicates);
+        List<T> Search(params Expression<Func<T, bool>>[] predicates);
     }
 }

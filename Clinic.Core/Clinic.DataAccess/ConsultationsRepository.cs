@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using System;
+using System.Linq.Expressions;
 
 namespace Clinic.DataAccess
 {
@@ -40,16 +41,21 @@ namespace Clinic.DataAccess
             }
         }
 
-        public override List<ClinicalVisit> Search(params Func<ClinicalVisit, bool>[] predicates)
+        public override List<ClinicalVisit> Search(params Expression<Func<ClinicalVisit, bool>>[] predicates)
         {
             using (var context = new ClinicDbContext())
             {
-                return context.Consultations
+                IQueryable<ClinicalVisit> results = context.Consultations
                     .Include(a => a.Doctor)
                     .Include(a => a.Office)
-                    .Include(a => a.Patient)
-                    .Where(v => predicates.All(p => p(v)))
-                    .ToList();
+                    .Include(a => a.Patient);
+
+                foreach (var predicate in predicates)
+                {
+                    results = results.Where(predicate);
+                }
+
+                return results.ToList();
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using System.Linq.Expressions;
 
 namespace Clinic.DataAccess
 {
@@ -24,13 +25,18 @@ namespace Clinic.DataAccess
             }
         }
 
-        public virtual List<T> Search(params Func<T, bool>[] predicates)
+        public virtual List<T> Search(params Expression<Func<T, bool>>[] predicates)
         {
             using (var context = new ClinicDbContext())
             {
-                return context.Set<T>()
-                    .Where(v => predicates.All(p => p(v)))
-                    .ToList();
+                IQueryable<T> results = context.Set<T>();
+            
+                foreach (var predicate in predicates)
+                {
+                    results = results.Where(predicate);
+                }
+
+                return results.ToList();
             }
         }
     }
