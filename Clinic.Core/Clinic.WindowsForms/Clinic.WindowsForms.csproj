@@ -58,6 +58,18 @@
     <Compile Include="EditDoctorForm.Designer.cs">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditOfficeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOfficeForm.Designer.cs">
+      <DependentUpon>EditOfficeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficesForm.Designer.cs">
+      <DependentUpon>OfficesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shell.cs">
@@ -71,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditDoctorForm.resx">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOfficeForm.resx">
+      <DependentUpon>EditOfficeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficesForm.resx">
+      <DependentUpon>OfficesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
