@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Clinic.WindowsForms
 {
-    public partial class Shell : Form
+    public partial class DoctorsForm : Form
     {
-        public Shell()
+        public DoctorsForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var doctorsForm = new DoctorsForm();
-            doctorsForm.Show();
         }
     }
 }
