@@ -1,4 +1,5 @@
-﻿using Clinic.Core.Reports;
+﻿using Clinic.Core.Infrastructure;
+using Clinic.Core.Reports;
 using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 using System;
@@ -21,6 +22,7 @@ namespace Clinic.Console
             {
                 case "clinic": ViewClinicActivity(args); break;
                 case "doctor": ViewDoctorActivity(args); break;
+                case "office": ViewOfficeActivity(args); break;
             }
         }
 
@@ -51,6 +53,23 @@ namespace Clinic.Console
         {
             var doctorRepository = new Repository<Doctor>();
             return doctorRepository.Search(doctor => doctor.Name == doctorName).Single();
+        }
+
+        private void ViewOfficeActivity(string[] args)
+        {
+            var office = GetOfficeByLocation(args[2]);
+            var startDateTime = DateTime.Parse(args[3]);
+            var endDateTime = DateTime.Parse(args[4]);
+
+            var report = OfficeActivityReport.For(repository, office, startDateTime, endDateTime);
+
+            System.Console.WriteLine("Total visits duration: {0}", report.TotalVisitDuration);
+        }
+
+        private Office GetOfficeByLocation(string officeLocation)
+        {
+            var officeRepository = new Repository<Office>();
+            return officeRepository.Search(office => office.Location == officeLocation).Single();
         }
     }
 }
