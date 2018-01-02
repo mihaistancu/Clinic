@@ -1,4 +1,4 @@
-﻿using Clinic.Core.Staffing;
+﻿using Clinic.Core.Patients;
 using Clinic.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -10,29 +10,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Clinic.WindowsForms
+namespace Clinic.WindowsForms.Patients
 {
-    public partial class DoctorsForm : Form
+    public partial class PatientsForm : Form
     {
-        public DoctorsForm()
+        public PatientsForm()
         {
             InitializeComponent();
-
             ReloadData();
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
-            var editDoctorForm = new EditDoctorForm();
-            editDoctorForm.ShowDialog();
+            var editPatientForm = new EditPatientForm();
+            editPatientForm.ShowDialog();
             ReloadData();
         }
 
         private void ReloadData()
         {
-            var repository = new Repository<Doctor>();
-            var doctors = repository.GetAll();
-            doctorsGridView.DataSource = doctors;
+            var repository = new Repository<Patient>();
+            var patients = repository.GetAll();
+            patientsGridView.DataSource = patients;
         }
     }
 }

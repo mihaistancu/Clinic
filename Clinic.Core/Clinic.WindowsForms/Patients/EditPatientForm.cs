@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Clinic.WindowsForms
+namespace Clinic.WindowsForms.Patients
 {
     public partial class EditPatientForm : Form
     {

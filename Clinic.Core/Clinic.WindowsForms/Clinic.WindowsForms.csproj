@@ -46,40 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoctorsForm.cs">
+    <Compile Include="Doctors\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoctorsForm.Designer.cs">
+    <Compile Include="Doctors\DoctorsForm.Designer.cs">
       <DependentUpon>DoctorsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditDoctorForm.cs">
+    <Compile Include="Doctors\EditDoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditDoctorForm.Designer.cs">
+    <Compile Include="Doctors\EditDoctorForm.Designer.cs">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditOfficeForm.cs">
+    <Compile Include="Offices\EditOfficeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditOfficeForm.Designer.cs">
+    <Compile Include="Offices\EditOfficeForm.Designer.cs">
       <DependentUpon>EditOfficeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditPatientForm.cs">
+    <Compile Include="Patients\EditPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditPatientForm.Designer.cs">
+    <Compile Include="Patients\EditPatientForm.Designer.cs">
       <DependentUpon>EditPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OfficesForm.cs">
+    <Compile Include="Offices\OfficesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OfficesForm.Designer.cs">
+    <Compile Include="Offices\OfficesForm.Designer.cs">
       <DependentUpon>OfficesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientsForm.cs">
+    <Compile Include="Patients\PatientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientsForm.Designer.cs">
+    <Compile Include="Patients\PatientsForm.Designer.cs">
       <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -90,22 +90,22 @@
     <Compile Include="Shell.Designer.cs">
       <DependentUpon>Shell.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DoctorsForm.resx">
+    <EmbeddedResource Include="Doctors\DoctorsForm.resx">
       <DependentUpon>DoctorsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditDoctorForm.resx">
+    <EmbeddedResource Include="Doctors\EditDoctorForm.resx">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditOfficeForm.resx">
+    <EmbeddedResource Include="Offices\EditOfficeForm.resx">
       <DependentUpon>EditOfficeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditPatientForm.resx">
+    <EmbeddedResource Include="Patients\EditPatientForm.resx">
       <DependentUpon>EditPatientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OfficesForm.resx">
+    <EmbeddedResource Include="Offices\OfficesForm.resx">
       <DependentUpon>OfficesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientsForm.resx">
+    <EmbeddedResource Include="Patients\PatientsForm.resx">
       <DependentUpon>PatientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

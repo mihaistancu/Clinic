@@ -1,4 +1,4 @@
-﻿namespace Clinic.WindowsForms
+﻿namespace Clinic.WindowsForms.Patients
 {
     partial class EditPatientForm
     {

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clinic.WindowsForms.Doctors;
+using Clinic.WindowsForms.Offices;
+using Clinic.WindowsForms.Patients;
 
 namespace Clinic.WindowsForms
 {
