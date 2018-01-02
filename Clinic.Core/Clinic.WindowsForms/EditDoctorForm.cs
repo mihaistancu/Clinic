@@ -12,27 +12,18 @@ using System.Windows.Forms;
 
 namespace Clinic.WindowsForms
 {
-    public partial class DoctorsForm : Form
+    public partial class EditDoctorForm : Form
     {
-        public DoctorsForm()
+        public EditDoctorForm()
         {
             InitializeComponent();
-
-            ReloadData();
         }
 
-        private void OnAddButtonClicked(object sender, EventArgs e)
-        {
-            var editDoctorForm = new EditDoctorForm();
-            editDoctorForm.ShowDialog();
-            ReloadData();
-        }
-
-        private void ReloadData()
+        private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new Repository<Doctor>();
-            var doctors = repository.GetAll();
-            doctorsGridView.DataSource = doctors;
+            repository.Add(new Doctor { Name = doctorNameTextBox.Text });
+            Close();
         }
     }
 }
