@@ -9,12 +9,12 @@ namespace Clinic.Core.Consultations
     {
         public static Expression<Func<ClinicalVisit, bool>> ByOffice(Office office)
         {
-            return visit => visit.Office == office;
+            return visit => visit.Office.Location == office.Location;
         }
 
         public static Expression<Func<ClinicalVisit, bool>> ByDoctor(Doctor doctor)
         {
-            return visit => visit.Doctor == doctor;
+            return visit => visit.Doctor.Name == doctor.Name;
         }
 
         public static Expression<Func<ClinicalVisit, bool>> ByTimeframe(DateTime startDateTime, DateTime endDateTime)
