@@ -64,11 +64,23 @@
     <Compile Include="EditOfficeForm.Designer.cs">
       <DependentUpon>EditOfficeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPatientForm.Designer.cs">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OfficesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OfficesForm.Designer.cs">
       <DependentUpon>OfficesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsForm.Designer.cs">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,8 +99,14 @@
     <EmbeddedResource Include="EditOfficeForm.resx">
       <DependentUpon>EditOfficeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditPatientForm.resx">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OfficesForm.resx">
       <DependentUpon>OfficesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsForm.resx">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
