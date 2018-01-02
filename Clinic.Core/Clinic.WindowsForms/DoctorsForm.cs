@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Clinic.Core.Staffing;
+using Clinic.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,10 @@ namespace Clinic.WindowsForms
         public DoctorsForm()
         {
             InitializeComponent();
+
+            var repository = new Repository<Doctor>();
+            var doctors = repository.GetAll();
+            doctorsGridView.DataSource = doctors;
         }
     }
 }

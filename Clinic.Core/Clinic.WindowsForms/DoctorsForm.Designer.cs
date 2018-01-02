@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.doctorsGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // doctorsGridView
+            // 
+            this.doctorsGridView.AllowUserToAddRows = false;
+            this.doctorsGridView.AllowUserToDeleteRows = false;
+            this.doctorsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.doctorsGridView.Location = new System.Drawing.Point(12, 12);
+            this.doctorsGridView.Name = "doctorsGridView";
+            this.doctorsGridView.ReadOnly = true;
+            this.doctorsGridView.Size = new System.Drawing.Size(748, 399);
+            this.doctorsGridView.TabIndex = 1;
             // 
             // DoctorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 423);
+            this.Controls.Add(this.doctorsGridView);
             this.Name = "DoctorsForm";
             this.Text = "Doctors";
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView doctorsGridView;
     }
 }
