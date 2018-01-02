@@ -34,7 +34,7 @@ namespace Clinic.Console
             var report = ClinicActivityReport.For(repository, startDateTime, endDateTime);
 
             System.Console.WriteLine("Total visits duration: {0}", report.TotalVisitsDuration);
-            System.Console.WriteLine("Total amount received: {0}", report.TotalAmountReceived);
+            System.Console.WriteLine("Total amount received: ${0}", report.TotalAmountReceived);
         }
 
         private void ViewDoctorActivity(string[] args)
@@ -46,7 +46,7 @@ namespace Clinic.Console
             var report = DoctorActivityReport.For(repository, doctor, startDateTime, endDateTime);
 
             System.Console.WriteLine("Total visits: {0}", report.ClinicalVisitsCount);
-            System.Console.WriteLine("Total amount received: {0}", report.TotalAmountReceived);
+            System.Console.WriteLine("Total amount received: ${0}", report.TotalAmountReceived);
         }
 
         private Doctor GetDoctorByName(string doctorName)
