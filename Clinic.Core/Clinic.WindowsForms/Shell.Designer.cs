@@ -72,7 +72,7 @@
             this.Controls.Add(this.officesButton);
             this.Controls.Add(this.doctorsButton);
             this.Name = "Shell";
-            this.Text = "Shell";
+            this.Text = "Clinic";
             this.ResumeLayout(false);
 
         }
