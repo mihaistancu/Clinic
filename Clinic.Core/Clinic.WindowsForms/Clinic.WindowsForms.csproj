@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments\AppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\AppointmentsForm.Designer.cs">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\EditAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\EditAppointmentForm.Designer.cs">
+      <DependentUpon>EditAppointmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctors\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     <Compile Include="Shell.Designer.cs">
       <DependentUpon>Shell.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Appointments\AppointmentsForm.resx">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\EditAppointmentForm.resx">
+      <DependentUpon>EditAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctors\DoctorsForm.resx">
       <DependentUpon>DoctorsForm.cs</DependentUpon>
     </EmbeddedResource>

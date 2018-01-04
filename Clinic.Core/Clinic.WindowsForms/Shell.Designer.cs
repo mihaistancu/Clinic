@@ -32,6 +32,7 @@
             this.officesButton = new System.Windows.Forms.Button();
             this.patientsButton = new System.Windows.Forms.Button();
             this.officeHoursButton = new System.Windows.Forms.Button();
+            this.appointmentsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // doctorsButton
@@ -66,7 +67,7 @@
             // 
             // officeHoursButton
             // 
-            this.officeHoursButton.Location = new System.Drawing.Point(39, 53);
+            this.officeHoursButton.Location = new System.Drawing.Point(93, 53);
             this.officeHoursButton.Name = "officeHoursButton";
             this.officeHoursButton.Size = new System.Drawing.Size(75, 23);
             this.officeHoursButton.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.officeHoursButton.UseVisualStyleBackColor = true;
             this.officeHoursButton.Click += new System.EventHandler(this.OnOfficeHoursButtonClicked);
             // 
+            // appointmentsButton
+            // 
+            this.appointmentsButton.Location = new System.Drawing.Point(12, 93);
+            this.appointmentsButton.Name = "appointmentsButton";
+            this.appointmentsButton.Size = new System.Drawing.Size(114, 23);
+            this.appointmentsButton.TabIndex = 4;
+            this.appointmentsButton.Text = "Appointments";
+            this.appointmentsButton.UseVisualStyleBackColor = true;
+            this.appointmentsButton.Click += new System.EventHandler(this.OnAppointmentsClicked);
+            // 
             // Shell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 353);
+            this.Controls.Add(this.appointmentsButton);
             this.Controls.Add(this.officeHoursButton);
             this.Controls.Add(this.patientsButton);
             this.Controls.Add(this.officesButton);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button officesButton;
         private System.Windows.Forms.Button patientsButton;
         private System.Windows.Forms.Button officeHoursButton;
+        private System.Windows.Forms.Button appointmentsButton;
     }
 }

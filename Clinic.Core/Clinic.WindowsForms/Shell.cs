@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Clinic.WindowsForms.Appointments;
 using Clinic.WindowsForms.Doctors;
 using Clinic.WindowsForms.OfficeHours;
 using Clinic.WindowsForms.Offices;
@@ -36,6 +37,12 @@ namespace Clinic.WindowsForms
         {
             var officeHoursForm = new OfficeHoursForm();
             officeHoursForm.Show();
+        }
+
+        private void OnAppointmentsClicked(object sender, EventArgs e)
+        {
+            var appointmentsForm = new AppointmentsForm();
+            appointmentsForm.Show();
         }
     }
 }
