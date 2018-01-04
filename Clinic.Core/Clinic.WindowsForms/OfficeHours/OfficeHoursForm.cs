@@ -18,19 +18,27 @@ namespace Clinic.WindowsForms.OfficeHours
         public OfficeHoursForm()
         {
             InitializeComponent();
-            ReloadData();
+            LoadDoctors();
+            LoadOffices();
+            LoadOfficesHours();
         }
 
-        private void ReloadData()
+        private void LoadDoctors()
         {
             var doctorRepository = new Repository<Doctor>();
             var doctors = doctorRepository.GetAll();
             doctorComboBox.DataSource = doctors;
+        }
 
+        private void LoadOffices()
+        {
             var officeRepository = new Repository<Office>();
             var offices = officeRepository.GetAll();
             officeComboBox.DataSource = offices;
+        }
 
+        private void LoadOfficesHours()
+        {
             var officeHoursRepository = new OfficeHoursRepository();
             var officeHours = officeHoursRepository.Search(h =>
                 h.Doctor.Name == doctorComboBox.Text && 
@@ -45,7 +53,7 @@ namespace Clinic.WindowsForms.OfficeHours
         {
             var editDailyOfficeHoursForm = new EditOfficeHoursForm();
             editDailyOfficeHoursForm.ShowDialog();
-            ReloadData();
+            LoadOfficesHours();
         }
     }
 }
