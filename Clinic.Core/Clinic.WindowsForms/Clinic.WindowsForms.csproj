@@ -58,6 +58,12 @@
     <Compile Include="Doctors\EditDoctorForm.Designer.cs">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfficeHours\EditDailyOfficeHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficeHours\EditDailyOfficeHoursForm.Designer.cs">
+      <DependentUpon>EditDailyOfficeHoursForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OfficeHours\EditWeeklyOfficeHoursForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\EditDoctorForm.resx">
       <DependentUpon>EditDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeHours\EditDailyOfficeHoursForm.resx">
+      <DependentUpon>EditDailyOfficeHoursForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OfficeHours\EditWeeklyOfficeHoursForm.resx">
       <DependentUpon>EditWeeklyOfficeHoursForm.cs</DependentUpon>
