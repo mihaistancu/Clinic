@@ -32,8 +32,13 @@ namespace Clinic.WindowsForms.OfficeHours
             officeComboBox.DataSource = offices;
 
             var officeHoursRepository = new OfficeHoursRepository();
-            var officeHours = officeHoursRepository.GetAll();
-            officeHoursDataGridView.DataSource = officeHours;
+            var officeHours = officeHoursRepository.Search(h =>
+                h.Doctor.Name == doctorComboBox.Text && 
+                h.Office.Location == officeComboBox.Text).SingleOrDefault();
+            if (officeHours != null)
+            {
+                officeHoursDataGridView.DataSource = officeHours.OfficeHours;
+            }
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
