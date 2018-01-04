@@ -22,7 +22,9 @@ namespace Clinic.WindowsForms.OfficeHours
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var editWeeklyOfficeHoursForm = new EditWeeklyOfficeHoursForm();
+            editWeeklyOfficeHoursForm.ShowDialog();
+            ReloadData();
         }
     }
 }
