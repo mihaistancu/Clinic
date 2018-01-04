@@ -1,7 +1,9 @@
-﻿using Clinic.Core.OfficeHours;
+﻿using System;
+using Clinic.Core.OfficeHours;
 using System.Linq;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Clinic.DataAccess
 {
@@ -40,6 +42,24 @@ namespace Clinic.DataAccess
                     .Include(o => o.Office)
                     .Include(o => o.OfficeHours)
                     .ToList();
+            }
+        }
+
+        public override List<WeeklyOfficeHours> Search(params Expression<Func<WeeklyOfficeHours, bool>>[] predicates)
+        {
+            using (var context = new ClinicDbContext())
+            {
+                IQueryable<WeeklyOfficeHours> results = context.OfficeHours
+                    .Include(o => o.Doctor)
+                    .Include(o => o.Office)
+                    .Include(o => o.OfficeHours);
+
+                foreach (var predicate in predicates)
+                {
+                    results = results.Where(predicate);
+                }
+
+                return results.ToList();
             }
         }
     }
