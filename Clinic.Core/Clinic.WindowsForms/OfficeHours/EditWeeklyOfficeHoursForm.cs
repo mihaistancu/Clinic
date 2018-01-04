@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clinic.Core.Infrastructure;
 using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 
@@ -22,8 +23,16 @@ namespace Clinic.WindowsForms.OfficeHours
 
         private void ReloadData()
         {
-            var repository = new OfficeHoursRepository();
-            var officeHours = repository.GetAll();
+            var doctorRepository = new Repository<Doctor>();
+            var doctors = doctorRepository.GetAll();
+            doctorComboBox.DataSource = doctors;
+
+            var officeRepository = new Repository<Office>();
+            var offices = officeRepository.GetAll();
+            officeComboBox.DataSource = offices;
+
+            var officeHoursRepository = new OfficeHoursRepository();
+            var officeHours = officeHoursRepository.GetAll();
             officeHoursDataGridView.DataSource = officeHours;
         }
 

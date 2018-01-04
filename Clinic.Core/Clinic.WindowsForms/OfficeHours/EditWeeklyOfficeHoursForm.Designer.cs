@@ -48,6 +48,7 @@
             // 
             // officeComboBox
             // 
+            this.officeComboBox.DisplayMember = "Location";
             this.officeComboBox.FormattingEnabled = true;
             this.officeComboBox.Location = new System.Drawing.Point(350, 30);
             this.officeComboBox.Name = "officeComboBox";
@@ -66,6 +67,7 @@
             // doctorComboBox
             // 
             this.doctorComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.doctorComboBox.DisplayMember = "Name";
             this.doctorComboBox.FormattingEnabled = true;
             this.doctorComboBox.Location = new System.Drawing.Point(99, 30);
             this.doctorComboBox.Name = "doctorComboBox";
