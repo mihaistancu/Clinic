@@ -3,6 +3,8 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq.Expressions;
+using Clinic.Core.OfficeHours;
 
 namespace Clinic.DataAccess
 {
@@ -23,6 +25,22 @@ namespace Clinic.DataAccess
             using (var context = new ClinicDbContext())
             {
                 return context.Appointments.Include(a => a.Doctor).ToList();
+            }
+        }
+
+        public override List<Appointment> Search(params Expression<Func<Appointment, bool>>[] predicates)
+        {
+            using (var context = new ClinicDbContext())
+            {
+                IQueryable<Appointment> results = context.Appointments
+                    .Include(o => o.Doctor);
+                    
+                foreach (var predicate in predicates)
+                {
+                    results = results.Where(predicate);
+                }
+
+                return results.ToList();
             }
         }
     }
