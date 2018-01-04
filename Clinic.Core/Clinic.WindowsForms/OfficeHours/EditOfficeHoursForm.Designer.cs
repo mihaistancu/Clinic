@@ -1,6 +1,6 @@
 ﻿namespace Clinic.WindowsForms.OfficeHours
 {
-    partial class EditDailyOfficeHoursForm
+    partial class EditOfficeHoursForm
     {
         /// <summary>
         /// Required designer variable.

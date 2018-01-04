@@ -14,9 +14,9 @@ using Clinic.DataAccess;
 
 namespace Clinic.WindowsForms.OfficeHours
 {
-    public partial class EditDailyOfficeHoursForm : Form
+    public partial class EditOfficeHoursForm : Form
     {
-        public EditDailyOfficeHoursForm()
+        public EditOfficeHoursForm()
         {
             InitializeComponent();
             ReloadData();
