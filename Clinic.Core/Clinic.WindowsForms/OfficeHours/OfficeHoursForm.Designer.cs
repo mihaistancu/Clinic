@@ -54,6 +54,7 @@
             this.officeComboBox.Name = "officeComboBox";
             this.officeComboBox.Size = new System.Drawing.Size(121, 21);
             this.officeComboBox.TabIndex = 10;
+            this.officeComboBox.TextChanged += new System.EventHandler(this.OnSelectedValueChanged);
             // 
             // label1
             // 
@@ -73,6 +74,8 @@
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(121, 21);
             this.doctorComboBox.TabIndex = 8;
+            this.doctorComboBox.SelectedValueChanged += new System.EventHandler(this.OnSelectedValueChanged);
+            this.doctorComboBox.TextChanged += new System.EventHandler(this.OnSelectedValueChanged);
             // 
             // officeHoursDataGridView
             // 
@@ -92,7 +95,7 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.OnAddButtonClicked);
             // 
-            // EditWeeklyOfficeHoursForm
+            // OfficeHoursForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +106,7 @@
             this.Controls.Add(this.officeComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.doctorComboBox);
-            this.Name = "EditWeeklyOfficeHoursForm";
+            this.Name = "OfficeHoursForm";
             this.Text = "Weekly Office Hours";
             ((System.ComponentModel.ISupportInitialize)(this.officeHoursDataGridView)).EndInit();
             this.ResumeLayout(false);
