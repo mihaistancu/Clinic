@@ -196,6 +196,10 @@
       <Project>{caa2d445-f099-47de-a08f-d5f262051eb0}</Project>
       <Name>Clinic.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Clinic.WindowsForms.Controls\Clinic.WindowsForms.Controls.csproj">
+      <Project>{d721fd13-3b93-4db7-9308-24488f9209a0}</Project>
+      <Name>Clinic.WindowsForms.Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
