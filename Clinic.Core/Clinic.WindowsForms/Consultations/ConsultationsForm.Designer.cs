@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.doctorComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.patientComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,14 +106,14 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Patient";
             // 
-            // comboBox1
+            // patientComboBox
             // 
-            this.comboBox1.DisplayMember = "Location";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(597, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 16;
+            this.patientComboBox.DisplayMember = "Name";
+            this.patientComboBox.FormattingEnabled = true;
+            this.patientComboBox.Location = new System.Drawing.Point(597, 14);
+            this.patientComboBox.Name = "patientComboBox";
+            this.patientComboBox.Size = new System.Drawing.Size(121, 21);
+            this.patientComboBox.TabIndex = 16;
             // 
             // ConsultationsForm
             // 
@@ -121,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 453);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.patientComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.officeComboBox);
             this.Controls.Add(this.label1);
@@ -145,6 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox doctorComboBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox patientComboBox;
     }
 }
