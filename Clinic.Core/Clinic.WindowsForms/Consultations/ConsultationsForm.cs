@@ -24,7 +24,9 @@ namespace Clinic.WindowsForms.Consultations
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var editConsultationForm = new EditConsultationForm();
+            editConsultationForm.ShowDialog();
+            ReloadData();
         }
 
         private void LoadDoctors()

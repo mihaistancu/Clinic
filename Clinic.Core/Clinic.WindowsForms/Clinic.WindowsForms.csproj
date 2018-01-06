@@ -64,6 +64,12 @@
     <Compile Include="Consultations\ConsultationsForm.Designer.cs">
       <DependentUpon>ConsultationsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultations\EditConsultationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultations\EditConsultationForm.Designer.cs">
+      <DependentUpon>EditConsultationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctors\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultations\ConsultationsForm.resx">
       <DependentUpon>ConsultationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultations\EditConsultationForm.resx">
+      <DependentUpon>EditConsultationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors\DoctorsForm.resx">
       <DependentUpon>DoctorsForm.cs</DependentUpon>
