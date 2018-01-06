@@ -33,6 +33,7 @@
             this.patientsButton = new System.Windows.Forms.Button();
             this.officeHoursButton = new System.Windows.Forms.Button();
             this.appointmentsButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // doctorsButton
@@ -85,11 +86,22 @@
             this.appointmentsButton.UseVisualStyleBackColor = true;
             this.appointmentsButton.Click += new System.EventHandler(this.OnAppointmentsClicked);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Consultations";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.OnConsultationsClicked);
+            // 
             // Shell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 353);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.appointmentsButton);
             this.Controls.Add(this.officeHoursButton);
             this.Controls.Add(this.patientsButton);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button patientsButton;
         private System.Windows.Forms.Button officeHoursButton;
         private System.Windows.Forms.Button appointmentsButton;
+        private System.Windows.Forms.Button button1;
     }
 }
