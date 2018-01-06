@@ -77,6 +77,7 @@
             this.officeComboBox.Name = "officeComboBox";
             this.officeComboBox.Size = new System.Drawing.Size(121, 21);
             this.officeComboBox.TabIndex = 14;
+            this.officeComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
             // 
             // label1
             // 
@@ -96,6 +97,7 @@
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(121, 21);
             this.doctorComboBox.TabIndex = 12;
+            this.doctorComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
             // 
             // label3
             // 
@@ -114,6 +116,7 @@
             this.patientComboBox.Name = "patientComboBox";
             this.patientComboBox.Size = new System.Drawing.Size(121, 21);
             this.patientComboBox.TabIndex = 16;
+            this.patientComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
             // 
             // ConsultationsForm
             // 
