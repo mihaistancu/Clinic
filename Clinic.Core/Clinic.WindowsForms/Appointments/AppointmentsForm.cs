@@ -14,7 +14,6 @@ namespace Clinic.WindowsForms.Appointments
         public AppointmentsForm()
         {
             InitializeComponent();
-            LoadDoctors();
             LoadAppointments();
         }
 
@@ -23,13 +22,6 @@ namespace Clinic.WindowsForms.Appointments
             var editAppointmentForm = new EditAppointmentForm();
             editAppointmentForm.ShowDialog();
             LoadAppointments();
-        }
-
-        private void LoadDoctors()
-        {
-            var doctorRepository = new Repository<Doctor>();
-            var doctors = doctorRepository.GetAll();
-            doctorComboBox.DataSource = doctors;
         }
 
         private void LoadAppointments()
@@ -49,9 +41,9 @@ namespace Clinic.WindowsForms.Appointments
 
         private IEnumerable<Expression<Func<Appointment, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.Text))
+            if (!string.IsNullOrEmpty(doctorComboBox.SelectedDoctorName))
             {
-                yield return a => a.Doctor.Name == doctorComboBox.Text;
+                yield return a => a.Doctor.Name == doctorComboBox.SelectedDoctorName;
             }
         }
 

@@ -32,10 +32,9 @@
             this.consultationsGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.officeComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.doctorComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.patientComboBox = new System.Windows.Forms.ComboBox();
+            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,26 +78,6 @@
             this.officeComboBox.TabIndex = 14;
             this.officeComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Doctor";
-            // 
-            // doctorComboBox
-            // 
-            this.doctorComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.doctorComboBox.DisplayMember = "Name";
-            this.doctorComboBox.FormattingEnabled = true;
-            this.doctorComboBox.Location = new System.Drawing.Point(82, 14);
-            this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.doctorComboBox.TabIndex = 12;
-            this.doctorComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -118,17 +97,23 @@
             this.patientComboBox.TabIndex = 16;
             this.patientComboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
             // 
+            // doctorComboBox
+            // 
+            this.doctorComboBox.Location = new System.Drawing.Point(12, -2);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(213, 50);
+            this.doctorComboBox.TabIndex = 18;
+            // 
             // ConsultationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 453);
+            this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.patientComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.officeComboBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.consultationsGridView);
             this.Name = "ConsultationsForm";
@@ -145,9 +130,8 @@
         private System.Windows.Forms.DataGridView consultationsGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox officeComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox doctorComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox patientComboBox;
+        private Controls.DoctorComboBox doctorComboBox;
     }
 }

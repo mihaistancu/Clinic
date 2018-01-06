@@ -5,7 +5,6 @@ using System.Linq.Expressions;
 using System.Windows.Forms;
 using Clinic.Core.Infrastructure;
 using Clinic.Core.OfficeHours;
-using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 
 namespace Clinic.WindowsForms.OfficeHours
@@ -15,18 +14,10 @@ namespace Clinic.WindowsForms.OfficeHours
         public OfficeHoursForm()
         {
             InitializeComponent();
-            LoadDoctors();
             LoadOffices();
             LoadOfficesHours();
         }
-
-        private void LoadDoctors()
-        {
-            var doctorRepository = new Repository<Doctor>();
-            var doctors = doctorRepository.GetAll();
-            doctorComboBox.DataSource = doctors;
-        }
-
+        
         private void LoadOffices()
         {
             var officeRepository = new Repository<Office>();
@@ -54,9 +45,9 @@ namespace Clinic.WindowsForms.OfficeHours
 
         private IEnumerable<Expression<Func<WeeklyOfficeHours, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.Text))
+            if (!string.IsNullOrEmpty(doctorComboBox.SelectedDoctorName))
             {
-                yield return h => h.Doctor.Name == doctorComboBox.Text;
+                yield return h => h.Doctor.Name == doctorComboBox.SelectedDoctorName;
             }
 
             if (!string.IsNullOrEmpty(officeComboBox.Text))

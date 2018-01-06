@@ -16,7 +16,6 @@ namespace Clinic.WindowsForms.Consultations
         public ConsultationsForm()
         {
             InitializeComponent();
-            LoadDoctors();
             LoadOffices();
             LoadPatients();
             ReloadData();
@@ -28,14 +27,7 @@ namespace Clinic.WindowsForms.Consultations
             editConsultationForm.ShowDialog();
             ReloadData();
         }
-
-        private void LoadDoctors()
-        {
-            var doctorRepository = new Repository<Doctor>();
-            var doctors = doctorRepository.GetAll();
-            doctorComboBox.DataSource = doctors;
-        }
-
+        
         private void LoadOffices()
         {
             var officeRepository = new Repository<Office>();
@@ -71,9 +63,9 @@ namespace Clinic.WindowsForms.Consultations
 
         private IEnumerable<Expression<Func<ClinicalVisit, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.Text))
+            if (!string.IsNullOrEmpty(doctorComboBox.SelectedDoctorName))
             {
-                yield return c => c.Doctor.Name == doctorComboBox.Text;
+                yield return c => c.Doctor.Name == doctorComboBox.SelectedDoctorName;
             }
 
             if (!string.IsNullOrEmpty(officeComboBox.Text))
