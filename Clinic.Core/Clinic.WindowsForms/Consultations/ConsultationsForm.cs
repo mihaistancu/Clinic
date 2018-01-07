@@ -38,6 +38,7 @@ namespace Clinic.WindowsForms.Consultations
             var results = from x in repository.Search(searchPredicates)
                           select new
                           {
+                              Id = x.Id,
                               Doctor = x.Doctor.Name,
                               Office = x.Office.Location,
                               Patient = x.Patient.Name,

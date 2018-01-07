@@ -36,6 +36,7 @@ namespace Clinic.WindowsForms.Appointments
             var results = from x in appointmentsRepository.Search(searchPredicates)
                 select new
                 {
+                    Id = x.Id,
                     Doctor = x.Doctor.Name,
                     Date = x.StartDate
                 };
