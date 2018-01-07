@@ -68,6 +68,7 @@
             this.Controls.Add(this.saveButton);
             this.Name = "EditAppointmentForm";
             this.Text = "Appointment";
+            this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);
 
         }

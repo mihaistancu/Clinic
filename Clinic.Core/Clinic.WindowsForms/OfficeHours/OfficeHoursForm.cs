@@ -12,13 +12,17 @@ namespace Clinic.WindowsForms.OfficeHours
     {
         public OfficeHoursForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
-            LoadOfficesHours();
+            LoadOfficeHours();
         }
-        
-        private void LoadOfficesHours()
+
+        private void LoadOfficeHours()
         {
             var officeHoursRepository = new OfficeHoursRepository();
             var searchPredicates = GetSearchPredicates().ToArray();
@@ -53,12 +57,12 @@ namespace Clinic.WindowsForms.OfficeHours
         {
             var editDailyOfficeHoursForm = new EditOfficeHoursForm();
             editDailyOfficeHoursForm.ShowDialog();
-            LoadOfficesHours();
+            LoadOfficeHours();
         }
         
         private void OnSelectedValueChanged()
         {
-            LoadOfficesHours();
+            LoadOfficeHours();
         }
     }
 }

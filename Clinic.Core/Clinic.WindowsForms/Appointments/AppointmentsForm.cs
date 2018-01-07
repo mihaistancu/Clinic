@@ -13,6 +13,10 @@ namespace Clinic.WindowsForms.Appointments
         public AppointmentsForm()
         {
             InitializeComponent();
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
             doctorComboBox.LoadData();
             LoadAppointments();
         }

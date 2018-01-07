@@ -54,6 +54,7 @@
             // 
             // doctorComboBox
             // 
+            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
@@ -70,6 +71,7 @@
             this.Controls.Add(this.addButton);
             this.Name = "AppointmentsForm";
             this.Text = "Appointments";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGridView)).EndInit();
             this.ResumeLayout(false);
 

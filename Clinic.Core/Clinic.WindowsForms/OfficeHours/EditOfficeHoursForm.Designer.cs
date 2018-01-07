@@ -87,6 +87,7 @@
             this.Controls.Add(this.saveButton);
             this.Name = "EditOfficeHoursForm";
             this.Text = "Daily Office Hours";
+            this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);
 
         }

@@ -13,20 +13,24 @@ namespace Clinic.WindowsForms.Consultations
         public ConsultationsForm()
         {
             InitializeComponent();
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
             patientComboBox.LoadData();
-            ReloadData();
+            LoadConsultations();
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
             var editConsultationForm = new EditConsultationForm();
             editConsultationForm.ShowDialog();
-            ReloadData();
+            LoadConsultations();
         }
         
-        private void ReloadData()
+        private void LoadConsultations()
         {
             var repository = new ConsultationsRepository();
             var searchPredicates = GetSearchPredicates().ToArray();
@@ -65,7 +69,7 @@ namespace Clinic.WindowsForms.Consultations
         
         private void OnSelectedValueChanged()
         {
-            ReloadData();
+            LoadConsultations();
         }
     }
 }

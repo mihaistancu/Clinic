@@ -9,7 +9,6 @@ namespace Clinic.WindowsForms.Appointments
         public EditAppointmentForm()
         {
             InitializeComponent();
-            doctorComboBox.LoadData();
         }
 
         private void OnSaveButtonClicked(object sender, EventArgs e)
@@ -17,6 +16,11 @@ namespace Clinic.WindowsForms.Appointments
             var repository = new AppointmentsRepository();
             repository.Add(doctorComboBox.SelectedDoctor.Name, datePicker.SelectedDate);
             Close();
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
+            doctorComboBox.LoadData();
         }
     }
 }

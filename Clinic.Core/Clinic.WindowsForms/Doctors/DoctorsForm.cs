@@ -10,18 +10,21 @@ namespace Clinic.WindowsForms.Doctors
         public DoctorsForm()
         {
             InitializeComponent();
+        }
 
-            ReloadData();
+        private void OnLoad(object sender, EventArgs e)
+        {
+            LoadDoctors();
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
             var editDoctorForm = new EditDoctorForm();
             editDoctorForm.ShowDialog();
-            ReloadData();
+            LoadDoctors();
         }
 
-        private void ReloadData()
+        private void LoadDoctors()
         {
             var repository = new Repository<Doctor>();
             var doctors = repository.GetAll();

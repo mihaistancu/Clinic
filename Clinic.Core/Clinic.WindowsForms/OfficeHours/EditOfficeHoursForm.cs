@@ -9,11 +9,15 @@ namespace Clinic.WindowsForms.OfficeHours
     {
         public EditOfficeHoursForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
         }
-        
+
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new OfficeHoursRepository();

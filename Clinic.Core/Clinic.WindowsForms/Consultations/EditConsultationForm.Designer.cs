@@ -110,6 +110,7 @@
             this.Controls.Add(this.label7);
             this.Name = "EditConsultationForm";
             this.Text = "Consultation";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -63,6 +63,7 @@
             this.Controls.Add(this.officesGridView);
             this.Name = "OfficesForm";
             this.Text = "Offices";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.officesGridView)).EndInit();
             this.ResumeLayout(false);
 

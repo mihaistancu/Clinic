@@ -63,6 +63,7 @@
             this.Controls.Add(this.doctorsGridView);
             this.Name = "DoctorsForm";
             this.Text = "Doctors";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.doctorsGridView)).EndInit();
             this.ResumeLayout(false);
 

@@ -59,6 +59,7 @@
             // 
             // doctorComboBox
             // 
+            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
@@ -67,6 +68,7 @@
             // 
             // officeComboBox
             // 
+            this.officeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.officeComboBox.Location = new System.Drawing.Point(228, 12);
             this.officeComboBox.Name = "officeComboBox";
             this.officeComboBox.Size = new System.Drawing.Size(210, 50);
@@ -75,6 +77,7 @@
             // 
             // patientComboBox
             // 
+            this.patientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.patientComboBox.Location = new System.Drawing.Point(444, 12);
             this.patientComboBox.Name = "patientComboBox";
             this.patientComboBox.Size = new System.Drawing.Size(210, 50);
@@ -93,6 +96,7 @@
             this.Controls.Add(this.consultationsGridView);
             this.Name = "ConsultationsForm";
             this.Text = "Consultations";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).EndInit();
             this.ResumeLayout(false);
 

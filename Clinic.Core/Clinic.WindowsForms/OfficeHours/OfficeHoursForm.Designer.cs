@@ -55,6 +55,7 @@
             // 
             // doctorComboBox
             // 
+            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
@@ -63,6 +64,7 @@
             // 
             // officeComboBox
             // 
+            this.officeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.officeComboBox.Location = new System.Drawing.Point(228, 12);
             this.officeComboBox.Name = "officeComboBox";
             this.officeComboBox.Size = new System.Drawing.Size(210, 50);
@@ -80,6 +82,7 @@
             this.Controls.Add(this.officeHoursDataGridView);
             this.Name = "OfficeHoursForm";
             this.Text = "Weekly Office Hours";
+            this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.officeHoursDataGridView)).EndInit();
             this.ResumeLayout(false);
 

@@ -8,12 +8,16 @@ namespace Clinic.WindowsForms.Consultations
     {
         public EditConsultationForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
             patientComboBox.LoadData();
         }
-        
+
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new ConsultationsRepository();

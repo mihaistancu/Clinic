@@ -9,18 +9,22 @@ namespace Clinic.WindowsForms.Offices
     {
         public OfficesForm()
         {
-            InitializeComponent();
-            ReloadData();
+            InitializeComponent();            
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
+            LoadOffices();
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
             var editOfficeForm = new EditOfficeForm();
             editOfficeForm.ShowDialog();
-            ReloadData();
+            LoadOffices();
         }
 
-        private void ReloadData()
+        private void LoadOffices()
         {
             var repository = new Repository<Office>();
             var offices = repository.GetAll();
