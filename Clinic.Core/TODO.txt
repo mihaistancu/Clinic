@@ -5,3 +5,4 @@ Split ReportsModule into 3 distinct modules for each type of report
 Give a more meaningful name to Module (CrudModule, AddListModule, etc)
 Discard existing Clinic.Tests since they do not bring value anymore
 Discard root folder of solution 
+Groupd WindowsForms.Controls into ComboBoxes and DateTimePickers
