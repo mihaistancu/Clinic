@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using Clinic.Core.Infrastructure;
 using Clinic.Core.OfficeHours;
-using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 
 namespace Clinic.WindowsForms.OfficeHours
@@ -15,24 +12,8 @@ namespace Clinic.WindowsForms.OfficeHours
             InitializeComponent();
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
-            ReloadData();
         }
-
-        private void ReloadData()
-        {
-            var daysOfWeek = new List<DayOfWeek>
-            {
-                DayOfWeek.Monday,
-                DayOfWeek.Tuesday,
-                DayOfWeek.Wednesday,
-                DayOfWeek.Thursday,
-                DayOfWeek.Friday,
-                DayOfWeek.Saturday,
-                DayOfWeek.Sunday
-            };
-            dayOfWeekComboBox.DataSource = daysOfWeek;
-        }
-
+        
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new OfficeHoursRepository();
@@ -40,7 +21,7 @@ namespace Clinic.WindowsForms.OfficeHours
             string officeLocation = officeComboBox.SelectedValue;
             var dailyOfficeHours = new DailyOfficeHours
             {
-                DayOfWeek = (DayOfWeek) dayOfWeekComboBox.SelectedItem,
+                DayOfWeek = dayOfWeekComboBox.SelectedDay,
                 StartTime = timeRange.StartTime,
                 EndTime = timeRange.EndTime
             };

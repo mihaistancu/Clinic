@@ -54,6 +54,12 @@
     <Compile Include="DatePicker.Designer.cs">
       <DependentUpon>DatePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="DayOfWeekComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DayOfWeekComboBox.Designer.cs">
+      <DependentUpon>DayOfWeekComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatePicker.resx">
       <DependentUpon>DatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayOfWeekComboBox.resx">
+      <DependentUpon>DayOfWeekComboBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorComboBox.resx">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>
