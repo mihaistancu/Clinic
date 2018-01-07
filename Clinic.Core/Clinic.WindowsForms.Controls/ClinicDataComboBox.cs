@@ -7,11 +7,6 @@ namespace Clinic.WindowsForms.Controls
     {
         public event Action SelectedValueChanged;
 
-        public ClinicDataComboBox()
-        {
-            InitializeComponent();
-        }
-
         public string Label
         {
             get { return label.Text; }
@@ -22,8 +17,14 @@ namespace Clinic.WindowsForms.Controls
         {
             get { return comboBox.Text; }
         }
-        
-        private void OnLoad(object sender, System.EventArgs e)
+
+        public ClinicDataComboBox()
+        {
+            InitializeComponent();
+            InitializeData();
+        }
+
+        private void InitializeData()
         {
             if (!DesignMode)
             {
