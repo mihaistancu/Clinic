@@ -54,6 +54,12 @@
     <Compile Include="OfficeComboBox.Designer.cs">
       <DependentUpon>OfficeComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientComboBox.Designer.cs">
+      <DependentUpon>PatientComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +68,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OfficeComboBox.resx">
       <DependentUpon>OfficeComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientComboBox.resx">
+      <DependentUpon>PatientComboBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
