@@ -20,8 +20,8 @@ namespace Clinic.WindowsForms.Consultations
             string doctorName = doctorComboBox.SelectedValue;
             string officeLocation = officeComboBox.SelectedValue;
             string patientName = patientComboBox.SelectedValue;
-            DateTime startDateTime = new DateTime(datePicker.SelectedDate.Year, datePicker.SelectedDate.Month, datePicker.SelectedDate.Day, timeRange.StartTime.Hours, timeRange.StartTime.Minutes, timeRange.StartTime.Seconds);
-            DateTime endDateTime = new DateTime(datePicker.SelectedDate.Year, datePicker.SelectedDate.Month, datePicker.SelectedDate.Day, timeRange.EndTime.Hours, timeRange.EndTime.Minutes, timeRange.EndTime.Seconds);
+            DateTime startDateTime = dateTimeRange.StartDateTime;
+            DateTime endDateTime = dateTimeRange.EndDateTime;
             double amountReceived = (double)amountReceivedNumericUpDown.Value;
             repository.Add(doctorName, officeLocation, patientName, startDateTime, endDateTime, amountReceived);
             Close();

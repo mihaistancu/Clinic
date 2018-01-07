@@ -34,8 +34,7 @@
             this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
             this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
             this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
-            this.datePicker = new Clinic.WindowsForms.Controls.DatePicker();
-            this.timeRange = new Clinic.WindowsForms.Controls.TimeRange();
+            this.dateTimeRange = new Clinic.WindowsForms.Controls.DateTimeRange();
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,19 +88,12 @@
             this.patientComboBox.Size = new System.Drawing.Size(210, 50);
             this.patientComboBox.TabIndex = 35;
             // 
-            // datePicker
+            // dateTimeRange
             // 
-            this.datePicker.Location = new System.Drawing.Point(71, 92);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(305, 47);
-            this.datePicker.TabIndex = 36;
-            // 
-            // timeRange
-            // 
-            this.timeRange.Location = new System.Drawing.Point(414, 68);
-            this.timeRange.Name = "timeRange";
-            this.timeRange.Size = new System.Drawing.Size(255, 90);
-            this.timeRange.TabIndex = 37;
+            this.dateTimeRange.Location = new System.Drawing.Point(78, 60);
+            this.dateTimeRange.Name = "dateTimeRange";
+            this.dateTimeRange.Size = new System.Drawing.Size(631, 121);
+            this.dateTimeRange.TabIndex = 36;
             // 
             // EditConsultationForm
             // 
@@ -109,8 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 252);
-            this.Controls.Add(this.timeRange);
-            this.Controls.Add(this.datePicker);
+            this.Controls.Add(this.dateTimeRange);
             this.Controls.Add(this.patientComboBox);
             this.Controls.Add(this.officeComboBox);
             this.Controls.Add(this.doctorComboBox);
@@ -132,7 +123,6 @@
         private Controls.DoctorComboBox doctorComboBox;
         private Controls.OfficeComboBox officeComboBox;
         private Controls.PatientComboBox patientComboBox;
-        private Controls.DatePicker datePicker;
-        private Controls.TimeRange timeRange;
+        private Controls.DateTimeRange dateTimeRange;
     }
 }
