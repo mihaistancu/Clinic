@@ -9,6 +9,7 @@ namespace Clinic.WindowsForms.Controls
         public DoctorComboBox()
         {
             InitializeComponent();
+            LoadDoctors();
         }
 
         private void LoadDoctors()
