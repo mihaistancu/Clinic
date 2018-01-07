@@ -59,6 +59,7 @@
             this.Controls.Add(this.comboBox);
             this.Name = "DoctorComboBox";
             this.Size = new System.Drawing.Size(213, 50);
+            this.Load += new System.EventHandler(this.OnLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 

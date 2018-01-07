@@ -9,22 +9,22 @@ namespace Clinic.WindowsForms.Controls
         public DoctorComboBox()
         {
             InitializeComponent();
-            LoadDoctors();
         }
-
-        private void LoadDoctors()
-        {
-            var doctorRepository = new Repository<Doctor>();
-            var doctors = doctorRepository.GetAll();
-            comboBox.DataSource = doctors;
-        }
-
+        
         public string SelectedDoctorName
         {
             get
             {
                 return comboBox.Text;
             }
+        }
+
+        private void OnLoad(object sender, System.EventArgs e)
+        {
+            if (DesignMode) return;
+            var doctorRepository = new Repository<Doctor>();
+            var doctors = doctorRepository.GetAll();
+            comboBox.DataSource = doctors;
         }
     }
 }
