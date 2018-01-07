@@ -44,9 +44,9 @@ namespace Clinic.WindowsForms.Consultations
 
         private IEnumerable<Expression<Func<ClinicalVisit, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.SelectedDoctorName))
+            if (!string.IsNullOrEmpty(doctorComboBox.SelectedValue))
             {
-                yield return c => c.Doctor.Name == doctorComboBox.SelectedDoctorName;
+                yield return c => c.Doctor.Name == doctorComboBox.SelectedValue;
             }
 
             if (!string.IsNullOrEmpty(officeComboBox.Text))

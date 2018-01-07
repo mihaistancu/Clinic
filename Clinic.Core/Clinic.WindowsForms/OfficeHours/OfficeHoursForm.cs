@@ -36,12 +36,12 @@ namespace Clinic.WindowsForms.OfficeHours
 
         private IEnumerable<Expression<Func<WeeklyOfficeHours, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.SelectedDoctorName))
+            if (!string.IsNullOrEmpty(doctorComboBox.SelectedValue))
             {
-                yield return h => h.Doctor.Name == doctorComboBox.SelectedDoctorName;
+                yield return h => h.Doctor.Name == doctorComboBox.SelectedValue;
             }
 
-            if (!string.IsNullOrEmpty(officeComboBox.SelectedOfficeLocation))
+            if (!string.IsNullOrEmpty(officeComboBox.SelectedValue))
             {
                 yield return h => h.Office.Location == officeComboBox.Text;
             }

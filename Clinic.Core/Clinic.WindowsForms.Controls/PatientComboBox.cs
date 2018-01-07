@@ -11,7 +11,7 @@ namespace Clinic.WindowsForms.Controls
             InitializeComponent();
         }
         
-        public string SelectedPatientName
+        public string SelectedValue
         {
             get
             {
