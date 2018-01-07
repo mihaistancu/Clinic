@@ -48,11 +48,20 @@
     <Compile Include="DoctorComboBox.Designer.cs">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfficeComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficeComboBox.Designer.cs">
+      <DependentUpon>OfficeComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DoctorComboBox.resx">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeComboBox.resx">
+      <DependentUpon>OfficeComboBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,6 @@
 ﻿using Clinic.Core.Consultations;
 using Clinic.Core.Infrastructure;
 using Clinic.Core.Patients;
-using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,6 @@ namespace Clinic.WindowsForms.Consultations
         public ConsultationsForm()
         {
             InitializeComponent();
-            LoadOffices();
             LoadPatients();
             ReloadData();
         }
@@ -28,13 +26,6 @@ namespace Clinic.WindowsForms.Consultations
             ReloadData();
         }
         
-        private void LoadOffices()
-        {
-            var officeRepository = new Repository<Office>();
-            var offices = officeRepository.GetAll();
-            officeComboBox.DataSource = offices;
-        }
-
         private void LoadPatients()
         {
             var patientsRepository = new Repository<Patient>();

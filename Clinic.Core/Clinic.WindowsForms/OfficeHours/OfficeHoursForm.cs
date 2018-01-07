@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-using Clinic.Core.Infrastructure;
 using Clinic.Core.OfficeHours;
 using Clinic.DataAccess;
 
@@ -14,17 +13,9 @@ namespace Clinic.WindowsForms.OfficeHours
         public OfficeHoursForm()
         {
             InitializeComponent();
-            LoadOffices();
             LoadOfficesHours();
         }
         
-        private void LoadOffices()
-        {
-            var officeRepository = new Repository<Office>();
-            var offices = officeRepository.GetAll();
-            officeComboBox.DataSource = offices;
-        }
-
         private void LoadOfficesHours()
         {
             var officeHoursRepository = new OfficeHoursRepository();
@@ -50,7 +41,7 @@ namespace Clinic.WindowsForms.OfficeHours
                 yield return h => h.Doctor.Name == doctorComboBox.SelectedDoctorName;
             }
 
-            if (!string.IsNullOrEmpty(officeComboBox.Text))
+            if (!string.IsNullOrEmpty(officeComboBox.SelectedOfficeLocation))
             {
                 yield return h => h.Office.Location == officeComboBox.Text;
             }
