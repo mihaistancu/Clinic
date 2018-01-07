@@ -15,7 +15,7 @@ namespace Clinic.WindowsForms.Appointments
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new AppointmentsRepository();
-            repository.Add(doctorComboBox.SelectedValue, appointmentDateTimePicker.Value);
+            repository.Add(doctorComboBox.SelectedValue, datePicker.SelectedDate);
             Close();
         }
     }

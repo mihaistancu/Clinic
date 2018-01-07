@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.datePicker = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.endTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.startTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -40,24 +38,9 @@
             this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
             this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
             this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
+            this.datePicker = new Clinic.WindowsForms.Controls.DatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // datePicker
-            // 
-            this.datePicker.Location = new System.Drawing.Point(169, 106);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(200, 20);
-            this.datePicker.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(122, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Date";
             // 
             // endTimePicker
             // 
@@ -147,12 +130,20 @@
             this.patientComboBox.Size = new System.Drawing.Size(210, 50);
             this.patientComboBox.TabIndex = 35;
             // 
+            // datePicker
+            // 
+            this.datePicker.Location = new System.Drawing.Point(71, 92);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(305, 47);
+            this.datePicker.TabIndex = 36;
+            // 
             // EditConsultationForm
             // 
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 252);
+            this.Controls.Add(this.datePicker);
             this.Controls.Add(this.patientComboBox);
             this.Controls.Add(this.officeComboBox);
             this.Controls.Add(this.doctorComboBox);
@@ -163,8 +154,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.startTimePicker);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.datePicker);
             this.Name = "EditConsultationForm";
             this.Text = "Consultation";
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).EndInit();
@@ -174,8 +163,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker datePicker;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker endTimePicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker startTimePicker;
@@ -186,5 +173,6 @@
         private Controls.DoctorComboBox doctorComboBox;
         private Controls.OfficeComboBox officeComboBox;
         private Controls.PatientComboBox patientComboBox;
+        private Controls.DatePicker datePicker;
     }
 }

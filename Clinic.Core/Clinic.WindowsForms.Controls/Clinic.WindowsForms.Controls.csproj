@@ -48,6 +48,12 @@
     <Compile Include="ClinicDataComboBox.Designer.cs">
       <DependentUpon>ClinicDataComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatePicker.Designer.cs">
+      <DependentUpon>DatePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ClinicDataComboBox.resx">
       <DependentUpon>ClinicDataComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePicker.resx">
+      <DependentUpon>DatePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorComboBox.resx">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>

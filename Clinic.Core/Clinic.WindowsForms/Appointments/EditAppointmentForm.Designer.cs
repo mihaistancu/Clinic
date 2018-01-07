@@ -28,28 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.appointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
+            this.datePicker = new Clinic.WindowsForms.Controls.DatePicker();
             this.SuspendLayout();
-            // 
-            // appointmentDateTimePicker
-            // 
-            this.appointmentDateTimePicker.Location = new System.Drawing.Point(103, 76);
-            this.appointmentDateTimePicker.Name = "appointmentDateTimePicker";
-            this.appointmentDateTimePicker.Size = new System.Drawing.Size(190, 20);
-            this.appointmentDateTimePicker.TabIndex = 21;
-            this.appointmentDateTimePicker.Value = new System.DateTime(2000, 1, 1, 21, 0, 0, 0);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Date";
             // 
             // saveButton
             // 
@@ -69,26 +51,30 @@
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
             this.doctorComboBox.TabIndex = 23;
             // 
+            // datePicker
+            // 
+            this.datePicker.Location = new System.Drawing.Point(29, 66);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(305, 47);
+            this.datePicker.TabIndex = 24;
+            // 
             // EditAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 182);
+            this.Controls.Add(this.datePicker);
             this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.appointmentDateTimePicker);
-            this.Controls.Add(this.label4);
             this.Name = "EditAppointmentForm";
             this.Text = "Appointment";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker appointmentDateTimePicker;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button saveButton;
         private Controls.DoctorComboBox doctorComboBox;
+        private Controls.DatePicker datePicker;
     }
 }
