@@ -54,7 +54,7 @@ namespace Clinic.WindowsForms.OfficeHours
             LoadOfficesHours();
         }
         
-        private void OnSelectedValueChanged(object sender, EventArgs e)
+        private void OnSelectedValueChanged()
         {
             LoadOfficesHours();
         }

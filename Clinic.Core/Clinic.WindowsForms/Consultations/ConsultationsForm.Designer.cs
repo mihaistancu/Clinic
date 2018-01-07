@@ -59,24 +59,30 @@
             // 
             // doctorComboBox
             // 
+            this.doctorComboBox.Label = "Doctor";
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
             this.doctorComboBox.TabIndex = 18;
+            this.doctorComboBox.SelectedValueChanged += new System.Action(this.OnSelectedValueChanged);
             // 
             // officeComboBox
             // 
+            this.officeComboBox.Label = "Office";
             this.officeComboBox.Location = new System.Drawing.Point(228, 12);
             this.officeComboBox.Name = "officeComboBox";
             this.officeComboBox.Size = new System.Drawing.Size(210, 50);
             this.officeComboBox.TabIndex = 19;
+            this.officeComboBox.SelectedValueChanged += new System.Action(this.OnSelectedValueChanged);
             // 
             // patientComboBox
             // 
+            this.patientComboBox.Label = "Patient";
             this.patientComboBox.Location = new System.Drawing.Point(444, 12);
             this.patientComboBox.Name = "patientComboBox";
             this.patientComboBox.Size = new System.Drawing.Size(210, 50);
             this.patientComboBox.TabIndex = 20;
+            this.patientComboBox.SelectedValueChanged += new System.Action(this.OnSelectedValueChanged);
             // 
             // ConsultationsForm
             // 

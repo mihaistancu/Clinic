@@ -59,8 +59,8 @@ namespace Clinic.WindowsForms.Consultations
                 yield return c => c.Patient.Name == patientComboBox.Text;
             }
         }
-
-        private void OnComboBoxTextChanged(object sender, EventArgs e)
+        
+        private void OnSelectedValueChanged()
         {
             ReloadData();
         }

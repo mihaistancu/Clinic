@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using Clinic.Core.Appointments;
-using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 
 namespace Clinic.WindowsForms.Appointments
@@ -46,8 +45,8 @@ namespace Clinic.WindowsForms.Appointments
                 yield return a => a.Doctor.Name == doctorComboBox.SelectedValue;
             }
         }
-
-        private void OnSelectedValueChanged(object sender, EventArgs e)
+        
+        private void OnSelectedValueChanged()
         {
             LoadAppointments();
         }
