@@ -30,9 +30,18 @@
         {
             this.SuspendLayout();
             // 
+            // comboBox
+            // 
+            this.comboBox.DisplayMember = "Location";
+            // 
+            // label
+            // 
+            this.label.Size = new System.Drawing.Size(35, 13);
+            this.label.Text = "Office";
+            // 
             // OfficeComboBox
             // 
-            this.Label = "Office";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "OfficeComboBox";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -6,13 +6,7 @@ namespace Clinic.WindowsForms.Controls
     public partial class ClinicDataComboBox : UserControl
     {
         public event Action SelectedValueChanged;
-
-        public string Label
-        {
-            get { return label.Text; }
-            set { label.Text = value; }
-        }
-
+        
         public string SelectedValue
         {
             get { return comboBox.Text; }
@@ -21,15 +15,11 @@ namespace Clinic.WindowsForms.Controls
         public ClinicDataComboBox()
         {
             InitializeComponent();
-            InitializeData();
         }
 
-        private void InitializeData()
+        public void LoadData()
         {
-            if (!DesignMode)
-            {
-                comboBox.DataSource = GetDropDownItems();
-            }
+            comboBox.DataSource = GetDropDownItems();
         }
 
         protected virtual object GetDropDownItems()

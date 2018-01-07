@@ -13,6 +13,8 @@ namespace Clinic.WindowsForms.OfficeHours
         public OfficeHoursForm()
         {
             InitializeComponent();
+            doctorComboBox.LoadData();
+            officeComboBox.LoadData();
             LoadOfficesHours();
         }
         

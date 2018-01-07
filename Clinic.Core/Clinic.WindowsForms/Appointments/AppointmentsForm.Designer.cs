@@ -54,7 +54,6 @@
             // 
             // doctorComboBox
             // 
-            this.doctorComboBox.Label = "Doctor";
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
             this.doctorComboBox.Size = new System.Drawing.Size(210, 50);

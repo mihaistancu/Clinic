@@ -44,7 +44,6 @@
             // comboBox
             // 
             this.comboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.comboBox.DisplayMember = "Name";
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Location = new System.Drawing.Point(74, 15);
             this.comboBox.Name = "comboBox";
@@ -66,8 +65,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.ComboBox comboBox;
+        protected System.Windows.Forms.ComboBox comboBox;
+        protected System.Windows.Forms.Label label;
     }
 }

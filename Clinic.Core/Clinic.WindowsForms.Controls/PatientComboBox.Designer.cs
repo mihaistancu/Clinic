@@ -30,9 +30,18 @@
         {
             this.SuspendLayout();
             // 
+            // comboBox
+            // 
+            this.comboBox.DisplayMember = "Name";
+            // 
+            // label
+            // 
+            this.label.Size = new System.Drawing.Size(40, 13);
+            this.label.Text = "Patient";
+            // 
             // PatientComboBox
             // 
-            this.Label = "Patient";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.Name = "PatientComboBox";
             this.ResumeLayout(false);
             this.PerformLayout();

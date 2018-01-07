@@ -13,6 +13,9 @@ namespace Clinic.WindowsForms.Consultations
         public ConsultationsForm()
         {
             InitializeComponent();
+            doctorComboBox.LoadData();
+            officeComboBox.LoadData();
+            patientComboBox.LoadData();
             ReloadData();
         }
 
