@@ -28,32 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.doctorComboBox = new System.Windows.Forms.ComboBox();
             this.appointmentDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
+            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Doctor";
-            // 
-            // doctorComboBox
-            // 
-            this.doctorComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.doctorComboBox.DisplayMember = "Name";
-            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.doctorComboBox.FormattingEnabled = true;
-            this.doctorComboBox.Location = new System.Drawing.Point(103, 30);
-            this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.doctorComboBox.TabIndex = 14;
             // 
             // appointmentDateTimePicker
             // 
@@ -82,16 +61,23 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.OnSaveButtonClicked);
             // 
+            // doctorComboBox
+            // 
+            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.doctorComboBox.Location = new System.Drawing.Point(29, 12);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
+            this.doctorComboBox.TabIndex = 23;
+            // 
             // EditAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 182);
+            this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.appointmentDateTimePicker);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.doctorComboBox);
             this.Name = "EditAppointmentForm";
             this.Text = "Appointment";
             this.ResumeLayout(false);
@@ -100,11 +86,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox doctorComboBox;
         private System.Windows.Forms.DateTimePicker appointmentDateTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button saveButton;
+        private Controls.DoctorComboBox doctorComboBox;
     }
 }

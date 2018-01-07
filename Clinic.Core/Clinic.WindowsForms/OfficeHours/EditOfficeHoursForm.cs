@@ -13,19 +13,13 @@ namespace Clinic.WindowsForms.OfficeHours
         public EditOfficeHoursForm()
         {
             InitializeComponent();
+            doctorComboBox.LoadData();
+            officeComboBox.LoadData();
             ReloadData();
         }
 
         private void ReloadData()
         {
-            var doctorRepository = new Repository<Doctor>();
-            var doctors = doctorRepository.GetAll();
-            doctorComboBox.DataSource = doctors;
-
-            var officeRepository = new Repository<Office>();
-            var offices = officeRepository.GetAll();
-            officeComboBox.DataSource = offices;
-
             var daysOfWeek = new List<DayOfWeek>
             {
                 DayOfWeek.Monday,
@@ -42,8 +36,8 @@ namespace Clinic.WindowsForms.OfficeHours
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new OfficeHoursRepository();
-            string doctorName = ((Doctor)doctorComboBox.SelectedItem).Name;
-            string officeLocation = ((Office)officeComboBox.SelectedItem).Location;
+            string doctorName = doctorComboBox.SelectedValue;
+            string officeLocation = officeComboBox.SelectedValue;
             var dailyOfficeHours = new DailyOfficeHours
             {
                 DayOfWeek = (DayOfWeek) dayOfWeekComboBox.SelectedItem,

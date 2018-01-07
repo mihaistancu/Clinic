@@ -12,6 +12,12 @@ namespace Clinic.WindowsForms.Controls
             get { return comboBox.Text; }
         }
 
+        public ComboBoxStyle DropDownStyle
+        {
+            get { return comboBox.DropDownStyle; }
+            set { comboBox.DropDownStyle = value; }
+        }
+
         public ClinicDataComboBox()
         {
             InitializeComponent();

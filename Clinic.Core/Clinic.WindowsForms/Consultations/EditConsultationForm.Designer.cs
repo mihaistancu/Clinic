@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.patientComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.officeComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.doctorComboBox = new System.Windows.Forms.ComboBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.endTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -43,66 +37,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.amountReceivedNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.saveButton = new System.Windows.Forms.Button();
+            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
+            this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
+            this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(558, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Patient";
-            // 
-            // patientComboBox
-            // 
-            this.patientComboBox.DisplayMember = "Name";
-            this.patientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.patientComboBox.FormattingEnabled = true;
-            this.patientComboBox.Location = new System.Drawing.Point(617, 28);
-            this.patientComboBox.Name = "patientComboBox";
-            this.patientComboBox.Size = new System.Drawing.Size(121, 21);
-            this.patientComboBox.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Office";
-            // 
-            // officeComboBox
-            // 
-            this.officeComboBox.DisplayMember = "Location";
-            this.officeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.officeComboBox.FormattingEnabled = true;
-            this.officeComboBox.Location = new System.Drawing.Point(353, 28);
-            this.officeComboBox.Name = "officeComboBox";
-            this.officeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.officeComboBox.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Doctor";
-            // 
-            // doctorComboBox
-            // 
-            this.doctorComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.doctorComboBox.DisplayMember = "Name";
-            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.doctorComboBox.FormattingEnabled = true;
-            this.doctorComboBox.Location = new System.Drawing.Point(102, 28);
-            this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.doctorComboBox.TabIndex = 18;
             // 
             // datePicker
             // 
@@ -184,12 +123,39 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.OnSaveButtonClicked);
             // 
+            // doctorComboBox
+            // 
+            this.doctorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.doctorComboBox.Location = new System.Drawing.Point(37, 12);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
+            this.doctorComboBox.TabIndex = 33;
+            // 
+            // officeComboBox
+            // 
+            this.officeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.officeComboBox.Location = new System.Drawing.Point(293, 12);
+            this.officeComboBox.Name = "officeComboBox";
+            this.officeComboBox.Size = new System.Drawing.Size(210, 50);
+            this.officeComboBox.TabIndex = 34;
+            // 
+            // patientComboBox
+            // 
+            this.patientComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.patientComboBox.Location = new System.Drawing.Point(557, 12);
+            this.patientComboBox.Name = "patientComboBox";
+            this.patientComboBox.Size = new System.Drawing.Size(210, 50);
+            this.patientComboBox.TabIndex = 35;
+            // 
             // EditConsultationForm
             // 
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 252);
+            this.Controls.Add(this.patientComboBox);
+            this.Controls.Add(this.officeComboBox);
+            this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.amountReceivedNumericUpDown);
             this.Controls.Add(this.label7);
@@ -199,12 +165,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.datePicker);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.patientComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.officeComboBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.doctorComboBox);
             this.Name = "EditConsultationForm";
             this.Text = "Consultation";
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).EndInit();
@@ -214,13 +174,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox patientComboBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox officeComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox doctorComboBox;
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker endTimePicker;
@@ -230,5 +183,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown amountReceivedNumericUpDown;
         private System.Windows.Forms.Button saveButton;
+        private Controls.DoctorComboBox doctorComboBox;
+        private Controls.OfficeComboBox officeComboBox;
+        private Controls.PatientComboBox patientComboBox;
     }
 }
