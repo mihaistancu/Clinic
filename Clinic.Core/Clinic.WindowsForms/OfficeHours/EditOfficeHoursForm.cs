@@ -17,8 +17,8 @@ namespace Clinic.WindowsForms.OfficeHours
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new OfficeHoursRepository();
-            string doctorName = doctorComboBox.SelectedValue;
-            string officeLocation = officeComboBox.SelectedValue;
+            string doctorName = doctorComboBox.SelectedDoctor.Name;
+            string officeLocation = officeComboBox.SelectedOffice.Location;
             var dailyOfficeHours = new DailyOfficeHours
             {
                 DayOfWeek = dayOfWeekComboBox.SelectedDay,

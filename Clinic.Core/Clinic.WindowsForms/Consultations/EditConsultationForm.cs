@@ -17,9 +17,9 @@ namespace Clinic.WindowsForms.Consultations
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new ConsultationsRepository();
-            string doctorName = doctorComboBox.SelectedValue;
-            string officeLocation = officeComboBox.SelectedValue;
-            string patientName = patientComboBox.SelectedValue;
+            string doctorName = doctorComboBox.SelectedDoctor.Name;
+            string officeLocation = officeComboBox.SelectedOffice.Location;
+            string patientName = patientComboBox.SelectedPatient.Name;
             DateTime startDateTime = dateTimeRange.StartDateTime;
             DateTime endDateTime = dateTimeRange.EndDateTime;
             double amountReceived = (double)amountReceivedNumericUpDown.Value;

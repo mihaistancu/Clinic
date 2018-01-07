@@ -7,11 +7,6 @@ namespace Clinic.WindowsForms.Controls
     {
         public event Action SelectedValueChanged;
         
-        public string SelectedValue
-        {
-            get { return comboBox.Text; }
-        }
-
         public ComboBoxStyle DropDownStyle
         {
             get { return comboBox.DropDownStyle; }

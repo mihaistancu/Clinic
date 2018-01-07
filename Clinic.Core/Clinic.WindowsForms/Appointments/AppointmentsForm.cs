@@ -41,9 +41,9 @@ namespace Clinic.WindowsForms.Appointments
 
         private IEnumerable<Expression<Func<Appointment, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.SelectedValue))
+            if (doctorComboBox.SelectedDoctor != null)
             {
-                yield return a => a.Doctor.Name == doctorComboBox.SelectedValue;
+                yield return a => a.Doctor.Name == doctorComboBox.SelectedDoctor.Name;
             }
         }
         

@@ -5,6 +5,11 @@ namespace Clinic.WindowsForms.Controls
 {
     public partial class PatientComboBox : ClinicDataComboBox
     {
+        public Patient SelectedPatient
+        {
+            get { return comboBox.SelectedItem as Patient; }
+        }
+
         public PatientComboBox()
         {
             InitializeComponent();

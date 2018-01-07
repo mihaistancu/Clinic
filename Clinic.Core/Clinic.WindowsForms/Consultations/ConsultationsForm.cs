@@ -47,19 +47,19 @@ namespace Clinic.WindowsForms.Consultations
 
         private IEnumerable<Expression<Func<ClinicalVisit, bool>>> GetSearchPredicates()
         {
-            if (!string.IsNullOrEmpty(doctorComboBox.SelectedValue))
+            if (doctorComboBox.SelectedDoctor != null)
             {
-                yield return c => c.Doctor.Name == doctorComboBox.SelectedValue;
+                yield return c => c.Doctor.Name == doctorComboBox.SelectedDoctor.Name;
             }
 
-            if (!string.IsNullOrEmpty(officeComboBox.Text))
+            if (officeComboBox.SelectedOffice != null)
             {
-                yield return c => c.Office.Location == officeComboBox.Text;
+                yield return c => c.Office.Location == officeComboBox.SelectedOffice.Location;
             }
 
-            if (!string.IsNullOrEmpty(patientComboBox.Text))
+            if (patientComboBox.SelectedPatient != null)
             {
-                yield return c => c.Patient.Name == patientComboBox.Text;
+                yield return c => c.Patient.Name == patientComboBox.SelectedPatient.Name;
             }
         }
         
