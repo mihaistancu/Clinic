@@ -9,9 +9,9 @@ using Clinic.WindowsForms.Consultations;
 
 namespace Clinic.WindowsForms
 {
-    public partial class Shell : Form
+    public partial class ClinicForm : Form
     {
-        public Shell()
+        public ClinicForm()
         {
             InitializeComponent();
         }
