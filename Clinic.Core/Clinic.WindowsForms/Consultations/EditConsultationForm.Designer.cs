@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.endTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.startTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.amountReceivedNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.saveButton = new System.Windows.Forms.Button();
@@ -39,46 +35,9 @@
             this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
             this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
             this.datePicker = new Clinic.WindowsForms.Controls.DatePicker();
+            this.timeRange = new Clinic.WindowsForms.Controls.TimeRange();
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // endTimePicker
-            // 
-            this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.endTimePicker.Location = new System.Drawing.Point(499, 123);
-            this.endTimePicker.Name = "endTimePicker";
-            this.endTimePicker.ShowUpDown = true;
-            this.endTimePicker.Size = new System.Drawing.Size(118, 20);
-            this.endTimePicker.TabIndex = 29;
-            this.endTimePicker.Value = new System.DateTime(2000, 1, 1, 17, 0, 0, 0);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(424, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "End Time";
-            // 
-            // startTimePicker
-            // 
-            this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.startTimePicker.Location = new System.Drawing.Point(499, 86);
-            this.startTimePicker.Name = "startTimePicker";
-            this.startTimePicker.ShowUpDown = true;
-            this.startTimePicker.Size = new System.Drawing.Size(118, 20);
-            this.startTimePicker.TabIndex = 27;
-            this.startTimePicker.Value = new System.DateTime(2000, 1, 1, 21, 0, 0, 0);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(424, 92);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Start Time";
             // 
             // label7
             // 
@@ -137,12 +96,20 @@
             this.datePicker.Size = new System.Drawing.Size(305, 47);
             this.datePicker.TabIndex = 36;
             // 
+            // timeRange
+            // 
+            this.timeRange.Location = new System.Drawing.Point(414, 68);
+            this.timeRange.Name = "timeRange";
+            this.timeRange.Size = new System.Drawing.Size(255, 90);
+            this.timeRange.TabIndex = 37;
+            // 
             // EditConsultationForm
             // 
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 252);
+            this.Controls.Add(this.timeRange);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.patientComboBox);
             this.Controls.Add(this.officeComboBox);
@@ -150,10 +117,6 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.amountReceivedNumericUpDown);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.endTimePicker);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.startTimePicker);
-            this.Controls.Add(this.label6);
             this.Name = "EditConsultationForm";
             this.Text = "Consultation";
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).EndInit();
@@ -163,10 +126,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker endTimePicker;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker startTimePicker;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown amountReceivedNumericUpDown;
         private System.Windows.Forms.Button saveButton;
@@ -174,5 +133,6 @@
         private Controls.OfficeComboBox officeComboBox;
         private Controls.PatientComboBox patientComboBox;
         private Controls.DatePicker datePicker;
+        private Controls.TimeRange timeRange;
     }
 }

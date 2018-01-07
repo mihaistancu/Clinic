@@ -41,8 +41,8 @@ namespace Clinic.WindowsForms.OfficeHours
             var dailyOfficeHours = new DailyOfficeHours
             {
                 DayOfWeek = (DayOfWeek) dayOfWeekComboBox.SelectedItem,
-                StartTime = startTimePicker.Value.TimeOfDay,
-                EndTime = endTimePicker.Value.TimeOfDay
+                StartTime = timeRange.StartTime,
+                EndTime = timeRange.EndTime
             };
             repository.Add(doctorName, officeLocation, dailyOfficeHours);
             Close();

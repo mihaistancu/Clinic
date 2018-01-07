@@ -73,6 +73,12 @@
       <DependentUpon>PatientComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimeRange.Designer.cs">
+      <DependentUpon>TimeRange.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClinicDataComboBox.resx">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientComboBox.resx">
       <DependentUpon>PatientComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeRange.resx">
+      <DependentUpon>TimeRange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
