@@ -38,7 +38,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(775, 12);
+            this.addButton.Location = new System.Drawing.Point(772, 24);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 4;
@@ -51,31 +51,31 @@
             this.consultationsGridView.AllowUserToAddRows = false;
             this.consultationsGridView.AllowUserToDeleteRows = false;
             this.consultationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.consultationsGridView.Location = new System.Drawing.Point(12, 48);
+            this.consultationsGridView.Location = new System.Drawing.Point(12, 68);
             this.consultationsGridView.Name = "consultationsGridView";
             this.consultationsGridView.ReadOnly = true;
-            this.consultationsGridView.Size = new System.Drawing.Size(848, 393);
+            this.consultationsGridView.Size = new System.Drawing.Size(848, 373);
             this.consultationsGridView.TabIndex = 3;
             // 
             // doctorComboBox
             // 
-            this.doctorComboBox.Location = new System.Drawing.Point(12, -2);
+            this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(213, 50);
+            this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
             this.doctorComboBox.TabIndex = 18;
             // 
             // officeComboBox
             // 
-            this.officeComboBox.Location = new System.Drawing.Point(266, -4);
+            this.officeComboBox.Location = new System.Drawing.Point(228, 12);
             this.officeComboBox.Name = "officeComboBox";
-            this.officeComboBox.Size = new System.Drawing.Size(222, 52);
+            this.officeComboBox.Size = new System.Drawing.Size(210, 50);
             this.officeComboBox.TabIndex = 19;
             // 
             // patientComboBox
             // 
-            this.patientComboBox.Location = new System.Drawing.Point(507, -9);
+            this.patientComboBox.Location = new System.Drawing.Point(444, 12);
             this.patientComboBox.Name = "patientComboBox";
-            this.patientComboBox.Size = new System.Drawing.Size(246, 57);
+            this.patientComboBox.Size = new System.Drawing.Size(210, 50);
             this.patientComboBox.TabIndex = 20;
             // 
             // ConsultationsForm

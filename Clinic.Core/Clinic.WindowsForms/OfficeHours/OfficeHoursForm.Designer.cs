@@ -38,14 +38,14 @@
             // officeHoursDataGridView
             // 
             this.officeHoursDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.officeHoursDataGridView.Location = new System.Drawing.Point(12, 80);
+            this.officeHoursDataGridView.Location = new System.Drawing.Point(12, 70);
             this.officeHoursDataGridView.Name = "officeHoursDataGridView";
-            this.officeHoursDataGridView.Size = new System.Drawing.Size(694, 263);
+            this.officeHoursDataGridView.Size = new System.Drawing.Size(694, 273);
             this.officeHoursDataGridView.TabIndex = 12;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(552, 28);
+            this.addButton.Location = new System.Drawing.Point(554, 25);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 13;
@@ -57,14 +57,14 @@
             // 
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(213, 50);
+            this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
             this.doctorComboBox.TabIndex = 14;
             // 
-            // officeComboBox1
+            // officeComboBox
             // 
-            this.officeComboBox.Location = new System.Drawing.Point(261, 12);
-            this.officeComboBox.Name = "officeComboBox1";
-            this.officeComboBox.Size = new System.Drawing.Size(222, 52);
+            this.officeComboBox.Location = new System.Drawing.Point(228, 12);
+            this.officeComboBox.Name = "officeComboBox";
+            this.officeComboBox.Size = new System.Drawing.Size(210, 50);
             this.officeComboBox.TabIndex = 15;
             // 
             // OfficeHoursForm

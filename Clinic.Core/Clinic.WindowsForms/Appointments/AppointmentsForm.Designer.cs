@@ -36,7 +36,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(280, 21);
+            this.addButton.Location = new System.Drawing.Point(279, 25);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 14;
@@ -47,16 +47,16 @@
             // appointmentsDataGridView
             // 
             this.appointmentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.appointmentsDataGridView.Location = new System.Drawing.Point(12, 65);
+            this.appointmentsDataGridView.Location = new System.Drawing.Point(12, 68);
             this.appointmentsDataGridView.Name = "appointmentsDataGridView";
-            this.appointmentsDataGridView.Size = new System.Drawing.Size(509, 211);
+            this.appointmentsDataGridView.Size = new System.Drawing.Size(509, 208);
             this.appointmentsDataGridView.TabIndex = 15;
             // 
             // doctorComboBox
             // 
             this.doctorComboBox.Location = new System.Drawing.Point(12, 12);
             this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(213, 50);
+            this.doctorComboBox.Size = new System.Drawing.Size(210, 50);
             this.doctorComboBox.TabIndex = 16;
             // 
             // AppointmentsForm
