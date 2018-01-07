@@ -1,30 +1,19 @@
 ﻿using Clinic.Core.Infrastructure;
 using Clinic.DataAccess;
-using System.Windows.Forms;
 
 namespace Clinic.WindowsForms.Controls
 {
-    public partial class OfficeComboBox : UserControl
+    public partial class OfficeComboBox : ClinicDataComboBox
     {
         public OfficeComboBox()
         {
             InitializeComponent();
         }
-        
-        public string SelectedValue
-        {
-            get
-            {
-                return comboBox.Text;
-            }
-        }
 
-        private void OnLoad(object sender, System.EventArgs e)
+        protected override object GetDropDownItems()
         {
-            if (DesignMode) return;
-            var officeRepository = new Repository<Office>();
-            var offices = officeRepository.GetAll();
-            comboBox.DataSource = offices;
+            var repository = new Repository<Office>();
+            return repository.GetAll();
         }
     }
 }
