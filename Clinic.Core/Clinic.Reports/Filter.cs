@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq.Expressions;
+using Clinic.Core;
 
-namespace Clinic.Core.Consultations
+namespace Clinic.Reports
 {
     public class Filter 
     {

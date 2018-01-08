@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using Clinic.Core;
 using Clinic.Core.OfficeHours;
-using Clinic.Core.Consultations;
 
 namespace Clinic.DataAccess
 {

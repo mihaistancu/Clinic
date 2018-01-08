@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Clinic.Core.Consultations;
+using Clinic.Core;
 
-namespace Clinic.Core.Reports
+namespace Clinic.Reports
 {
     public class OfficeActivityReport
     {

@@ -1,8 +1,8 @@
-﻿using Clinic.Core.Reports;
-using Clinic.DataAccess;
+﻿using Clinic.DataAccess;
 using System;
 using System.Linq;
 using Clinic.Core;
+using Clinic.Reports;
 
 namespace Clinic.Console
 {

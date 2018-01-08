@@ -1,5 +1,4 @@
-﻿using Clinic.Core.Consultations;
-using Clinic.DataAccess;
+﻿using Clinic.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;

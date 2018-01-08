@@ -1,10 +1,10 @@
 ﻿using System;
-using Clinic.Core.Consultations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Clinic.Core;
+using Clinic.Reports;
 
 namespace Clinic.Tests
 {
