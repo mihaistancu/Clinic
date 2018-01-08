@@ -1,6 +1,6 @@
-﻿namespace Clinic.WindowsForms.Controls
+﻿namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
-    partial class PatientComboBox
+    partial class DoctorComboBox 
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,13 +36,13 @@
             // 
             // label
             // 
-            this.label.Size = new System.Drawing.Size(40, 13);
-            this.label.Text = "Patient";
+            this.label.Size = new System.Drawing.Size(39, 13);
+            this.label.Text = "Doctor";
             // 
-            // PatientComboBox
+            // DoctorComboBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.Name = "PatientComboBox";
+            this.Name = "DoctorComboBox";
             this.ResumeLayout(false);
             this.PerformLayout();
 

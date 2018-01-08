@@ -1,4 +1,7 @@
-﻿namespace Clinic.WindowsForms.Consultations
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+using Clinic.WindowsForms.Controls.DateTimePickers;
+
+namespace Clinic.WindowsForms.Consultations
 {
     partial class EditConsultationForm
     {
@@ -31,10 +34,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.amountReceivedNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.saveButton = new System.Windows.Forms.Button();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
-            this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
-            this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
-            this.dateTimeRange = new Clinic.WindowsForms.Controls.DateTimeRange();
+            this.doctorComboBox = new DoctorComboBox();
+            this.officeComboBox = new OfficeComboBox();
+            this.patientComboBox = new PatientComboBox();
+            this.dateTimeRange = new DateTimeRange();
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,9 +124,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown amountReceivedNumericUpDown;
         private System.Windows.Forms.Button saveButton;
-        private Controls.DoctorComboBox doctorComboBox;
-        private Controls.OfficeComboBox officeComboBox;
-        private Controls.PatientComboBox patientComboBox;
-        private Controls.DateTimeRange dateTimeRange;
+        private DoctorComboBox doctorComboBox;
+        private OfficeComboBox officeComboBox;
+        private PatientComboBox patientComboBox;
+        private DateTimeRange dateTimeRange;
     }
 }

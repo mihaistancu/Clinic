@@ -1,7 +1,7 @@
 ﻿using Clinic.Core.Staffing;
 using Clinic.DataAccess;
 
-namespace Clinic.WindowsForms.Controls
+namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     public partial class DoctorComboBox : ClinicDataComboBox
     {

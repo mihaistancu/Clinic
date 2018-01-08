@@ -1,7 +1,7 @@
 ﻿using Clinic.Core.Infrastructure;
 using Clinic.DataAccess;
 
-namespace Clinic.WindowsForms.Controls
+namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     public partial class OfficeComboBox : ClinicDataComboBox
     {

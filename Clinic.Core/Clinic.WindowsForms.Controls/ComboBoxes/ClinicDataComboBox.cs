@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Clinic.WindowsForms.Controls
+namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     public partial class ClinicDataComboBox : UserControl
     {

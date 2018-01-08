@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Clinic.WindowsForms.Controls
+namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     public partial class DayOfWeekComboBox : UserControl
     {

@@ -1,4 +1,6 @@
-﻿namespace Clinic.WindowsForms.Consultations
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+
+namespace Clinic.WindowsForms.Consultations
 {
     partial class ConsultationsForm
     {
@@ -30,9 +32,9 @@
         {
             this.addButton = new System.Windows.Forms.Button();
             this.consultationsGridView = new System.Windows.Forms.DataGridView();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
-            this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
-            this.patientComboBox = new Clinic.WindowsForms.Controls.PatientComboBox();
+            this.doctorComboBox = new DoctorComboBox();
+            this.officeComboBox = new OfficeComboBox();
+            this.patientComboBox = new PatientComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,8 +108,8 @@
 
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridView consultationsGridView;
-        private Controls.DoctorComboBox doctorComboBox;
-        private Controls.OfficeComboBox officeComboBox;
-        private Controls.PatientComboBox patientComboBox;
+        private DoctorComboBox doctorComboBox;
+        private OfficeComboBox officeComboBox;
+        private PatientComboBox patientComboBox;
     }
 }

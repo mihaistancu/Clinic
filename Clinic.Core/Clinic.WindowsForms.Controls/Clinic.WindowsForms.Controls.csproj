@@ -42,79 +42,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClinicDataComboBox.cs">
+    <Compile Include="ComboBoxes\ClinicDataComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClinicDataComboBox.Designer.cs">
+    <Compile Include="ComboBoxes\ClinicDataComboBox.Designer.cs">
       <DependentUpon>ClinicDataComboBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatePicker.cs">
+    <Compile Include="DateTimePickers\DatePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DatePicker.Designer.cs">
+    <Compile Include="DateTimePickers\DatePicker.Designer.cs">
       <DependentUpon>DatePicker.cs</DependentUpon>
     </Compile>
-    <Compile Include="DateTimeRange.cs">
+    <Compile Include="DateTimePickers\DateTimeRange.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DateTimeRange.Designer.cs">
+    <Compile Include="DateTimePickers\DateTimeRange.Designer.cs">
       <DependentUpon>DateTimeRange.cs</DependentUpon>
     </Compile>
-    <Compile Include="DayOfWeekComboBox.cs">
+    <Compile Include="ComboBoxes\DayOfWeekComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DayOfWeekComboBox.Designer.cs">
+    <Compile Include="ComboBoxes\DayOfWeekComboBox.Designer.cs">
       <DependentUpon>DayOfWeekComboBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoctorComboBox.cs">
+    <Compile Include="ComboBoxes\DoctorComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DoctorComboBox.Designer.cs">
+    <Compile Include="ComboBoxes\DoctorComboBox.Designer.cs">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="OfficeComboBox.cs">
+    <Compile Include="ComboBoxes\OfficeComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OfficeComboBox.Designer.cs">
+    <Compile Include="ComboBoxes\OfficeComboBox.Designer.cs">
       <DependentUpon>OfficeComboBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientComboBox.cs">
+    <Compile Include="ComboBoxes\PatientComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PatientComboBox.Designer.cs">
+    <Compile Include="ComboBoxes\PatientComboBox.Designer.cs">
       <DependentUpon>PatientComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimeRange.cs">
+    <Compile Include="DateTimePickers\TimeRange.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TimeRange.Designer.cs">
+    <Compile Include="DateTimePickers\TimeRange.Designer.cs">
       <DependentUpon>TimeRange.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClinicDataComboBox.resx">
+    <EmbeddedResource Include="ComboBoxes\ClinicDataComboBox.resx">
       <DependentUpon>ClinicDataComboBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatePicker.resx">
+    <EmbeddedResource Include="DateTimePickers\DatePicker.resx">
       <DependentUpon>DatePicker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DateTimeRange.resx">
+    <EmbeddedResource Include="DateTimePickers\DateTimeRange.resx">
       <DependentUpon>DateTimeRange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DayOfWeekComboBox.resx">
+    <EmbeddedResource Include="ComboBoxes\DayOfWeekComboBox.resx">
       <DependentUpon>DayOfWeekComboBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoctorComboBox.resx">
+    <EmbeddedResource Include="ComboBoxes\DoctorComboBox.resx">
       <DependentUpon>DoctorComboBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OfficeComboBox.resx">
+    <EmbeddedResource Include="ComboBoxes\OfficeComboBox.resx">
       <DependentUpon>OfficeComboBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientComboBox.resx">
+    <EmbeddedResource Include="ComboBoxes\PatientComboBox.resx">
       <DependentUpon>PatientComboBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimeRange.resx">
+    <EmbeddedResource Include="DateTimePickers\TimeRange.resx">
       <DependentUpon>TimeRange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

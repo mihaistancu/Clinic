@@ -1,4 +1,6 @@
-﻿namespace Clinic.WindowsForms.Appointments
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+
+namespace Clinic.WindowsForms.Appointments
 {
     partial class AppointmentsForm
     {
@@ -30,7 +32,7 @@
         {
             this.addButton = new System.Windows.Forms.Button();
             this.appointmentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
+            this.doctorComboBox = new DoctorComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +82,6 @@
         #endregion
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.DataGridView appointmentsDataGridView;
-        private Controls.DoctorComboBox doctorComboBox;
+        private DoctorComboBox doctorComboBox;
     }
 }

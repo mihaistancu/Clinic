@@ -1,4 +1,7 @@
-﻿namespace Clinic.WindowsForms.Appointments
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+using Clinic.WindowsForms.Controls.DateTimePickers;
+
+namespace Clinic.WindowsForms.Appointments
 {
     partial class EditAppointmentForm
     {
@@ -29,8 +32,8 @@
         private void InitializeComponent()
         {
             this.saveButton = new System.Windows.Forms.Button();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
-            this.datePicker = new Clinic.WindowsForms.Controls.DatePicker();
+            this.doctorComboBox = new DoctorComboBox();
+            this.datePicker = new DatePicker();
             this.SuspendLayout();
             // 
             // saveButton
@@ -75,7 +78,7 @@
 
         #endregion
         private System.Windows.Forms.Button saveButton;
-        private Controls.DoctorComboBox doctorComboBox;
-        private Controls.DatePicker datePicker;
+        private DoctorComboBox doctorComboBox;
+        private DatePicker datePicker;
     }
 }

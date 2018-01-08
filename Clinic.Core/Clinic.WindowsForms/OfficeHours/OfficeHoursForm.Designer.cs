@@ -1,4 +1,6 @@
-﻿namespace Clinic.WindowsForms.OfficeHours
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+
+namespace Clinic.WindowsForms.OfficeHours
 {
     partial class OfficeHoursForm
     {
@@ -30,8 +32,8 @@
         {
             this.officeHoursDataGridView = new System.Windows.Forms.DataGridView();
             this.addButton = new System.Windows.Forms.Button();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
-            this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
+            this.doctorComboBox = new DoctorComboBox();
+            this.officeComboBox = new OfficeComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.officeHoursDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@
         #endregion
         private System.Windows.Forms.DataGridView officeHoursDataGridView;
         private System.Windows.Forms.Button addButton;
-        private Controls.DoctorComboBox doctorComboBox;
-        private Controls.OfficeComboBox officeComboBox;
+        private DoctorComboBox doctorComboBox;
+        private OfficeComboBox officeComboBox;
     }
 }

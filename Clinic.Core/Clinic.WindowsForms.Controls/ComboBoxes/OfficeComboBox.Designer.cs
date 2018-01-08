@@ -1,4 +1,4 @@
-﻿namespace Clinic.WindowsForms.Controls
+﻿namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     partial class OfficeComboBox
     {

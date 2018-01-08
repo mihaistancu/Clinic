@@ -1,4 +1,7 @@
-﻿namespace Clinic.WindowsForms.OfficeHours
+﻿using Clinic.WindowsForms.Controls.ComboBoxes;
+using Clinic.WindowsForms.Controls.DateTimePickers;
+
+namespace Clinic.WindowsForms.OfficeHours
 {
     partial class EditOfficeHoursForm
     {
@@ -29,10 +32,10 @@
         private void InitializeComponent()
         {
             this.saveButton = new System.Windows.Forms.Button();
-            this.doctorComboBox = new Clinic.WindowsForms.Controls.DoctorComboBox();
-            this.officeComboBox = new Clinic.WindowsForms.Controls.OfficeComboBox();
-            this.timeRange = new Clinic.WindowsForms.Controls.TimeRange();
-            this.dayOfWeekComboBox = new Clinic.WindowsForms.Controls.DayOfWeekComboBox();
+            this.doctorComboBox = new DoctorComboBox();
+            this.officeComboBox = new OfficeComboBox();
+            this.timeRange = new TimeRange();
+            this.dayOfWeekComboBox = new DayOfWeekComboBox();
             this.SuspendLayout();
             // 
             // saveButton
@@ -94,9 +97,9 @@
 
         #endregion
         private System.Windows.Forms.Button saveButton;
-        private Controls.DoctorComboBox doctorComboBox;
-        private Controls.OfficeComboBox officeComboBox;
-        private Controls.TimeRange timeRange;
-        private Controls.DayOfWeekComboBox dayOfWeekComboBox;
+        private DoctorComboBox doctorComboBox;
+        private OfficeComboBox officeComboBox;
+        private TimeRange timeRange;
+        private DayOfWeekComboBox dayOfWeekComboBox;
     }
 }

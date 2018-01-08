@@ -1,6 +1,6 @@
-﻿namespace Clinic.WindowsForms.Controls
+﻿namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
-    partial class ClinicDataComboBox
+    partial class DayOfWeekComboBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label
+            // label3
             // 
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(15, 18);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(33, 13);
-            this.label.TabIndex = 13;
-            this.label.Text = "Entity";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Day of Week";
             // 
-            // comboBox
+            // comboBox1
             // 
-            this.comboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.comboBox.DisplayMember = "Location";
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(74, 15);
-            this.comboBox.Name = "comboBox";
+            this.comboBox.Location = new System.Drawing.Point(114, 15);
+            this.comboBox.Name = "comboBox1";
             this.comboBox.Size = new System.Drawing.Size(121, 21);
-            this.comboBox.TabIndex = 12;
-            this.comboBox.TextChanged += new System.EventHandler(this.OnComboBoxTextChanged);
+            this.comboBox.TabIndex = 18;
             // 
-            // ClinicDataComboBox
+            // DayOfWeekComboBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox);
-            this.Name = "ClinicDataComboBox";
-            this.Size = new System.Drawing.Size(210, 50);
+            this.Name = "DayOfWeekComboBox";
+            this.Size = new System.Drawing.Size(258, 50);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        protected System.Windows.Forms.ComboBox comboBox;
-        protected System.Windows.Forms.Label label;
+
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox;
     }
 }

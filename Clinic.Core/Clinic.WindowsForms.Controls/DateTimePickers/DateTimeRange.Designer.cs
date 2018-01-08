@@ -1,6 +1,6 @@
-﻿namespace Clinic.WindowsForms.Controls
+﻿namespace Clinic.WindowsForms.Controls.DateTimePickers
 {
-    partial class DoctorComboBox 
+    partial class DateTimeRange
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,26 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.timeRange = new TimeRange();
+            this.datePicker = new DatePicker();
             this.SuspendLayout();
             // 
-            // comboBox
+            // timeRange
             // 
-            this.comboBox.DisplayMember = "Name";
+            this.timeRange.Location = new System.Drawing.Point(359, 14);
+            this.timeRange.Name = "timeRange";
+            this.timeRange.Size = new System.Drawing.Size(255, 90);
+            this.timeRange.TabIndex = 39;
             // 
-            // label
+            // datePicker
             // 
-            this.label.Size = new System.Drawing.Size(39, 13);
-            this.label.Text = "Doctor";
+            this.datePicker.Location = new System.Drawing.Point(16, 38);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(305, 47);
+            this.datePicker.TabIndex = 38;
             // 
-            // DoctorComboBox
+            // DateTimeRange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.Name = "DoctorComboBox";
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.timeRange);
+            this.Controls.Add(this.datePicker);
+            this.Name = "DateTimeRange";
+            this.Size = new System.Drawing.Size(631, 121);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
+        private TimeRange timeRange;
+        private DatePicker datePicker;
     }
 }

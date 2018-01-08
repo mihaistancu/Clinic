@@ -1,7 +1,7 @@
-﻿using Clinic.DataAccess;
-using Clinic.Core.Patients;
+﻿using Clinic.Core.Patients;
+using Clinic.DataAccess;
 
-namespace Clinic.WindowsForms.Controls
+namespace Clinic.WindowsForms.Controls.ComboBoxes
 {
     public partial class PatientComboBox : ClinicDataComboBox
     {
