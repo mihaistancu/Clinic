@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clinic.Core\Clinic.Core.csproj">
+    <ProjectReference Include="..\Clinic.Core\Clinic.Data.csproj">
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
-      <Name>Clinic.Core</Name>
+      <Name>Clinic.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

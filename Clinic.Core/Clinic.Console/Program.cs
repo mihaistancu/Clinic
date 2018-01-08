@@ -1,6 +1,6 @@
-﻿using Clinic.DataAccess;
-using System.Collections.Generic;
-using Clinic.Core;
+﻿using System.Collections.Generic;
+using Clinic.Data;
+using Clinic.Data.Persistence;
 
 namespace Clinic.Console
 {

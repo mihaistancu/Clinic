@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-using Clinic.Core.OfficeHours;
-using Clinic.DataAccess;
+using Clinic.Data.OfficeHours;
+using Clinic.Data.Persistence;
 
 namespace Clinic.WindowsForms.OfficeHours
 {

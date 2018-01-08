@@ -1,7 +1,7 @@
-﻿using Clinic.DataAccess;
-using System;
+﻿using System;
 using System.Linq;
-using Clinic.Core;
+using Clinic.Data;
+using Clinic.Data.Persistence;
 using Clinic.Reports;
 
 namespace Clinic.Console

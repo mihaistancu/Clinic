@@ -56,9 +56,9 @@
     <Compile Include="ConsultationsSearchTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clinic.Core\Clinic.Core.csproj">
+    <ProjectReference Include="..\Clinic.Core\Clinic.Data.csproj">
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
-      <Name>Clinic.Core</Name>
+      <Name>Clinic.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Clinic.Reports\Clinic.Reports.csproj">
       <Project>{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}</Project>

@@ -1,6 +1,6 @@
-﻿using Clinic.DataAccess;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Clinic.Data.Persistence;
 
 namespace Clinic.WindowsForms.Consultations
 {

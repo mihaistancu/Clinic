@@ -1,8 +1,7 @@
 ﻿using System.Data.Entity;
-using Clinic.Core;
-using Clinic.Core.OfficeHours;
+using Clinic.Data.OfficeHours;
 
-namespace Clinic.DataAccess
+namespace Clinic.Data.Persistence
 {
     public class ClinicDbContext : DbContext
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Clinic.Core.OfficeHours
+namespace Clinic.Data.OfficeHours
 {
     public class DailyOfficeHours
     {

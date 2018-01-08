@@ -1,7 +1,7 @@
-﻿using Clinic.DataAccess;
-using System;
+﻿using System;
 using System.Windows.Forms;
-using Clinic.Core;
+using Clinic.Data;
+using Clinic.Data.Persistence;
 
 namespace Clinic.WindowsForms.Patients
 {

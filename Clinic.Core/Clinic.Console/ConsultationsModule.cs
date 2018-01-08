@@ -1,5 +1,5 @@
-﻿using Clinic.DataAccess;
-using System;
+﻿using System;
+using Clinic.Data.Persistence;
 
 namespace Clinic.Console
 {

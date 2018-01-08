@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System;
+using System.Linq;
 using System.Linq.Expressions;
-using Clinic.Core;
 
-namespace Clinic.DataAccess
+namespace Clinic.Data.Persistence
 {
     public class ConsultationsRepository: Repository<ClinicalVisit>
     {

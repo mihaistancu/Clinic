@@ -1,10 +1,9 @@
-﻿using Clinic.Core;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 using System.Linq.Expressions;
 
-namespace Clinic.DataAccess
+namespace Clinic.Data.Persistence
 {
     public class Repository<T> : IRepository<T> where T : class
     {

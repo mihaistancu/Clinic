@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
-using Clinic.Core;
-using Clinic.Core.OfficeHours;
 
-namespace Clinic.DataAccess
+namespace Clinic.Data.Persistence
 {
     public class AppointmentsRepository: Repository<Appointment>
     {

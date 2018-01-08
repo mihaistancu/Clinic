@@ -1,11 +1,11 @@
 ﻿using System;
-using Clinic.Core.OfficeHours;
-using System.Linq;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
+using Clinic.Data.OfficeHours;
 
-namespace Clinic.DataAccess
+namespace Clinic.Data.Persistence
 {
     public class OfficeHoursRepository : Repository<WeeklyOfficeHours>
     {

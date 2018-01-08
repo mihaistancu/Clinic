@@ -59,13 +59,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clinic.Core\Clinic.Core.csproj">
+    <ProjectReference Include="..\Clinic.Core\Clinic.Data.csproj">
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
-      <Name>Clinic.Core</Name>
+      <Name>Clinic.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Clinic.DataAccess\Clinic.DataAccess.csproj">
+    <ProjectReference Include="..\Clinic.DataAccess\Clinic.Data.Persistence.csproj">
       <Project>{caa2d445-f099-47de-a08f-d5f262051eb0}</Project>
-      <Name>Clinic.DataAccess</Name>
+      <Name>Clinic.Data.Persistence</Name>
     </ProjectReference>
     <ProjectReference Include="..\Clinic.Reports\Clinic.Reports.csproj">
       <Project>{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}</Project>

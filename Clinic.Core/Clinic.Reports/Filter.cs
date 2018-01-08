@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Clinic.Core;
+using Clinic.Data;
 
 namespace Clinic.Reports
 {

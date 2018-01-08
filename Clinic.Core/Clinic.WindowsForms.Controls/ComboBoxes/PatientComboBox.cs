@@ -1,5 +1,5 @@
-﻿using Clinic.Core;
-using Clinic.DataAccess;
+﻿using Clinic.Data;
+using Clinic.Data.Persistence;
 
 namespace Clinic.WindowsForms.Controls.ComboBoxes
 {

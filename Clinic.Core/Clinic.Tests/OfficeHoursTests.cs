@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Clinic.Core;
-using Clinic.Core.OfficeHours;
+using Clinic.Data;
+using Clinic.Data.OfficeHours;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Clinic.Tests

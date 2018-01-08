@@ -119,13 +119,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clinic.Core\Clinic.Core.csproj">
+    <ProjectReference Include="..\Clinic.Core\Clinic.Data.csproj">
       <Project>{35AB0E3D-A0C1-42D9-B184-511D8F705130}</Project>
-      <Name>Clinic.Core</Name>
+      <Name>Clinic.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Clinic.DataAccess\Clinic.DataAccess.csproj">
+    <ProjectReference Include="..\Clinic.DataAccess\Clinic.Data.Persistence.csproj">
       <Project>{CAA2D445-F099-47DE-A08F-D5F262051EB0}</Project>
-      <Name>Clinic.DataAccess</Name>
+      <Name>Clinic.Data.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

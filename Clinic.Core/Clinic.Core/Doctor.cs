@@ -1,4 +1,4 @@
-﻿namespace Clinic.Core
+﻿namespace Clinic.Data
 {
     public class Doctor
     {

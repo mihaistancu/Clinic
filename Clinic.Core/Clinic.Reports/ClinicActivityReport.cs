@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Clinic.Core;
+using Clinic.Data;
 
 namespace Clinic.Reports
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Clinic.Core
+namespace Clinic.Data
 {
     public class ClinicalVisit
     {

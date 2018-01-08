@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Clinic.Core;
+using Clinic.Data;
 
 namespace Clinic.Tests
 {

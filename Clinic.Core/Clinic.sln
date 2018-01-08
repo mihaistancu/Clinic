@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Core", "Clinic.Core\Clinic.Core.csproj", "{35AB0E3D-A0C1-42D9-B184-511D8F705130}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data", "Clinic.Core\Clinic.Data.csproj", "{35AB0E3D-A0C1-42D9-B184-511D8F705130}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Tests", "Clinic.Tests\Clinic.Tests.csproj", "{B112BA5B-1E27-4FD0-890E-7D28FDF629D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Console", "Clinic.Console\Clinic.Console.csproj", "{21402FAA-76AE-44EC-BB93-6326A8AC0D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.DataAccess", "Clinic.DataAccess\Clinic.DataAccess.csproj", "{CAA2D445-F099-47DE-A08F-D5F262051EB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data.Persistence", "Clinic.DataAccess\Clinic.Data.Persistence.csproj", "{CAA2D445-F099-47DE-A08F-D5F262051EB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms", "Clinic.WindowsForms\Clinic.WindowsForms.csproj", "{9D603B34-4390-48C1-8E70-F05EB9340ED4}"
 EndProject

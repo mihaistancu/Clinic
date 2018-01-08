@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Clinic.Core.OfficeHours;
-using Clinic.DataAccess;
+using Clinic.Data.OfficeHours;
+using Clinic.Data.Persistence;
 
 namespace Clinic.WindowsForms.OfficeHours
 {
