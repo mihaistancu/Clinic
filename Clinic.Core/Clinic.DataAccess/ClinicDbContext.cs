@@ -1,9 +1,6 @@
 ﻿using System.Data.Entity;
-using Clinic.Core.Infrastructure;
-using Clinic.Core.Patients;
-using Clinic.Core.Staffing;
+using Clinic.Core;
 using Clinic.Core.OfficeHours;
-using Clinic.Core.Appointments;
 using Clinic.Core.Consultations;
 
 namespace Clinic.DataAccess

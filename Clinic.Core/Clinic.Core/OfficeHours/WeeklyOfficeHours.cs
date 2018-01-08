@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Clinic.Core.Staffing;
-using Clinic.Core.Infrastructure;
 
 namespace Clinic.Core.OfficeHours
 {

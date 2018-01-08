@@ -1,4 +1,4 @@
-﻿using Clinic.Core.Staffing;
+﻿using Clinic.Core;
 using Clinic.DataAccess;
 
 namespace Clinic.WindowsForms.Controls.ComboBoxes

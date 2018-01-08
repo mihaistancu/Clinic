@@ -1,8 +1,6 @@
-﻿using Clinic.Core.Infrastructure;
-using Clinic.Core.Patients;
-using Clinic.Core.Staffing;
-using Clinic.DataAccess;
+﻿using Clinic.DataAccess;
 using System.Collections.Generic;
+using Clinic.Core;
 
 namespace Clinic.Console
 {

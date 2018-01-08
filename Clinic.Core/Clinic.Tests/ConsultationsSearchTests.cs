@@ -1,12 +1,10 @@
 ﻿using System;
-using Clinic.Core.Staffing;
-using Clinic.Core.Infrastructure;
 using Clinic.Core.Consultations;
-using Clinic.Core.Patients;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Clinic.Core;
 
 namespace Clinic.Tests
 {

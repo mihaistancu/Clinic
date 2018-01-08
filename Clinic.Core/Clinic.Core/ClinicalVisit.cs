@@ -1,9 +1,6 @@
 ﻿using System;
-using Clinic.Core.Staffing;
-using Clinic.Core.Infrastructure;
-using Clinic.Core.Patients;
 
-namespace Clinic.Core.Consultations
+namespace Clinic.Core
 {
     public class ClinicalVisit
     {

@@ -1,6 +1,6 @@
-﻿namespace Clinic.Core.Patients
+﻿namespace Clinic.Core
 {
-    public class Patient
+    public class Doctor
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data.Entity;
 using System;
 using System.Linq.Expressions;
+using Clinic.Core;
 
 namespace Clinic.DataAccess
 {

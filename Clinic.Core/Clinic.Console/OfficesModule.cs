@@ -1,4 +1,4 @@
-﻿using Clinic.Core.Infrastructure;
+﻿using Clinic.Core;
 using Clinic.DataAccess;
 
 namespace Clinic.Console

@@ -1,6 +1,4 @@
 ﻿using System;
-using Clinic.Core.Staffing;
-using Clinic.Core.Infrastructure;
 using System.Linq.Expressions;
 
 namespace Clinic.Core.Consultations
