@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms.Control
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Reports", "Clinic.Reports\Clinic.Reports.csproj", "{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{27E9F59E-D812-4268-AEBB-1D7D21A3A78A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{21402FAA-76AE-44EC-BB93-6326A8AC0D7E} = {27E9F59E-D812-4268-AEBB-1D7D21A3A78A}
 		{9D603B34-4390-48C1-8E70-F05EB9340ED4} = {A1580FC4-32B5-411A-ADDE-EE10CE7327F1}
 		{D721FD13-3B93-4DB7-9308-24488F9209A0} = {A1580FC4-32B5-411A-ADDE-EE10CE7327F1}
 	EndGlobalSection
