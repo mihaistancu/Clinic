@@ -6,7 +6,7 @@ namespace Clinic.Console
 {
     class Program
     {
-        static Dictionary<string, IModule> moduleMap = new Dictionary<string, IModule>
+        static readonly Dictionary<string, IModule> moduleMap = new Dictionary<string, IModule>
         {
             { "doctors", new DoctorsModule(new Repository<Doctor>()) },
             { "patients", new PatientsModule(new Repository<Patient>()) },

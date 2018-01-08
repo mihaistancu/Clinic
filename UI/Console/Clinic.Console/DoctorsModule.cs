@@ -5,7 +5,7 @@ namespace Clinic.Console
 {
     public class DoctorsModule : Module
     {
-        Repository<Doctor> repository;
+        readonly Repository<Doctor> repository;
 
         public DoctorsModule(Repository<Doctor> repository)
         {

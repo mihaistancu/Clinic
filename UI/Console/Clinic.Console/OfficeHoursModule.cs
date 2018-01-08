@@ -7,7 +7,7 @@ namespace Clinic.Console
 {
     public class OfficeHoursModule : Module
     {
-        OfficeHoursRepository repository;
+        readonly OfficeHoursRepository repository;
 
         public OfficeHoursModule(OfficeHoursRepository repository)
         {

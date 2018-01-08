@@ -5,7 +5,7 @@ namespace Clinic.Console
 {
     public class OfficesModule : Module
     {
-        Repository<Office> repository;
+        readonly Repository<Office> repository;
 
         public OfficesModule(Repository<Office> repository)
         {

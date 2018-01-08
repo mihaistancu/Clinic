@@ -8,7 +8,7 @@ namespace Clinic.Console
 {
     public class ReportsModule : IModule
     {
-        ConsultationsRepository repository;
+        readonly ConsultationsRepository repository;
 
         public ReportsModule()
         {
