@@ -95,6 +95,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Appointments\AppointmentsWindow\" />
+    <Folder Include="Appointments\EditAppointmentWindow\" />
+    <Folder Include="Doctors\DoctorsWindow\" />
+    <Folder Include="Doctors\EditDoctorWindow\" />
+    <Folder Include="Examinations\EditExaminationWindow\" />
+    <Folder Include="Examinations\ExaminationsWindow\" />
+    <Folder Include="OfficeHours\EditOfficeHoursWindow\" />
+    <Folder Include="OfficeHours\OfficeHoursWindow\" />
+    <Folder Include="Offices\EditOfficeWindow\" />
+    <Folder Include="Offices\OfficesWindow\" />
+    <Folder Include="Patients\EditPatientWindow\" />
+    <Folder Include="Patients\PatientsWindow\" />
+    <Folder Include="Reports\ClinicActivityWindow\" />
+    <Folder Include="Reports\DoctorActivityWindow\" />
+    <Folder Include="Reports\PatientActivityWindow\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

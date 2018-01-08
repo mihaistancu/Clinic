@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="Clinic" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <Button>Doctors</Button>
+            <Button>Offices</Button>
+            <Button>Patients</Button>
+            <Button>Office Hours</Button>
+            <Button>Appointments</Button>
+            <Button>Examinations</Button>
+            <Button>Doctor Activity</Button>
+            <Button>Office Activity</Button>
+            <Button>Clinic Activity</Button>
+        </StackPanel>
     </Grid>
 </Window>
