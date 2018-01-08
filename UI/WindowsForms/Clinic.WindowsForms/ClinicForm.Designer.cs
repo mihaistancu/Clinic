@@ -37,6 +37,7 @@
             this.clinicActivityButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.doctorActivityButton = new System.Windows.Forms.Button();
+            this.officeActivityButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.officeActivityButton);
             this.groupBox1.Controls.Add(this.doctorActivityButton);
             this.groupBox1.Controls.Add(this.clinicActivityButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 134);
@@ -130,6 +132,16 @@
             this.doctorActivityButton.Text = "Doctor Activity";
             this.doctorActivityButton.UseVisualStyleBackColor = true;
             this.doctorActivityButton.Click += new System.EventHandler(this.OnDoctorActivityButtonClicked);
+            // 
+            // officeActivityButton
+            // 
+            this.officeActivityButton.Location = new System.Drawing.Point(133, 37);
+            this.officeActivityButton.Name = "officeActivityButton";
+            this.officeActivityButton.Size = new System.Drawing.Size(75, 40);
+            this.officeActivityButton.TabIndex = 8;
+            this.officeActivityButton.Text = "Office Activity";
+            this.officeActivityButton.UseVisualStyleBackColor = true;
+            this.officeActivityButton.Click += new System.EventHandler(this.OnOfficeActivityButtonClicked);
             // 
             // ClinicForm
             // 
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Button clinicActivityButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button doctorActivityButton;
+        private System.Windows.Forms.Button officeActivityButton;
     }
 }
