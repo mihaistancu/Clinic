@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data", "Clinic.Core\Clinic.Data.csproj", "{35AB0E3D-A0C1-42D9-B184-511D8F705130}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data", "Clinic.Data\Clinic.Data.csproj", "{35AB0E3D-A0C1-42D9-B184-511D8F705130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Console", "Clinic.Console\Clinic.Console.csproj", "{21402FAA-76AE-44EC-BB93-6326A8AC0D7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Console", "UI\Console\Clinic.Console\Clinic.Console.csproj", "{21402FAA-76AE-44EC-BB93-6326A8AC0D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data.Persistence", "Clinic.DataAccess\Clinic.Data.Persistence.csproj", "{CAA2D445-F099-47DE-A08F-D5F262051EB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data.Persistence", "Clinic.Data.Persistence\Clinic.Data.Persistence.csproj", "{CAA2D445-F099-47DE-A08F-D5F262051EB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms", "Clinic.WindowsForms\Clinic.WindowsForms.csproj", "{9D603B34-4390-48C1-8E70-F05EB9340ED4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms", "UI\WindowsForms\Clinic.WindowsForms\Clinic.WindowsForms.csproj", "{9D603B34-4390-48C1-8E70-F05EB9340ED4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3E40DE26-D0FF-446C-BF48-A7403352E297}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsForms", "WindowsForms", "{A1580FC4-32B5-411A-ADDE-EE10CE7327F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms.Controls", "Clinic.WindowsForms.Controls\Clinic.WindowsForms.Controls.csproj", "{D721FD13-3B93-4DB7-9308-24488F9209A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.WindowsForms.Controls", "UI\WindowsForms\Clinic.WindowsForms.Controls\Clinic.WindowsForms.Controls.csproj", "{D721FD13-3B93-4DB7-9308-24488F9209A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Reports", "Clinic.Reports\Clinic.Reports.csproj", "{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}"
 EndProject
