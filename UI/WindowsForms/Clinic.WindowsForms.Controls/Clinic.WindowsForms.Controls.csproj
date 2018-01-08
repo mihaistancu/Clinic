@@ -54,6 +54,7 @@
     <Compile Include="DateTimePickers\DatePicker.Designer.cs">
       <DependentUpon>DatePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="DateTimePickers\DateTimeFactory.cs" />
     <Compile Include="DateTimePickers\DateTimePicker.cs">
       <SubType>UserControl</SubType>
     </Compile>

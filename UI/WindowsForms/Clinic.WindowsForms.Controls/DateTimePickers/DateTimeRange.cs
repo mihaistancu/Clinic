@@ -7,24 +7,12 @@ namespace Clinic.WindowsForms.Controls.DateTimePickers
     {
         public DateTime StartDateTime
         {
-            get { return new DateTime(
-                datePicker.SelectedDate.Year, 
-                datePicker.SelectedDate.Month, 
-                datePicker.SelectedDate.Day, 
-                timeRange.StartTime.Hours, 
-                timeRange.StartTime.Minutes, 
-                timeRange.StartTime.Seconds); }
+            get { return DateTimeFactory.Build(datePicker.SelectedDate, timeRange.StartTime); }
         }
 
         public DateTime EndDateTime
         {
-            get { return new DateTime(
-                datePicker.SelectedDate.Year, 
-                datePicker.SelectedDate.Month, 
-                datePicker.SelectedDate.Day, 
-                timeRange.EndTime.Hours, 
-                timeRange.EndTime.Minutes, 
-                timeRange.EndTime.Seconds); }
+            get { return DateTimeFactory.Build(datePicker.SelectedDate, timeRange.EndTime); }
         }
 
         public DateTimeRange()
