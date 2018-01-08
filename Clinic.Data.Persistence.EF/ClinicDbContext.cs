@@ -14,6 +14,6 @@ namespace Clinic.Data.Persistence.EF
         public DbSet<Office> Offices { get; set; }
         public DbSet<WeeklyOfficeHours> OfficeHours { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
-        public DbSet<ClinicalVisit> Consultations { get; set; }
+        public DbSet<Examination> Examinations { get; set; }
     }
 }

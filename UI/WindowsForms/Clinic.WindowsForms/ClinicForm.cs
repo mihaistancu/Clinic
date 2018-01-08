@@ -5,7 +5,7 @@ using Clinic.WindowsForms.Doctors;
 using Clinic.WindowsForms.OfficeHours;
 using Clinic.WindowsForms.Offices;
 using Clinic.WindowsForms.Patients;
-using Clinic.WindowsForms.Consultations;
+using Clinic.WindowsForms.Examinations;
 using Clinic.WindowsForms.Reports;
 
 namespace Clinic.WindowsForms
@@ -47,10 +47,10 @@ namespace Clinic.WindowsForms
             appointmentsForm.Show();
         }
 
-        private void OnConsultationsClicked(object sender, EventArgs e)
+        private void OnExaminationsClicked(object sender, EventArgs e)
         {
-            var consultationsForm = new ConsultationsForm();
-            consultationsForm.Show();
+            var examinationsForm = new ExaminationsForm();
+            examinationsForm.Show();
         }
 
         private void OnClinicActivityButtonClicked(object sender, EventArgs e)

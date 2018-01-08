@@ -13,7 +13,7 @@ namespace Clinic.Console
             { "offices", new OfficesModule(new Repository<Office>()) },
             { "hours", new OfficeHoursModule(new OfficeHoursRepository()) },
             { "appointments", new AppointmentsModule(new AppointmentsRepository()) },
-            { "consultations", new ConsultationsModule(new ConsultationsRepository()) },
+            { "examinations", new ExaminationsModule(new ExaminationsRepository()) },
             { "reports", new ReportsModule() }
         };
 

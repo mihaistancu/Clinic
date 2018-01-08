@@ -2,11 +2,11 @@
 using System.Windows.Forms;
 using Clinic.Data.Persistence.EF;
 
-namespace Clinic.WindowsForms.Consultations
+namespace Clinic.WindowsForms.Examinations
 {
-    public partial class EditConsultationForm : Form
+    public partial class EditExaminationForm : Form
     {
-        public EditConsultationForm()
+        public EditExaminationForm()
         {
             InitializeComponent();            
         }
@@ -20,7 +20,7 @@ namespace Clinic.WindowsForms.Consultations
 
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
-            var repository = new ConsultationsRepository();
+            var repository = new ExaminationsRepository();
             string doctorName = doctorComboBox.SelectedDoctor.Name;
             string officeLocation = officeComboBox.SelectedOffice.Location;
             string patientName = patientComboBox.SelectedPatient.Name;

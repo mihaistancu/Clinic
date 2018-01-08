@@ -16,9 +16,9 @@ namespace Clinic.WindowsForms.Reports
 
         private void OnGenerateReportButtonClicked(object sender, EventArgs e)
         {
-            var repository = new ConsultationsRepository();
+            var repository = new ExaminationsRepository();
             var report = DoctorActivityReport.For(repository, doctorComboBox.SelectedDoctor, dateRange.StartDate, dateRange.EndDate);
-            totalClinicalVisitsTextBox.Text = report.ClinicalVisitsCount.ToString();
+            totalExaminationsTextBox.Text = report.ExaminationsCount.ToString();
             totalAmountReceivedTextBox.Text = report.TotalAmountReceived.ToString(CultureInfo.InvariantCulture);
         }
 

@@ -3,11 +3,11 @@ using Clinic.Data.Persistence.EF;
 
 namespace Clinic.Console
 {
-    public class ConsultationsModule : Module
+    public class ExaminationsModule : Module
     {
-        readonly ConsultationsRepository repository;
+        readonly ExaminationsRepository repository;
 
-        public ConsultationsModule(ConsultationsRepository repository)
+        public ExaminationsModule(ExaminationsRepository repository)
         {
             this.repository = repository;
         }
@@ -25,12 +25,12 @@ namespace Clinic.Console
 
         protected override void List()
         {
-            foreach(var consultation in repository.GetAll())
+            foreach(var examination in repository.GetAll())
             {
-                System.Console.WriteLine("Dr {0} - {1}", consultation.Doctor.Name, consultation.Office.Location);
-                System.Console.WriteLine("Patient: {0}", consultation.Patient.Name);
-                System.Console.WriteLine("{0} - {1}", consultation.StartDateTime, consultation.EndDateTime);
-                System.Console.WriteLine("${0}", consultation.AmountReceived);
+                System.Console.WriteLine("Dr {0} - {1}", examination.Doctor.Name, examination.Office.Location);
+                System.Console.WriteLine("Patient: {0}", examination.Patient.Name);
+                System.Console.WriteLine("{0} - {1}", examination.StartDateTime, examination.EndDateTime);
+                System.Console.WriteLine("${0}", examination.AmountReceived);
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace Clinic.Data.Persistence.EF
 {
-    public class ConsultationsRepository: Repository<ClinicalVisit>
+    public class ExaminationsRepository: Repository<Examination>
     {
         public void Add(string doctorName, string officeLocation, string patientName, DateTime startDateTime, DateTime endDateTime, double amountReceived)
         {
@@ -15,7 +15,7 @@ namespace Clinic.Data.Persistence.EF
                 var doctor = context.Doctors.Single(d => d.Name == doctorName);
                 var office = context.Offices.Single(d => d.Location == officeLocation);
                 var patient = context.Patients.Single(d => d.Name == patientName);
-                context.Consultations.Add(new ClinicalVisit
+                context.Examinations.Add(new Examination
                 {
                     Doctor = doctor,
                     Office = office,
@@ -28,11 +28,11 @@ namespace Clinic.Data.Persistence.EF
             }
         }
 
-        public override List<ClinicalVisit> GetAll()
+        public override List<Examination> GetAll()
         {
             using (var context = new ClinicDbContext())
             {
-                return context.Consultations
+                return context.Examinations
                     .Include(a => a.Doctor)
                     .Include(a => a.Office)
                     .Include(a => a.Patient)
@@ -40,11 +40,11 @@ namespace Clinic.Data.Persistence.EF
             }
         }
 
-        public override List<ClinicalVisit> Search(params Expression<Func<ClinicalVisit, bool>>[] predicates)
+        public override List<Examination> Search(params Expression<Func<Examination, bool>>[] predicates)
         {
             using (var context = new ClinicDbContext())
             {
-                IQueryable<ClinicalVisit> results = context.Consultations
+                IQueryable<Examination> results = context.Examinations
                     .Include(a => a.Doctor)
                     .Include(a => a.Office)
                     .Include(a => a.Patient);

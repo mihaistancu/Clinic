@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.totalVisitsDurationTextBox = new System.Windows.Forms.TextBox();
+            this.totalExaminationsDurationTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateRange = new Clinic.WindowsForms.Controls.DateTimePickers.DateRange();
             this.generateReportButton = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             // 
             // groupBox
             // 
-            this.groupBox.Controls.Add(this.totalVisitsDurationTextBox);
+            this.groupBox.Controls.Add(this.totalExaminationsDurationTextBox);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Location = new System.Drawing.Point(48, 153);
             this.groupBox.Name = "groupBox";
@@ -48,13 +48,13 @@
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Report";
             // 
-            // totalVisitsDurationTextBox
+            // totalExaminationsDurationTextBox
             // 
-            this.totalVisitsDurationTextBox.Location = new System.Drawing.Point(235, 59);
-            this.totalVisitsDurationTextBox.Name = "totalVisitsDurationTextBox";
-            this.totalVisitsDurationTextBox.ReadOnly = true;
-            this.totalVisitsDurationTextBox.Size = new System.Drawing.Size(108, 20);
-            this.totalVisitsDurationTextBox.TabIndex = 3;
+            this.totalExaminationsDurationTextBox.Location = new System.Drawing.Point(235, 59);
+            this.totalExaminationsDurationTextBox.Name = "totalExaminationsDurationTextBox";
+            this.totalExaminationsDurationTextBox.ReadOnly = true;
+            this.totalExaminationsDurationTextBox.Size = new System.Drawing.Size(108, 20);
+            this.totalExaminationsDurationTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -63,7 +63,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Total Visits Duration (Days)";
+            this.label1.Text = "Total Examinations Duration (Days)";
             // 
             // dateRange
             // 
@@ -113,7 +113,7 @@
         private Controls.DateTimePickers.DateRange dateRange;
         private System.Windows.Forms.Button generateReportButton;
         private Controls.ComboBoxes.OfficeComboBox officeComboBox;
-        private System.Windows.Forms.TextBox totalVisitsDurationTextBox;
+        private System.Windows.Forms.TextBox totalExaminationsDurationTextBox;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -5,26 +5,24 @@ namespace Clinic.Data.Persistence
 {
     public class Filter 
     {
-        public static Expression<Func<ClinicalVisit, bool>> ByOffice(Office office)
+        public static Expression<Func<Examination, bool>> ByOffice(Office office)
         {
-            return visit => visit.Office.Location == office.Location;
+            return e => e.Office.Location == office.Location;
         }
 
-        public static Expression<Func<ClinicalVisit, bool>> ByDoctor(Doctor doctor)
+        public static Expression<Func<Examination, bool>> ByDoctor(Doctor doctor)
         {
-            return visit => visit.Doctor.Name == doctor.Name;
+            return e => e.Doctor.Name == doctor.Name;
         }
 
-        public static Expression<Func<ClinicalVisit, bool>> ByTimeframe(DateTime startDateTime, DateTime endDateTime)
+        public static Expression<Func<Examination, bool>> ByTimeframe(DateTime startDateTime, DateTime endDateTime)
         {
-            return visit =>
-                visit.StartDateTime >= startDateTime &&
-                visit.EndDateTime <= endDateTime;
+            return e => e.StartDateTime >= startDateTime && e.EndDateTime <= endDateTime;
         }
 
-        public static Expression<Func<ClinicalVisit, bool>> ByDate(DateTime date)
+        public static Expression<Func<Examination, bool>> ByDate(DateTime date)
         {
-            return visit => visit.StartDateTime.Date == date.Date;
+            return e => e.StartDateTime.Date == date.Date;
         }
     }
 }

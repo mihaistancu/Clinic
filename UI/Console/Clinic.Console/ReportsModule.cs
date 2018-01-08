@@ -8,11 +8,11 @@ namespace Clinic.Console
 {
     public class ReportsModule : IModule
     {
-        readonly ConsultationsRepository repository;
+        readonly ExaminationsRepository repository;
 
         public ReportsModule()
         {
-            repository = new ConsultationsRepository();
+            repository = new ExaminationsRepository();
         }
 
         public void Execute(string[] args)
@@ -32,7 +32,7 @@ namespace Clinic.Console
 
             var report = ClinicActivityReport.For(repository, startDateTime, endDateTime);
 
-            System.Console.WriteLine("Total visits duration: {0}", report.TotalVisitsDuration);
+            System.Console.WriteLine("Total examinations duration: {0}", report.TotalExaminationsDuration);
             System.Console.WriteLine("Total amount received: ${0}", report.TotalAmountReceived);
         }
 
@@ -44,7 +44,7 @@ namespace Clinic.Console
             
             var report = DoctorActivityReport.For(repository, doctor, startDateTime, endDateTime);
 
-            System.Console.WriteLine("Total visits: {0}", report.ClinicalVisitsCount);
+            System.Console.WriteLine("Total examinations: {0}", report.ExaminationsCount);
             System.Console.WriteLine("Total amount received: ${0}", report.TotalAmountReceived);
         }
 
@@ -62,7 +62,7 @@ namespace Clinic.Console
 
             var report = OfficeActivityReport.For(repository, office, startDateTime, endDateTime);
 
-            System.Console.WriteLine("Total visits duration: {0}", report.TotalVisitDuration);
+            System.Console.WriteLine("Total examinations duration: {0}", report.TotalExaminationsDuration);
         }
 
         private Office GetOfficeByLocation(string officeLocation)

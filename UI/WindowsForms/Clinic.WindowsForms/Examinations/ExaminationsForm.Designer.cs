@@ -1,8 +1,8 @@
 ﻿using Clinic.WindowsForms.Controls.ComboBoxes;
 
-namespace Clinic.WindowsForms.Consultations
+namespace Clinic.WindowsForms.Examinations
 {
-    partial class ConsultationsForm
+    partial class ExaminationsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,11 @@ namespace Clinic.WindowsForms.Consultations
         private void InitializeComponent()
         {
             this.addButton = new System.Windows.Forms.Button();
-            this.consultationsGridView = new System.Windows.Forms.DataGridView();
+            this.examinationsGridView = new System.Windows.Forms.DataGridView();
             this.doctorComboBox = new DoctorComboBox();
             this.officeComboBox = new OfficeComboBox();
             this.patientComboBox = new PatientComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examinationsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
@@ -48,16 +48,16 @@ namespace Clinic.WindowsForms.Consultations
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.OnAddButtonClicked);
             // 
-            // consultationsGridView
+            // examinationsGridView
             // 
-            this.consultationsGridView.AllowUserToAddRows = false;
-            this.consultationsGridView.AllowUserToDeleteRows = false;
-            this.consultationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.consultationsGridView.Location = new System.Drawing.Point(12, 68);
-            this.consultationsGridView.Name = "consultationsGridView";
-            this.consultationsGridView.ReadOnly = true;
-            this.consultationsGridView.Size = new System.Drawing.Size(848, 373);
-            this.consultationsGridView.TabIndex = 3;
+            this.examinationsGridView.AllowUserToAddRows = false;
+            this.examinationsGridView.AllowUserToDeleteRows = false;
+            this.examinationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.examinationsGridView.Location = new System.Drawing.Point(12, 68);
+            this.examinationsGridView.Name = "examinationsGridView";
+            this.examinationsGridView.ReadOnly = true;
+            this.examinationsGridView.Size = new System.Drawing.Size(848, 373);
+            this.examinationsGridView.TabIndex = 3;
             // 
             // doctorComboBox
             // 
@@ -86,7 +86,7 @@ namespace Clinic.WindowsForms.Consultations
             this.patientComboBox.TabIndex = 20;
             this.patientComboBox.SelectedValueChanged += new System.Action(this.OnSelectedValueChanged);
             // 
-            // ConsultationsForm
+            // ExaminationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,11 +95,11 @@ namespace Clinic.WindowsForms.Consultations
             this.Controls.Add(this.officeComboBox);
             this.Controls.Add(this.doctorComboBox);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.consultationsGridView);
-            this.Name = "ConsultationsForm";
-            this.Text = "Consultations";
+            this.Controls.Add(this.examinationsGridView);
+            this.Name = "ExaminationsForm";
+            this.Text = "Examinations";
             this.Load += new System.EventHandler(this.OnLoad);
-            ((System.ComponentModel.ISupportInitialize)(this.consultationsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examinationsGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,7 +107,7 @@ namespace Clinic.WindowsForms.Consultations
         #endregion
 
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.DataGridView consultationsGridView;
+        private System.Windows.Forms.DataGridView examinationsGridView;
         private DoctorComboBox doctorComboBox;
         private OfficeComboBox officeComboBox;
         private PatientComboBox patientComboBox;

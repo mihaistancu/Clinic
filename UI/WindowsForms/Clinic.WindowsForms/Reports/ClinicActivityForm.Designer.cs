@@ -32,7 +32,7 @@
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.generateReportButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.totalVisitsDurationTextBox = new System.Windows.Forms.TextBox();
+            this.totalExaminationsDurationTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.totalAmountReceivedTextBox = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             this.groupBox.Controls.Add(this.totalAmountReceivedTextBox);
             this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Controls.Add(this.totalVisitsDurationTextBox);
+            this.groupBox.Controls.Add(this.totalExaminationsDurationTextBox);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Location = new System.Drawing.Point(42, 100);
             this.groupBox.Name = "groupBox";
@@ -75,15 +75,15 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Total Visits Duration (Days)";
+            this.label1.Text = "Total Examinations Duration (Days)";
             // 
-            // totalVisitsDurationTextBox
+            // totalExaminationsDurationTextBox
             // 
-            this.totalVisitsDurationTextBox.Location = new System.Drawing.Point(237, 48);
-            this.totalVisitsDurationTextBox.Name = "totalVisitsDurationTextBox";
-            this.totalVisitsDurationTextBox.ReadOnly = true;
-            this.totalVisitsDurationTextBox.Size = new System.Drawing.Size(108, 20);
-            this.totalVisitsDurationTextBox.TabIndex = 1;
+            this.totalExaminationsDurationTextBox.Location = new System.Drawing.Point(237, 48);
+            this.totalExaminationsDurationTextBox.Name = "totalExaminationsDurationTextBox";
+            this.totalExaminationsDurationTextBox.ReadOnly = true;
+            this.totalExaminationsDurationTextBox.Size = new System.Drawing.Size(108, 20);
+            this.totalExaminationsDurationTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Button generateReportButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox totalVisitsDurationTextBox;
+        private System.Windows.Forms.TextBox totalExaminationsDurationTextBox;
         private System.Windows.Forms.TextBox totalAmountReceivedTextBox;
     }
 }

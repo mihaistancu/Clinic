@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentsModule.cs" />
-    <Compile Include="ConsultationsModule.cs" />
+    <Compile Include="ExaminationsModule.cs" />
     <Compile Include="DoctorsModule.cs" />
     <Compile Include="IModule.cs" />
     <Compile Include="Module.cs" />

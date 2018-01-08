@@ -36,8 +36,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.clinicActivityButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.doctorActivityButton = new System.Windows.Forms.Button();
             this.officeActivityButton = new System.Windows.Forms.Button();
+            this.doctorActivityButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,9 +97,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Consultations";
+            this.button1.Text = "Examinations";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.OnConsultationsClicked);
+            this.button1.Click += new System.EventHandler(this.OnExaminationsClicked);
             // 
             // clinicActivityButton
             // 
@@ -123,16 +123,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reports";
             // 
-            // doctorActivityButton
-            // 
-            this.doctorActivityButton.Location = new System.Drawing.Point(30, 37);
-            this.doctorActivityButton.Name = "doctorActivityButton";
-            this.doctorActivityButton.Size = new System.Drawing.Size(75, 40);
-            this.doctorActivityButton.TabIndex = 7;
-            this.doctorActivityButton.Text = "Doctor Activity";
-            this.doctorActivityButton.UseVisualStyleBackColor = true;
-            this.doctorActivityButton.Click += new System.EventHandler(this.OnDoctorActivityButtonClicked);
-            // 
             // officeActivityButton
             // 
             this.officeActivityButton.Location = new System.Drawing.Point(133, 37);
@@ -142,6 +132,16 @@
             this.officeActivityButton.Text = "Office Activity";
             this.officeActivityButton.UseVisualStyleBackColor = true;
             this.officeActivityButton.Click += new System.EventHandler(this.OnOfficeActivityButtonClicked);
+            // 
+            // doctorActivityButton
+            // 
+            this.doctorActivityButton.Location = new System.Drawing.Point(30, 37);
+            this.doctorActivityButton.Name = "doctorActivityButton";
+            this.doctorActivityButton.Size = new System.Drawing.Size(75, 40);
+            this.doctorActivityButton.TabIndex = 7;
+            this.doctorActivityButton.Text = "Doctor Activity";
+            this.doctorActivityButton.UseVisualStyleBackColor = true;
+            this.doctorActivityButton.Click += new System.EventHandler(this.OnDoctorActivityButtonClicked);
             // 
             // ClinicForm
             // 

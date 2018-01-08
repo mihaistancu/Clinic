@@ -14,9 +14,9 @@ namespace Clinic.WindowsForms.Reports
 
         private void OnGenerateReportButtonClicked(object sender, System.EventArgs e)
         {
-            var repository = new ConsultationsRepository();
+            var repository = new ExaminationsRepository();
             var report = ClinicActivityReport.For(repository, dateRange.StartDate, dateRange.EndDate);
-            totalVisitsDurationTextBox.Text = report.TotalVisitsDuration.ToString();
+            totalExaminationsDurationTextBox.Text = report.TotalExaminationsDuration.ToString();
             totalAmountReceivedTextBox.Text = report.TotalAmountReceived.ToString(CultureInfo.InvariantCulture);
         }
     }

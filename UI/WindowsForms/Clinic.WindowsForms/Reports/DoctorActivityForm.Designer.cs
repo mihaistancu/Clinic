@@ -31,7 +31,7 @@
             this.totalAmountReceivedTextBox = new System.Windows.Forms.TextBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.totalClinicalVisitsTextBox = new System.Windows.Forms.TextBox();
+            this.totalExaminationsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateRange = new Clinic.WindowsForms.Controls.DateTimePickers.DateRange();
             this.generateReportButton = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             // 
             this.groupBox.Controls.Add(this.totalAmountReceivedTextBox);
             this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Controls.Add(this.totalClinicalVisitsTextBox);
+            this.groupBox.Controls.Add(this.totalExaminationsTextBox);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Location = new System.Drawing.Point(47, 145);
             this.groupBox.Name = "groupBox";
@@ -69,13 +69,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Total Amount Received (Dollars)";
             // 
-            // totalClinicalVisitsTextBox
+            // totalExaminationsTextBox
             // 
-            this.totalClinicalVisitsTextBox.Location = new System.Drawing.Point(237, 48);
-            this.totalClinicalVisitsTextBox.Name = "totalClinicalVisitsTextBox";
-            this.totalClinicalVisitsTextBox.ReadOnly = true;
-            this.totalClinicalVisitsTextBox.Size = new System.Drawing.Size(108, 20);
-            this.totalClinicalVisitsTextBox.TabIndex = 1;
+            this.totalExaminationsTextBox.Location = new System.Drawing.Point(237, 48);
+            this.totalExaminationsTextBox.Name = "totalExaminationsTextBox";
+            this.totalExaminationsTextBox.ReadOnly = true;
+            this.totalExaminationsTextBox.Size = new System.Drawing.Size(108, 20);
+            this.totalExaminationsTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -84,7 +84,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Total Clinical Visits";
+            this.label1.Text = "Total Examinations";
             // 
             // dateRange
             // 
@@ -134,7 +134,7 @@
         private System.Windows.Forms.TextBox totalAmountReceivedTextBox;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox totalClinicalVisitsTextBox;
+        private System.Windows.Forms.TextBox totalExaminationsTextBox;
         private System.Windows.Forms.Label label1;
         private Controls.DateTimePickers.DateRange dateRange;
         private System.Windows.Forms.Button generateReportButton;

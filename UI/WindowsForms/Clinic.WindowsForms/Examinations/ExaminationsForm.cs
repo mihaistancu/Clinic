@@ -6,11 +6,11 @@ using System.Windows.Forms;
 using Clinic.Data;
 using Clinic.Data.Persistence.EF;
 
-namespace Clinic.WindowsForms.Consultations
+namespace Clinic.WindowsForms.Examinations
 {
-    public partial class ConsultationsForm : Form
+    public partial class ExaminationsForm : Form
     {
-        public ConsultationsForm()
+        public ExaminationsForm()
         {
             InitializeComponent();
         }
@@ -20,19 +20,19 @@ namespace Clinic.WindowsForms.Consultations
             doctorComboBox.LoadData();
             officeComboBox.LoadData();
             patientComboBox.LoadData();
-            LoadConsultations();
+            LoadExaminations();
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
-            var editConsultationForm = new EditConsultationForm();
-            editConsultationForm.ShowDialog();
-            LoadConsultations();
+            var editExaminationForm = new EditExaminationForm();
+            editExaminationForm.ShowDialog();
+            LoadExaminations();
         }
         
-        private void LoadConsultations()
+        private void LoadExaminations()
         {
-            var repository = new ConsultationsRepository();
+            var repository = new ExaminationsRepository();
             var searchPredicates = GetSearchPredicates().ToArray();
 
             var results = from x in repository.Search(searchPredicates)
@@ -47,10 +47,10 @@ namespace Clinic.WindowsForms.Consultations
                               AmountReceived = x.AmountReceived
                           };
 
-            consultationsGridView.DataSource = results.ToList();
+            examinationsGridView.DataSource = results.ToList();
         }
 
-        private IEnumerable<Expression<Func<ClinicalVisit, bool>>> GetSearchPredicates()
+        private IEnumerable<Expression<Func<Examination, bool>>> GetSearchPredicates()
         {
             if (doctorComboBox.SelectedDoctor != null)
             {
@@ -70,7 +70,7 @@ namespace Clinic.WindowsForms.Consultations
         
         private void OnSelectedValueChanged()
         {
-            LoadConsultations();
+            LoadExaminations();
         }
     }
 }

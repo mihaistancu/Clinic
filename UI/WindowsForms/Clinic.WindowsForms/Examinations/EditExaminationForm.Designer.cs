@@ -1,9 +1,9 @@
 ﻿using Clinic.WindowsForms.Controls.ComboBoxes;
 using Clinic.WindowsForms.Controls.DateTimePickers;
 
-namespace Clinic.WindowsForms.Consultations
+namespace Clinic.WindowsForms.Examinations
 {
-    partial class EditConsultationForm
+    partial class EditExaminationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@ namespace Clinic.WindowsForms.Consultations
             this.dateTimeRange.Size = new System.Drawing.Size(631, 121);
             this.dateTimeRange.TabIndex = 36;
             // 
-            // EditConsultationForm
+            // EditExaminationForm
             // 
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,8 +111,8 @@ namespace Clinic.WindowsForms.Consultations
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.amountReceivedNumericUpDown);
             this.Controls.Add(this.label7);
-            this.Name = "EditConsultationForm";
-            this.Text = "Consultation";
+            this.Name = "EditExaminationForm";
+            this.Text = "Examination";
             this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.amountReceivedNumericUpDown)).EndInit();
             this.ResumeLayout(false);

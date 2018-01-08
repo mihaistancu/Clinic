@@ -2,7 +2,7 @@
 
 namespace Clinic.Data
 {
-    public class ClinicalVisit
+    public class Examination
     {
         public int Id { get; set; }
         public Patient Patient { get; set; }
