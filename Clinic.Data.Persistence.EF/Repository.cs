@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Clinic.Data.Persistence
+namespace Clinic.Data.Persistence.EF
 {
     public class Repository<T> : IRepository<T> where T : class
     {

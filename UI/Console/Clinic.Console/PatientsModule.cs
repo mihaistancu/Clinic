@@ -1,5 +1,5 @@
 ﻿using Clinic.Data;
-using Clinic.Data.Persistence;
+using Clinic.Data.Persistence.EF;
 
 namespace Clinic.Console
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Clinic.Data.OfficeHours;
-using Clinic.Data.Persistence;
+using Clinic.Data.Persistence.EF;
 
 namespace Clinic.Console
 {

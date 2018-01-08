@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Clinic.Data.Persistence;
+using Clinic.Data.Persistence.EF;
 
 namespace Clinic.WindowsForms.Appointments
 {

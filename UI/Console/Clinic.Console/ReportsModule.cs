@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Clinic.Data;
-using Clinic.Data.Persistence;
+using Clinic.Data.Persistence.EF;
 using Clinic.Reports;
 
 namespace Clinic.Console

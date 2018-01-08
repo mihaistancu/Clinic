@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Clinic.Data.OfficeHours;
 
-namespace Clinic.Data.Persistence
+namespace Clinic.Data.Persistence.EF
 {
     public class OfficeHoursRepository : Repository<WeeklyOfficeHours>
     {

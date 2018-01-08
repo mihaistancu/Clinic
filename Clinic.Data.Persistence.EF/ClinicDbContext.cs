@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using Clinic.Data.OfficeHours;
 
-namespace Clinic.Data.Persistence
+namespace Clinic.Data.Persistence.EF
 {
     public class ClinicDbContext : DbContext
     {
