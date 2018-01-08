@@ -54,6 +54,12 @@
     <Compile Include="DateTimePickers\DatePicker.Designer.cs">
       <DependentUpon>DatePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="DateTimePickers\DateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateTimePickers\DateTimePicker.Designer.cs">
+      <DependentUpon>DateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="DateTimePickers\DateTimeRange.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DateTimePickers\DatePicker.resx">
       <DependentUpon>DatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateTimePickers\DateTimePicker.resx">
+      <DependentUpon>DateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DateTimePickers\DateTimeRange.resx">
       <DependentUpon>DateTimeRange.cs</DependentUpon>
