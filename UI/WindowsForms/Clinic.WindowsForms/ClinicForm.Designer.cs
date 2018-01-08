@@ -36,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.clinicActivityButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.doctorActivityButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +112,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.doctorActivityButton);
             this.groupBox1.Controls.Add(this.clinicActivityButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 134);
             this.groupBox1.Name = "groupBox1";
@@ -118,6 +120,16 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reports";
+            // 
+            // doctorActivityButton
+            // 
+            this.doctorActivityButton.Location = new System.Drawing.Point(30, 37);
+            this.doctorActivityButton.Name = "doctorActivityButton";
+            this.doctorActivityButton.Size = new System.Drawing.Size(75, 40);
+            this.doctorActivityButton.TabIndex = 7;
+            this.doctorActivityButton.Text = "Doctor Activity";
+            this.doctorActivityButton.UseVisualStyleBackColor = true;
+            this.doctorActivityButton.Click += new System.EventHandler(this.OnDoctorActivityButtonClicked);
             // 
             // ClinicForm
             // 
@@ -148,5 +160,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button clinicActivityButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button doctorActivityButton;
     }
 }

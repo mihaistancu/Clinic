@@ -58,5 +58,11 @@ namespace Clinic.WindowsForms
             var clinicActivityForm = new ClinicActivityForm();
             clinicActivityForm.Show();
         }
+
+        private void OnDoctorActivityButtonClicked(object sender, EventArgs e)
+        {
+            var doctorActivityForm = new DoctorActivityForm();
+            doctorActivityForm.Show();
+        }
     }
 }
