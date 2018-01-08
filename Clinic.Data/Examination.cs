@@ -10,7 +10,7 @@ namespace Clinic.Data
         public Office Office { get; set; }
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
-        public double AmountReceived { get; set; }
+        public decimal AmountReceived { get; set; }
         public TimeSpan Duration => EndDateTime - StartDateTime;
     }
 }

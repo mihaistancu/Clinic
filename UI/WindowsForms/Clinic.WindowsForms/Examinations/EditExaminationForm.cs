@@ -21,13 +21,13 @@ namespace Clinic.WindowsForms.Examinations
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new ExaminationsRepository();
-            string doctorName = doctorComboBox.SelectedDoctor.Name;
-            string officeLocation = officeComboBox.SelectedOffice.Location;
-            string patientName = patientComboBox.SelectedPatient.Name;
-            DateTime startDateTime = dateTimeRange.StartDateTime;
-            DateTime endDateTime = dateTimeRange.EndDateTime;
-            double amountReceived = (double)amountReceivedNumericUpDown.Value;
-            repository.Add(doctorName, officeLocation, patientName, startDateTime, endDateTime, amountReceived);
+            repository.Add(
+                doctorComboBox.SelectedDoctor.Name, 
+                officeComboBox.SelectedOffice.Location, 
+                patientComboBox.SelectedPatient.Name,
+                dateTimeRange.StartDateTime,
+                dateTimeRange.EndDateTime,
+                amountReceivedNumericUpDown.Value);
             Close();
         }
     }

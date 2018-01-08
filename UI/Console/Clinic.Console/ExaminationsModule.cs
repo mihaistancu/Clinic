@@ -19,7 +19,7 @@ namespace Clinic.Console
             string patientName = args[4];
             DateTime startDateTime = DateTime.Parse(args[5]);
             DateTime endDateTime = DateTime.Parse(args[6]);
-            double amountReceived = double.Parse(args[7]);
+            decimal amountReceived = decimal.Parse(args[7]);
             repository.Add(doctorName, officeLocation, patientName, startDateTime, endDateTime, amountReceived);
         }
 

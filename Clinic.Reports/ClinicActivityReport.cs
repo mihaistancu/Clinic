@@ -10,7 +10,7 @@ namespace Clinic.Reports
         public DateTime StartDateTime { get; private set; }
         public DateTime EndDateTime { get; private set; }
         public TimeSpan TotalExaminationsDuration { get; private set; }
-        public double TotalAmountReceived { get; private set; }
+        public decimal TotalAmountReceived { get; private set; }
 
         private ClinicActivityReport() { }
 

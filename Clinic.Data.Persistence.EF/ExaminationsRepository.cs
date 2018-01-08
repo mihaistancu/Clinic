@@ -8,7 +8,7 @@ namespace Clinic.Data.Persistence.EF
 {
     public class ExaminationsRepository: Repository<Examination>
     {
-        public void Add(string doctorName, string officeLocation, string patientName, DateTime startDateTime, DateTime endDateTime, double amountReceived)
+        public void Add(string doctorName, string officeLocation, string patientName, DateTime startDateTime, DateTime endDateTime, decimal amountReceived)
         {
             using (var context = new ClinicDbContext())
             {
