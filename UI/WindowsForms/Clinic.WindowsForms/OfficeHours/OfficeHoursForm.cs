@@ -27,6 +27,7 @@ namespace Clinic.WindowsForms.OfficeHours
             var searchPredicates = GetSearchPredicates().ToArray();
 
             var results = from x in officeHoursRepository.Search(searchPredicates)
+                orderby x.Doctor, x.Office, x.DayOfWeek
                 select new
                 {
                     Doctor = x.Doctor.Name,

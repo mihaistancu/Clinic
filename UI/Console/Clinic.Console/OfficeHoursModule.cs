@@ -25,7 +25,12 @@ namespace Clinic.Console
 
         protected override void List()
         {
-            foreach (var item in repository.GetAll())
+            var results = repository.GetAll()
+                .OrderBy(h => h.Doctor)
+                .ThenBy(h => h.Office)
+                .ThenBy(h => h.DayOfWeek);
+
+            foreach (var item in results)
             {
                 System.Console.WriteLine("Dr. {0}, {1} {2} {3} {4}", item.Doctor.Name, item.Office.Location, item.DayOfWeek, item.StartTime, item.EndTime);
             }
