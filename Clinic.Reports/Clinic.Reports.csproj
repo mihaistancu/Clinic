@@ -42,11 +42,14 @@
   <ItemGroup>
     <Compile Include="ClinicActivityReport.cs" />
     <Compile Include="DoctorActivityReport.cs" />
-    <Compile Include="Filter.cs" />
     <Compile Include="OfficeActivityReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Clinic.Data.Persistence\Clinic.Data.Persistence.csproj">
+      <Project>{CAA2D445-F099-47DE-A08F-D5F262051EB0}</Project>
+      <Name>Clinic.Data.Persistence</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Clinic.Data\Clinic.Data.csproj">
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
       <Name>Clinic.Data</Name>

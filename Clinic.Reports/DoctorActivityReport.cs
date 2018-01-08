@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Clinic.Data;
+using Clinic.Data.Persistence;
 
 namespace Clinic.Reports
 {

@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appointment.cs" />
-    <Compile Include="IRepository.cs" />
     <Compile Include="OfficeHours\DailyOfficeHours.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Doctor.cs" />

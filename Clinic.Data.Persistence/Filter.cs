@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Clinic.Data;
 
-namespace Clinic.Reports
+namespace Clinic.Data.Persistence
 {
     public class Filter 
     {

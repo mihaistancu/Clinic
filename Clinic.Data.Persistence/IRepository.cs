@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Clinic.Data
+namespace Clinic.Data.Persistence
 {
     public interface IRepository<T>
     {

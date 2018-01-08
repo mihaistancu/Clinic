@@ -119,6 +119,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Clinic.Data.Persistence.EF\Clinic.Data.Persistence.EF.csproj">
+      <Project>{f4ca7eac-9350-4075-967b-788c721c6ad1}</Project>
+      <Name>Clinic.Data.Persistence.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Clinic.Data\Clinic.Data.csproj">
       <Project>{35AB0E3D-A0C1-42D9-B184-511D8F705130}</Project>
       <Name>Clinic.Data</Name>

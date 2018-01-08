@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21402FAA-76AE-44EC-BB93-6326A8AC0D7E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{F4CA7EAC-9350-4075-967B-788C721C6AD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Clinic.Console</RootNamespace>
-    <AssemblyName>Clinic.Console</AssemblyName>
+    <RootNamespace>Clinic.Data.Persistence.EF</RootNamespace>
+    <AssemblyName>Clinic.Data.Persistence.EF</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,38 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppointmentsModule.cs" />
-    <Compile Include="ConsultationsModule.cs" />
-    <Compile Include="DoctorsModule.cs" />
-    <Compile Include="IModule.cs" />
-    <Compile Include="Module.cs" />
-    <Compile Include="OfficeHoursModule.cs" />
-    <Compile Include="OfficesModule.cs" />
-    <Compile Include="PatientsModule.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AppointmentsRepository.cs" />
+    <Compile Include="ClinicDbContext.cs" />
+    <Compile Include="ConsultationsRepository.cs" />
+    <Compile Include="OfficeHoursRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportsModule.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Clinic.Data.Persistence.EF\Clinic.Data.Persistence.EF.csproj">
-      <Project>{f4ca7eac-9350-4075-967b-788c721c6ad1}</Project>
-      <Name>Clinic.Data.Persistence.EF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Clinic.Data\Clinic.Data.csproj">
-      <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
-      <Name>Clinic.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Clinic.Data.Persistence\Clinic.Data.Persistence.csproj">
+    <ProjectReference Include="..\Clinic.Data.Persistence\Clinic.Data.Persistence.csproj">
       <Project>{caa2d445-f099-47de-a08f-d5f262051eb0}</Project>
       <Name>Clinic.Data.Persistence</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Clinic.Reports\Clinic.Reports.csproj">
-      <Project>{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}</Project>
-      <Name>Clinic.Reports</Name>
+    <ProjectReference Include="..\Clinic.Data\Clinic.Data.csproj">
+      <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
+      <Name>Clinic.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

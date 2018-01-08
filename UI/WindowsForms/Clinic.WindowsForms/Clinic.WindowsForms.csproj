@@ -188,6 +188,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Clinic.Data.Persistence.EF\Clinic.Data.Persistence.EF.csproj">
+      <Project>{f4ca7eac-9350-4075-967b-788c721c6ad1}</Project>
+      <Name>Clinic.Data.Persistence.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Clinic.Data\Clinic.Data.csproj">
       <Project>{35ab0e3d-a0c1-42d9-b184-511d8f705130}</Project>
       <Name>Clinic.Data</Name>

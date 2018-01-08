@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{27E9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{EA138E97-E832-4425-B6E0-420D96F58393}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Data.Persistence.EF", "Clinic.Data.Persistence.EF\Clinic.Data.Persistence.EF.csproj", "{F4CA7EAC-9350-4075-967B-788C721C6AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CBBC63B-170A-467B-B66C-2B68CEF8CDB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4CA7EAC-9350-4075-967B-788C721C6AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4CA7EAC-9350-4075-967B-788C721C6AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4CA7EAC-9350-4075-967B-788C721C6AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4CA7EAC-9350-4075-967B-788C721C6AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
