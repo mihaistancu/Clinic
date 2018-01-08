@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Clinic.WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ClinicView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClinicView : Window
     {
-        public MainWindow()
+        public ClinicView()
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="Clinic.WPF.MainWindow"
+﻿<Window x:Class="Clinic.WPF.ClinicView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Clinic.WPF"
         mc:Ignorable="d"
         Title="Clinic" Height="350" Width="525">
+    <Window.DataContext>
+        <local:ClinicViewModel></local:ClinicViewModel>
+    </Window.DataContext>
     <Grid>
         <StackPanel>
             <Button>Doctors</Button>
