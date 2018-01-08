@@ -34,6 +34,9 @@
             this.officeHoursButton = new System.Windows.Forms.Button();
             this.appointmentsButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.clinicActivityButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // doctorsButton
@@ -96,11 +99,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.OnConsultationsClicked);
             // 
+            // clinicActivityButton
+            // 
+            this.clinicActivityButton.Location = new System.Drawing.Point(81, 100);
+            this.clinicActivityButton.Name = "clinicActivityButton";
+            this.clinicActivityButton.Size = new System.Drawing.Size(75, 40);
+            this.clinicActivityButton.TabIndex = 6;
+            this.clinicActivityButton.Text = "Clinic Activity";
+            this.clinicActivityButton.UseVisualStyleBackColor = true;
+            this.clinicActivityButton.Click += new System.EventHandler(this.OnClinicActivityButtonClicked);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.clinicActivityButton);
+            this.groupBox1.Location = new System.Drawing.Point(12, 134);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(237, 166);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Reports";
+            // 
             // ClinicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 353);
+            this.ClientSize = new System.Drawing.Size(262, 315);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.appointmentsButton);
             this.Controls.Add(this.officeHoursButton);
@@ -109,6 +133,7 @@
             this.Controls.Add(this.doctorsButton);
             this.Name = "ClinicForm";
             this.Text = "Clinic";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,5 +146,7 @@
         private System.Windows.Forms.Button officeHoursButton;
         private System.Windows.Forms.Button appointmentsButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button clinicActivityButton;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

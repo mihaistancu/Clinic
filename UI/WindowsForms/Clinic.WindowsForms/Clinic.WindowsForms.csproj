@@ -126,6 +126,12 @@
     <Compile Include="ClinicForm.Designer.cs">
       <DependentUpon>ClinicForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ClinicActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ClinicActivityForm.Designer.cs">
+      <DependentUpon>ClinicActivityForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Appointments\AppointmentsForm.resx">
       <DependentUpon>AppointmentsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,9 @@
     </Compile>
     <EmbeddedResource Include="ClinicForm.resx">
       <DependentUpon>ClinicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ClinicActivityForm.resx">
+      <DependentUpon>ClinicActivityForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -6,6 +6,7 @@ using Clinic.WindowsForms.OfficeHours;
 using Clinic.WindowsForms.Offices;
 using Clinic.WindowsForms.Patients;
 using Clinic.WindowsForms.Consultations;
+using Clinic.WindowsForms.Reports;
 
 namespace Clinic.WindowsForms
 {
@@ -50,6 +51,12 @@ namespace Clinic.WindowsForms
         {
             var consultationsForm = new ConsultationsForm();
             consultationsForm.Show();
+        }
+
+        private void OnClinicActivityButtonClicked(object sender, EventArgs e)
+        {
+            var clinicActivityForm = new ClinicActivityForm();
+            clinicActivityForm.Show();
         }
     }
 }
