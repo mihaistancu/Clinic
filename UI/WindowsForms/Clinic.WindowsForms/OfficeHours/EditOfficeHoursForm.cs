@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Clinic.Data.OfficeHours;
 using Clinic.Data.Persistence.EF;
 
 namespace Clinic.WindowsForms.OfficeHours
@@ -21,15 +20,12 @@ namespace Clinic.WindowsForms.OfficeHours
         private void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var repository = new OfficeHoursRepository();
-            string doctorName = doctorComboBox.SelectedDoctor.Name;
-            string officeLocation = officeComboBox.SelectedOffice.Location;
-            var dailyOfficeHours = new DailyOfficeHours
-            {
-                DayOfWeek = dayOfWeekComboBox.SelectedDay,
-                StartTime = timeRange.StartTime,
-                EndTime = timeRange.EndTime
-            };
-            repository.Add(doctorName, officeLocation, dailyOfficeHours);
+            repository.Add(
+                doctorComboBox.SelectedDoctor.Name, 
+                officeComboBox.SelectedOffice.Location, 
+                dayOfWeekComboBox.SelectedDay, 
+                timeRange.StartTime, 
+                timeRange.EndTime);
             Close();
         }
     }
