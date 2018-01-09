@@ -10,6 +10,9 @@
         <local:DoctorsViewModel></local:DoctorsViewModel>
     </Window.DataContext>
     <Grid>
-        <Button Command="{Binding ShowEditDoctorViewCommand}">Add</Button>
+        <StackPanel>
+            <Button Command="{Binding ShowEditDoctorViewCommand}">Add</Button>
+            <DataGrid IsReadOnly="True" ItemsSource="{Binding Doctors}"></DataGrid>
+        </StackPanel>
     </Grid>
 </Window>
