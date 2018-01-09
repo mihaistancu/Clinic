@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Windows.Input;
-using Clinic.WPF.Doctors.EditDoctorWindow;
 
-namespace Clinic.WPF.Doctors.DoctorsWindow
+namespace Clinic.WPF.Mvvm
 {
-    public class ShowEditDoctorViewCommand : ICommand
+    public class Command : ICommand
     {
+        private readonly Action action;
+
+        public Command(Action action)
+        {
+            this.action = action;
+        }
+
         public bool CanExecute(object parameter)
         {
             return true;
@@ -13,8 +19,7 @@ namespace Clinic.WPF.Doctors.DoctorsWindow
 
         public void Execute(object parameter)
         {
-            var editDoctorView = new EditDoctorView();
-            editDoctorView.Show();
+            action();
         }
 
         public event EventHandler CanExecuteChanged;

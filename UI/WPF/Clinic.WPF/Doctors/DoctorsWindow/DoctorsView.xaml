@@ -10,6 +10,6 @@
         <local:DoctorsViewModel></local:DoctorsViewModel>
     </Window.DataContext>
     <Grid>
-        <Button Command="{Binding ShowEditDoctorView}">Add</Button>
+        <Button Command="{Binding ShowEditDoctorViewCommand}">Add</Button>
     </Grid>
 </Window>

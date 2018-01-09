@@ -11,7 +11,7 @@
     </Window.DataContext>
     <Grid>
         <StackPanel>
-            <Button Command="{Binding ShowDoctorsView}">Doctors</Button>
+            <Button Command="{Binding ShowDoctorsViewCommand}">Doctors</Button>
             <Button>Offices</Button>
             <Button>Patients</Button>
             <Button>Office Hours</Button>

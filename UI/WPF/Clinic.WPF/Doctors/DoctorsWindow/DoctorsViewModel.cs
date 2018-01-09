@@ -1,12 +1,21 @@
-﻿namespace Clinic.WPF.Doctors.DoctorsWindow
+﻿using Clinic.WPF.Doctors.EditDoctorWindow;
+using Clinic.WPF.Mvvm;
+
+namespace Clinic.WPF.Doctors.DoctorsWindow
 {
     public class DoctorsViewModel
     {
-        public ShowEditDoctorViewCommand ShowEditDoctorView { get; set; }
+        public Command ShowEditDoctorViewCommand { get; set; }
 
         public DoctorsViewModel()
         {
-            ShowEditDoctorView = new ShowEditDoctorViewCommand();
+            ShowEditDoctorViewCommand = new Command(ShowEditDoctorView);
+        }
+
+        private void ShowEditDoctorView()
+        {
+            var editDoctorView = new EditDoctorView();
+            editDoctorView.Show();
         }
     }
 }

@@ -78,12 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClinicViewModel.cs" />
-    <Compile Include="Doctors\DoctorsWindow\ShowEditDoctorViewCommand.cs" />
     <Compile Include="Doctors\EditDoctorWindow\EditDoctorView.xaml.cs">
       <DependentUpon>EditDoctorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Doctors\EditDoctorWindow\EditDoctorViewModel.cs" />
-    <Compile Include="ShowDoctorsViewCommand.cs" />
     <Compile Include="Doctors\DoctorsWindow\DoctorsView.xaml.cs">
       <DependentUpon>DoctorsView.xaml</DependentUpon>
     </Compile>
@@ -128,6 +126,12 @@
     <Folder Include="Reports\ClinicActivityWindow\" />
     <Folder Include="Reports\DoctorActivityWindow\" />
     <Folder Include="Reports\PatientActivityWindow\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clinic.WPF.Mvvm\Clinic.WPF.Mvvm.csproj">
+      <Project>{64042a73-6eb3-4702-9c4b-c826710ceb7b}</Project>
+      <Name>Clinic.WPF.Mvvm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
