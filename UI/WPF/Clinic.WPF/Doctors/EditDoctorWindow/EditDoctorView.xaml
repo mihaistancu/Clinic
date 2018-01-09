@@ -1,15 +1,15 @@
-﻿<Window x:Class="Clinic.WPF.Doctors.DoctorsWindow.DoctorsView"
+﻿<Window x:Class="Clinic.WPF.Doctors.EditDoctorWindow.EditDoctorView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Clinic.WPF.Doctors.DoctorsWindow"
+        xmlns:local="clr-namespace:Clinic.WPF.Doctors.EditDoctorWindow"
         mc:Ignorable="d"
-        Title="Doctors" Height="300" Width="300">
+        Title="Doctor" Height="300" Width="300">
     <Window.DataContext>
-        <local:DoctorsViewModel></local:DoctorsViewModel>
+        <local:EditDoctorViewModel></local:EditDoctorViewModel>
     </Window.DataContext>
     <Grid>
-        <Button Command="{Binding ShowEditDoctorView}">Add</Button>
+        
     </Grid>
 </Window>

@@ -71,9 +71,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Doctors\EditDoctorWindow\EditDoctorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClinicViewModel.cs" />
+    <Compile Include="Doctors\DoctorsWindow\ShowEditDoctorViewCommand.cs" />
+    <Compile Include="Doctors\EditDoctorWindow\EditDoctorView.xaml.cs">
+      <DependentUpon>EditDoctorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\EditDoctorWindow\EditDoctorViewModel.cs" />
     <Compile Include="ShowDoctorsViewCommand.cs" />
     <Compile Include="Doctors\DoctorsWindow\DoctorsView.xaml.cs">
       <DependentUpon>DoctorsView.xaml</DependentUpon>
@@ -108,7 +117,6 @@
   <ItemGroup>
     <Folder Include="Appointments\AppointmentsWindow\" />
     <Folder Include="Appointments\EditAppointmentWindow\" />
-    <Folder Include="Doctors\EditDoctorWindow\" />
     <Folder Include="Examinations\EditExaminationWindow\" />
     <Folder Include="Examinations\ExaminationsWindow\" />
     <Folder Include="OfficeHours\EditOfficeHoursWindow\" />
