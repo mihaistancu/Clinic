@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CloseAfterCommandExecuted.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="ExecuteCommandOnLoad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowCommand.cs" />
     <Compile Include="View.cs" />

@@ -4,11 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clinic.WPF.Doctors.DoctorsWindow"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:mvvm="clr-namespace:Clinic.WPF.Mvvm;assembly=Clinic.WPF.Mvvm"
         mc:Ignorable="d"
         Title="Doctors" Height="300" Width="300">
     <Window.DataContext>
         <local:DoctorsViewModel></local:DoctorsViewModel>
     </Window.DataContext>
+    <i:Interaction.Behaviors>
+        <mvvm:ExecuteCommandOnLoad Command="{Binding LoadDoctorsCommand}"/>
+    </i:Interaction.Behaviors>
     <Grid>
         <StackPanel>
             <Button Command="{Binding ShowEditDoctorViewCommand}">Add</Button>
