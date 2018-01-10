@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Clinic.Data;
 using Clinic.Data.Persistence.EF;
 using Clinic.WPF.Doctors.EditDoctorWindow;
@@ -6,12 +8,18 @@ using Clinic.WPF.Mvvm;
 
 namespace Clinic.WPF.Doctors.DoctorsWindow
 {
-    public class DoctorsViewModel
+    public class DoctorsViewModel: INotifyPropertyChanged
     {
         public ShowCommand<EditDoctorViewModel> ShowEditDoctorViewCommand { get; set; }
         public Command LoadDoctorsCommand { get; set; }
 
-        public List<Doctor> Doctors { get; private set; }
+        private List<Doctor> doctors;
+
+        public List<Doctor> Doctors
+        {
+            get { return doctors; }
+            private set { doctors = value; OnPropertyChanged(); }
+        }
 
         public DoctorsViewModel()
         {
@@ -23,6 +31,13 @@ namespace Clinic.WPF.Doctors.DoctorsWindow
         {
             var repository = new Repository<Doctor>();
             Doctors = repository.GetAll();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
