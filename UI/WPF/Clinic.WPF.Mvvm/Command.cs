@@ -17,11 +17,13 @@ namespace Clinic.WPF.Mvvm
             return true;
         }
 
-        public void Execute(object parameter)
+        public virtual void Execute(object parameter)
         {
             action();
+            Executed?.Invoke(this, EventArgs.Empty);
         }
 
         public event EventHandler CanExecuteChanged;
+        public event EventHandler Executed;
     }
 }
