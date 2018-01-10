@@ -1,4 +1,6 @@
-﻿using Clinic.WPF.Mvvm;
+﻿using Clinic.Data;
+using Clinic.Data.Persistence.EF;
+using Clinic.WPF.Mvvm;
 
 namespace Clinic.WPF.Doctors.EditDoctorWindow
 {
@@ -15,6 +17,8 @@ namespace Clinic.WPF.Doctors.EditDoctorWindow
 
         private void SaveDoctor()
         {
+            var repository = new Repository<Doctor>();
+            repository.Add(new Doctor {Name = DoctorName});
         }
     }
 }
