@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Interactivity;
 
-namespace Clinic.WPF.Mvvm
+namespace Clinic.WPF.Mvvm.Behaviors
 {
     public class ExecuteCommandOnLoad: Behavior<Window>
     {
