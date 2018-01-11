@@ -1,20 +1,14 @@
-﻿using System;
-using System.Windows.Input;
-
-namespace Clinic.WPF.Mvvm
+﻿namespace Clinic.WPF.Mvvm
 {
-    public class ShowCommand<T> :ICommand 
+    public class ShowCommand<T> :Command 
     {
-        public bool CanExecute(object parameter)
+        public ShowCommand() : base(OpenView)
         {
-            return true;
         }
 
-        public void Execute(object parameter)
+        private static void OpenView()
         {
-            View.For<T>().Show();
+            View.For<T>().ShowDialog();
         }
-        
-        public event EventHandler CanExecuteChanged;
     }
 }

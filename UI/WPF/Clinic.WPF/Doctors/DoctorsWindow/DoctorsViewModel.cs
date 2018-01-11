@@ -25,6 +25,13 @@ namespace Clinic.WPF.Doctors.DoctorsWindow
         {
             ShowEditDoctorViewCommand = new ShowCommand<EditDoctorViewModel>();
             LoadDoctorsCommand = new Command(LoadDoctors);
+
+            ShowEditDoctorViewCommand.Executed += OnEditDoctorFinished;
+        }
+
+        private void OnEditDoctorFinished(object sender, System.EventArgs e)
+        {
+            LoadDoctors();
         }
 
         private void LoadDoctors()
